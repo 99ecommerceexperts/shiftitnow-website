@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0A1F2E" />
+  <title>ShiftItNow — Migrate Any Store to Shopify in Days, Not Months</title>
+  <meta name="description" content="ShiftItNow is the Shopify migration app trusted by merchants moving from WooCommerce, Magento, Wix, Squarespace and BigCommerce. Products, customers, orders, SEO redirects — all preserved, all automated." />
+  <meta name="keywords" content="Shopify migration, WooCommerce to Shopify, Magento to Shopify, Wix to Shopify, Squarespace to Shopify, BigCommerce to Shopify, store migration app" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ShiftItNow — Migrate Any Store to Shopify" />
+  <meta property="og:description" content="The smartest way to move your store to Shopify. Zero downtime. All data preserved. Built by merchants, for merchants." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/logo.webp" />
+
+  <link rel="icon" type="image/webp" href="assets/logo.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============== ANNOUNCEMENT BAR ============== -->
+  <div class="announcement-bar" role="region" aria-label="Announcement">
+    <div class="container announcement-inner">
+      <span class="announce-dot" aria-hidden="true"></span>
+      <span>New: <strong>BigCommerce migration</strong> arriving soon — join the waitlist for early access.</span>
+      <a href="#waitlist" class="announce-link">Join waitlist <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+
+  <!-- ============== NAVIGATION ============== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-inner">
+      <a href="#top" class="brand" aria-label="ShiftItNow home">
+        <img src="assets/logo.webp" alt="" class="brand-mark" />
+        <span class="brand-name">Shift<span class="brand-accent">It</span>Now</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#platforms">Platforms</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-ghost btn-sm">Talk to sales</a>
+        <a href="#install" class="btn btn-primary btn-sm">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="currentColor"><path d="M19.5 8.25h-3.75V6a3.75 3.75 0 0 0-7.5 0v2.25H4.5A1.5 1.5 0 0 0 3 9.75v9.75A1.5 1.5 0 0 0 4.5 21h15a1.5 1.5 0 0 0 1.5-1.5V9.75a1.5 1.5 0 0 0-1.5-1.5Zm-9.75-2.25a2.25 2.25 0 0 1 4.5 0v2.25h-4.5V6Z"/></svg>
+          Install on Shopify
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <ul>
+        <li><a href="#platforms">Platforms</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Talk to sales</a></li>
+      </ul>
+      <a href="#install" class="btn btn-primary btn-block">Install on Shopify</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============== HERO ============== -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-grid"></div>
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+      </div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            Shopify migration, reimagined
+          </span>
+          <h1 class="hero-title">
+            Move your store to <span class="grad-shopify">Shopify</span>
+            <span class="hero-line2">in <em>days</em>, not months.</span>
+          </h1>
+          <p class="hero-sub">
+            ShiftItNow migrates your products, customers, orders, reviews and SEO redirects from any platform to Shopify — automatically, with zero data loss and zero downtime.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#install" class="btn btn-primary btn-lg">
+              Install on Shopify
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="#how" class="btn btn-ghost btn-lg">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              Watch 2-min demo
+            </a>
+          </div>
+
+          <ul class="hero-trust">
+            <li>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              Free trial migration
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              No coding required
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              SEO rankings preserved
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orbit-ring orbit-ring-1"></div>
+          <div class="orbit-ring orbit-ring-2"></div>
+          <div class="orbit-ring orbit-ring-3"></div>
+
+          <div class="logo-stage">
+            <img src="assets/logo.webp" alt="ShiftItNow" class="hero-logo" />
+          </div>
+
+          <!-- Floating platform chips -->
+          <div class="chip chip-woo">
+            <span class="chip-icon" style="background:#7B519C;">W</span>
+            <span>WooCommerce</span>
+          </div>
+          <div class="chip chip-magento">
+            <span class="chip-icon" style="background:#F26322;">M</span>
+            <span>Magento</span>
+          </div>
+          <div class="chip chip-wix">
+            <span class="chip-icon" style="background:#0C6EFC;">W</span>
+            <span>Wix</span>
+          </div>
+          <div class="chip chip-squarespace">
+            <span class="chip-icon" style="background:#000;">S</span>
+            <span>Squarespace</span>
+          </div>
+          <div class="chip chip-shopify">
+            <span class="chip-icon" style="background:#95BF47;">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="#fff" aria-hidden="true"><path d="M15.34 4.86c-.07-.05-.31-.08-.49-.08L13.5 5c-.5-.5-1.2-.9-2-.9-.4 0-.7.1-1.1.3-.1-.4-.4-.6-.8-.6-2.5 0-3.7 3.1-4.1 4.7L3.7 9c-.4.1-.4.2-.5.5L2 19.5l8.4 1.6L18 19.6c0-.1-2.5-14.6-2.66-14.74Z"/></svg>
+            </span>
+            <span>Shopify</span>
+          </div>
+
+          <div class="data-pill data-pill-1">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            12,840 products
+          </div>
+          <div class="data-pill data-pill-2">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            4,201 customers
+          </div>
+          <div class="data-pill data-pill-3">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            SEO redirects
+          </div>
+        </div>
+      </div>
+
+      <!-- Trusted by strip -->
+      <div class="container trust-strip">
+        <p class="trust-strip-label">Trusted by 1,000+ merchants migrating to Shopify</p>
+        <div class="trust-strip-logos">
+          <span>★★★★★ 4.9 on Shopify App Store</span>
+          <span class="sep" aria-hidden="true"></span>
+          <span>50M+ products migrated</span>
+          <span class="sep" aria-hidden="true"></span>
+          <span>99.98% data accuracy</span>
+          <span class="sep" aria-hidden="true"></span>
+          <span>24/7 expert support</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== PLATFORMS ============== -->
+    <section class="section platforms" id="platforms">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> Supported platforms</span>
+          <h2>Migrate from anywhere. Land on Shopify.</h2>
+          <p class="section-sub">Whatever you're running today, ShiftItNow speaks its language — and translates it cleanly into Shopify.</p>
+        </div>
+
+        <div class="platform-grid">
+          <article class="platform-card">
+            <div class="platform-logo platform-logo-woo">W</div>
+            <h3>WooCommerce</h3>
+            <p>Full WordPress + Woo migration: products, variants, customers, orders, coupons, reviews.</p>
+            <span class="badge badge-live">Available now</span>
+          </article>
+
+          <article class="platform-card">
+            <div class="platform-logo platform-logo-magento">M</div>
+            <h3>Magento / Adobe Commerce</h3>
+            <p>Enterprise-grade migration with attribute mapping, multi-store and B2B catalog support.</p>
+            <span class="badge badge-live">Available now</span>
+          </article>
+
+          <article class="platform-card">
+            <div class="platform-logo platform-logo-wix">W</div>
+            <h3>Wix</h3>
+            <p>Pull your full Wix Stores catalog, customers and content blocks into Shopify in one flow.</p>
+            <span class="badge badge-live">Available now</span>
+          </article>
+
+          <article class="platform-card">
+            <div class="platform-logo platform-logo-squarespace">S</div>
+            <h3>Squarespace</h3>
+            <p>Migrate commerce data, blog posts and SEO meta from any Squarespace 7.0 or 7.1 store.</p>
+            <span class="badge badge-live">Available now</span>
+          </article>
+
+          <article class="platform-card platform-card-soon">
+            <div class="platform-logo platform-logo-bigc">B</div>
+            <h3>BigCommerce</h3>
+            <p>Native BigCommerce API integration with channels, price lists and customer groups.</p>
+            <span class="badge badge-soon">Coming soon</span>
+          </article>
+
+          <article class="platform-card platform-card-custom">
+            <div class="platform-logo platform-logo-custom">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Custom / Other</h3>
+            <p>Got a custom-built store or an unusual platform? Our team will scope a tailored migration.</p>
+            <a href="#contact" class="badge badge-link">Talk to us →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== FEATURES ============== -->
+    <section class="section features" id="features">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> Why ShiftItNow</span>
+          <h2>Every piece of your store. Migrated, mapped, ready.</h2>
+          <p class="section-sub">Most migration tools leave you cleaning up data for weeks. ShiftItNow gets it right the first time — so you can flip the switch with confidence.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
+            <h3>Complete data migration</h3>
+            <p>Products, variants, images, categories, customers, orders, coupons, reviews, blogs, pages — everything moves. Nothing left behind.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            </div>
+            <h3>SEO rankings preserved</h3>
+            <p>301 redirects auto-generated for every URL. Meta titles, descriptions and alt text migrated cleanly so your Google rankings survive the move.</p>
+          </article>
+
+          <article class="feature-card feature-card-accent">
+            <div class="feature-icon feature-icon-gold">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3>Zero downtime</h3>
+            <p>Your old store keeps selling while we migrate. Switch DNS only when you're 100% ready — and we'll handle that too.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3>Smart field mapping</h3>
+            <p>Custom attributes, metafields, product options and tax classes intelligently mapped to Shopify equivalents — with a preview before commit.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 3v6"/><path d="M15 3v6"/><path d="M9 15v6"/><path d="M15 15v6"/><path d="M3 9h6"/><path d="M15 9h6"/><path d="M3 15h6"/><path d="M15 15h6"/></svg>
+            </div>
+            <h3>Delta sync</h3>
+            <p>New orders or customers landing on your old store during migration? They sync over automatically. No spreadsheet juggling.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3>Human support, 24/7</h3>
+            <p>Real migration engineers on chat, email and call. Not bots, not tier-1 scripts — the team that built the tool.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== HOW IT WORKS ============== -->
+    <section class="section how" id="how">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> The process</span>
+          <h2>Four steps. One smooth shift.</h2>
+          <p class="section-sub">From signup to launch, here's exactly what happens — and how fast.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step-line" aria-hidden="true"></div>
+
+          <article class="step">
+            <div class="step-num">01</div>
+            <h3>Connect</h3>
+            <p>Install ShiftItNow from the Shopify App Store. Connect your source store with API credentials or a one-click OAuth flow.</p>
+            <span class="step-time">~2 minutes</span>
+          </article>
+
+          <article class="step">
+            <div class="step-num">02</div>
+            <h3>Preview</h3>
+            <p>Run a free demo migration on a sample of your catalog. Review the field mapping, fix anything you don't like.</p>
+            <span class="step-time">~15 minutes</span>
+          </article>
+
+          <article class="step">
+            <div class="step-num">03</div>
+            <h3>Migrate</h3>
+            <p>Approve the full migration. We move everything in the background while your old store keeps taking orders.</p>
+            <span class="step-time">2 hours – 3 days</span>
+          </article>
+
+          <article class="step">
+            <div class="step-num">04</div>
+            <h3>Launch</h3>
+            <p>Final delta sync, DNS switch and a 7-day safety net. If anything looks off, one click rolls it back.</p>
+            <span class="step-time">~1 hour</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== WHAT GETS MIGRATED ============== -->
+    <section class="section migrated">
+      <div class="container migrated-inner">
+        <div class="migrated-copy">
+          <span class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> Scope of migration</span>
+          <h2>If it's in your store, we move it.</h2>
+          <p>No partial migrations. No "we don't do that." A complete, faithful copy of your storefront — landed on Shopify with all relationships intact.</p>
+          <a href="#contact" class="btn btn-dark btn-md">
+            Request a custom audit
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="migrated-grid">
+          <div class="mig-col">
+            <h4>Catalog</h4>
+            <ul>
+              <li>Products & variants</li>
+              <li>Images & galleries</li>
+              <li>Collections / categories</li>
+              <li>Tags & metafields</li>
+              <li>Inventory & SKUs</li>
+            </ul>
+          </div>
+          <div class="mig-col">
+            <h4>Customers</h4>
+            <ul>
+              <li>Customer accounts</li>
+              <li>Addresses & groups</li>
+              <li>Order history</li>
+              <li>Wishlists</li>
+              <li>Reward points*</li>
+            </ul>
+          </div>
+          <div class="mig-col">
+            <h4>Orders</h4>
+            <ul>
+              <li>Past orders & status</li>
+              <li>Line items & taxes</li>
+              <li>Refunds & returns</li>
+              <li>Coupons & discounts</li>
+              <li>Shipping zones</li>
+            </ul>
+          </div>
+          <div class="mig-col">
+            <h4>Content & SEO</h4>
+            <ul>
+              <li>Blog posts & pages</li>
+              <li>Meta titles & descriptions</li>
+              <li>Image alt text</li>
+              <li>301 redirects</li>
+              <li>Reviews & ratings</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== STATS ============== -->
+    <section class="section stats">
+      <div class="container">
+        <div class="stat-grid">
+          <div class="stat">
+            <div class="stat-num" data-target="50">0</div>
+            <div class="stat-unit">M+</div>
+            <p>Products migrated to Shopify</p>
+          </div>
+          <div class="stat">
+            <div class="stat-num" data-target="1000">0</div>
+            <div class="stat-unit">+</div>
+            <p>Merchants moved successfully</p>
+          </div>
+          <div class="stat">
+            <div class="stat-num" data-target="99.98">0</div>
+            <div class="stat-unit">%</div>
+            <p>Data accuracy guarantee</p>
+          </div>
+          <div class="stat">
+            <div class="stat-num" data-target="24">0</div>
+            <div class="stat-unit">/7</div>
+            <p>Expert support availability</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== TESTIMONIALS ============== -->
+    <section class="section testimonials">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> Merchant stories</span>
+          <h2>The team you wish you had hired sooner.</h2>
+        </div>
+
+        <div class="testimonial-grid">
+          <article class="testimonial">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>"We migrated 14,000 SKUs from Magento with our team's sanity intact. SEO held, orders kept flowing, and the support team replied in minutes — not days."</blockquote>
+            <footer>
+              <div class="avatar" style="background:linear-gradient(135deg,#F2B544,#E8821C);">SP</div>
+              <div>
+                <strong>Sarah Patel</strong>
+                <span>Head of E-commerce, Northstar Apparel</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testimonial featured">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>"I dreaded this for two years. ShiftItNow did the whole WooCommerce → Shopify move in a weekend, redirects included. Should have switched ages ago."</blockquote>
+            <footer>
+              <div class="avatar" style="background:linear-gradient(135deg,#5FB1C0,#2E7D8E);">DM</div>
+              <div>
+                <strong>Daniel Morrison</strong>
+                <span>Founder, Hearthwood Coffee Co.</span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testimonial">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>"Coming from Wix, I expected to lose a ton of content. Nothing was lost. Even my blog meta descriptions came across exactly right."</blockquote>
+            <footer>
+              <div class="avatar" style="background:linear-gradient(135deg,#11324A,#1A4D5C);">RK</div>
+              <div>
+                <strong>Reina Kobayashi</strong>
+                <span>Owner, Kobayashi Ceramics</span>
+              </div>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== PRICING ============== -->
+    <section class="section pricing" id="pricing">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> Pricing</span>
+          <h2>Straightforward pricing. No surprises.</h2>
+          <p class="section-sub">Pay once per migration. No subscriptions. No hidden fees. Try a free demo before you commit a dollar.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card">
+            <header>
+              <h3>Starter</h3>
+              <p>Small catalog, single store</p>
+            </header>
+            <div class="price">
+              <span class="price-currency">$</span>
+              <span class="price-amount">149</span>
+              <span class="price-period">one-time</span>
+            </div>
+            <ul class="price-feats">
+              <li>Up to 500 products</li>
+              <li>Customers + order history</li>
+              <li>Standard SEO redirects</li>
+              <li>Email support</li>
+              <li>7-day rollback window</li>
+            </ul>
+            <a href="#install" class="btn btn-ghost-dark btn-block">Start migration</a>
+          </article>
+
+          <article class="price-card price-card-featured">
+            <span class="badge-most-popular">Most popular</span>
+            <header>
+              <h3>Professional</h3>
+              <p>Growing stores, more complexity</p>
+            </header>
+            <div class="price">
+              <span class="price-currency">$</span>
+              <span class="price-amount">499</span>
+              <span class="price-period">one-time</span>
+            </div>
+            <ul class="price-feats">
+              <li>Up to 10,000 products</li>
+              <li>Everything in Starter</li>
+              <li>Custom field mapping</li>
+              <li>Reviews + blogs + pages</li>
+              <li>Priority chat support</li>
+              <li>Delta sync until launch</li>
+            </ul>
+            <a href="#install" class="btn btn-primary btn-block">Start migration</a>
+          </article>
+
+          <article class="price-card">
+            <header>
+              <h3>Enterprise</h3>
+              <p>High-SKU, B2B, multi-store</p>
+            </header>
+            <div class="price">
+              <span class="price-amount price-amount-text">Custom</span>
+            </div>
+            <ul class="price-feats">
+              <li>Unlimited products</li>
+              <li>Multi-store / multi-currency</li>
+              <li>B2B catalog + price lists</li>
+              <li>Dedicated migration engineer</li>
+              <li>SLA-backed timeline</li>
+              <li>Post-launch optimisation</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost-dark btn-block">Talk to sales</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== FAQ ============== -->
+    <section class="section faq" id="faq">
+      <div class="container faq-inner">
+        <div class="section-head section-head-left">
+          <span class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> FAQ</span>
+          <h2>Answers, before you ask.</h2>
+          <p class="section-sub">Didn't find what you're looking for? <a href="#contact" class="link-accent">Send us a question →</a></p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>
+              <span>How long does a typical migration take?</span>
+              <span class="faq-chev" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-body">
+              <p>For most stores, 2 to 48 hours of migration time. Large catalogs (50k+ SKUs) or complex B2B setups can run up to a week. We give you an exact ETA after the free demo migration — no guessing.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Will my SEO rankings survive the move?</span>
+              <span class="faq-chev" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-body">
+              <p>Yes. We generate 301 redirects for every product, collection, blog post and page URL — and migrate meta titles, descriptions and image alt text exactly as they were. Most merchants see no measurable ranking drop.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Can I keep selling on my old store during migration?</span>
+              <span class="faq-chev" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-body">
+              <p>Absolutely. Your old store stays live the entire time. New orders that come in during migration are synced over via delta sync before launch — no manual export, no missed customers.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>What if something goes wrong?</span>
+              <span class="faq-chev" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-body">
+              <p>Every migration ships with a 7-day rollback window — one click reverses everything. Plus, your source data is never touched. If we can't deliver a clean migration, we refund you in full.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Do you migrate BigCommerce stores?</span>
+              <span class="faq-chev" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-body">
+              <p>BigCommerce migrations are launching shortly. <a href="#waitlist" class="link-accent">Join the waitlist</a> to be one of the first 50 merchants on board — and get 20% off your migration.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>I have a custom-built store. Can you still help?</span>
+              <span class="faq-chev" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-body">
+              <p>Yes. Our Enterprise team handles custom platforms, headless setups and exotic data shapes regularly. <a href="#contact" class="link-accent">Tell us about your stack</a> and we'll scope a tailored migration in 24 hours.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== CTA ============== -->
+    <section class="section cta-section" id="install">
+      <div class="container">
+        <div class="cta-card">
+          <div class="cta-bg" aria-hidden="true">
+            <div class="cta-glow"></div>
+          </div>
+          <div class="cta-content">
+            <span class="eyebrow"><span class="eyebrow-dot"></span> Ready when you are</span>
+            <h2>Your Shopify store is waiting.</h2>
+            <p>Install ShiftItNow today, run a free demo migration on your real catalog, and decide. No card. No commitment. Just clarity.</p>
+            <div class="cta-buttons">
+              <a href="#" class="btn btn-primary btn-lg">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M15.34 4.86c-.07-.05-.31-.08-.49-.08L13.5 5c-.5-.5-1.2-.9-2-.9-.4 0-.7.1-1.1.3-.1-.4-.4-.6-.8-.6-2.5 0-3.7 3.1-4.1 4.7L3.7 9c-.4.1-.4.2-.5.5L2 19.5l8.4 1.6L18 19.6c0-.1-2.5-14.6-2.66-14.74Z"/></svg>
+                Install on Shopify
+              </a>
+              <a href="#contact" class="btn btn-ghost btn-lg">Talk to a migration expert</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== CONTACT / WAITLIST ============== -->
+    <section class="section contact" id="contact">
+      <div class="container contact-inner">
+        <div class="contact-copy" id="waitlist">
+          <span class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> Get in touch</span>
+          <h2>Tell us about your store.</h2>
+          <p>Whether you want a custom quote, a migration walk-through, or early access to BigCommerce migrations — we'll get back within one business day.</p>
+          <ul class="contact-items">
+            <li>
+              <strong>Email</strong>
+              <a href="mailto:hello@shiftitnow.app">hello@shiftitnow.app</a>
+            </li>
+            <li>
+              <strong>Support hours</strong>
+              <span>24/7 chat for active migrations</span>
+            </li>
+            <li>
+              <strong>Sales</strong>
+              <a href="mailto:sales@shiftitnow.app">sales@shiftitnow.app</a>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <label>
+              <span>Full name</span>
+              <input type="text" name="name" required autocomplete="name" placeholder="Jane Patel" />
+            </label>
+            <label>
+              <span>Work email</span>
+              <input type="email" name="email" required autocomplete="email" placeholder="jane@store.com" />
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              <span>Current platform</span>
+              <select name="platform" required>
+                <option value="">Select your platform</option>
+                <option>WooCommerce</option>
+                <option>Magento / Adobe Commerce</option>
+                <option>Wix</option>
+                <option>Squarespace</option>
+                <option>BigCommerce (waitlist)</option>
+                <option>Other / Custom</option>
+              </select>
+            </label>
+            <label>
+              <span>Approx. products</span>
+              <select name="catalogSize" required>
+                <option value="">Catalog size</option>
+                <option>1 – 500</option>
+                <option>500 – 2,500</option>
+                <option>2,500 – 10,000</option>
+                <option>10,000 – 50,000</option>
+                <option>50,000+</option>
+              </select>
+            </label>
+          </div>
+          <label class="form-block">
+            <span>Tell us anything we should know</span>
+            <textarea name="message" rows="4" placeholder="Custom fields, B2B, multi-store, target launch date…"></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">
+            Send message
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+          <p class="form-success" id="formSuccess" hidden>Thanks! We'll be in touch within one business day.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#top" class="brand">
+            <img src="assets/logo.webp" alt="" class="brand-mark" />
+            <span class="brand-name">Shift<span class="brand-accent">It</span>Now</span>
+          </a>
+          <p>The Shopify migration app for merchants who need it done right — the first time.</p>
+          <div class="footer-social" aria-label="Social links">
+            <a href="#" aria-label="Twitter / X">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M18.244 2H21.5l-7.55 8.63L23 22h-6.79l-4.66-6.21L6.2 22H3l8.07-9.23L2.5 2h6.94l4.22 5.62L18.244 2Zm-2.4 18h1.84L7.27 4h-1.94l10.51 16Z"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.02H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .78 0 1.74v20.51C0 23.22.79 24 1.77 24h20.45C23.21 24 24 23.22 24 22.25V1.74C24 .78 23.21 0 22.22 0Z"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.51 3.5 12 3.5 12 3.5s-7.51 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.49 20.5 12 20.5 12 20.5s7.51 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#platforms">Platforms</a></li>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#install">Shopify App Store</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Migrations</h4>
+          <ul>
+            <li><a href="#platforms">WooCommerce → Shopify</a></li>
+            <li><a href="#platforms">Magento → Shopify</a></li>
+            <li><a href="#platforms">Wix → Shopify</a></li>
+            <li><a href="#platforms">Squarespace → Shopify</a></li>
+            <li><a href="#waitlist">BigCommerce → Shopify</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Status</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> ShiftItNow. Made for Shopify merchants who don't have time to lose.</p>
+        <p class="footer-meta">Shopify is a trademark of Shopify Inc. ShiftItNow is an independent app and is not endorsed by Shopify Inc.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
