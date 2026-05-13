@@ -5,6 +5,20 @@
 (() => {
   'use strict';
 
+  /* ---------- 0. Announcement bar dismiss ---------- */
+  const announceClose = document.getElementById('announceClose');
+  const announcementBar = document.getElementById('announcementBar');
+
+  if (announceClose && announcementBar) {
+    announceClose.addEventListener('click', () => {
+      announcementBar.style.transition = 'opacity 200ms, max-height 300ms';
+      announcementBar.style.opacity = '0';
+      announcementBar.style.maxHeight = '0';
+      announcementBar.style.overflow = 'hidden';
+      setTimeout(() => announcementBar.remove(), 300);
+    });
+  }
+
   /* ---------- 1. Mobile nav toggle ---------- */
   const navToggle = document.getElementById('navToggle');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -61,7 +75,49 @@
     revealTargets.forEach(el => el.classList.add('in-view'));
   }
 
-  /* ---------- 4. Stat counters ---------- */
+  /* ---------- 4. Card sliders (mobile) ---------- */
+  function initCardSlider(gridSel, cardSel, dotClass) {
+    const grid = document.querySelector(gridSel);
+    if (!grid) return;
+
+    const existing = grid.parentNode.querySelector('.' + dotClass);
+    if (existing) existing.remove();
+
+    if (window.innerWidth > 768) return;
+
+    const cards = Array.from(grid.querySelectorAll(cardSel));
+    if (cards.length === 0) return;
+
+    const wrap = document.createElement('div');
+    wrap.className = dotClass;
+    cards.forEach((card, i) => {
+      const btn = document.createElement('button');
+      btn.className = dotClass.replace('s', '') + (i === 0 ? ' active' : '');
+      btn.setAttribute('aria-label', 'View item ' + (i + 1));
+      btn.addEventListener('click', () => {
+        grid.scrollTo({ left: card.offsetLeft - grid.offsetLeft, behavior: 'smooth' });
+      });
+      wrap.appendChild(btn);
+    });
+    grid.after(wrap);
+
+    const dots = wrap.querySelectorAll('.' + dotClass.replace('s', ''));
+    grid.addEventListener('scroll', () => {
+      const cardWidth = cards[0].offsetWidth + 12;
+      const idx = Math.min(Math.round(grid.scrollLeft / cardWidth), cards.length - 1);
+      dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+    }, { passive: true });
+  }
+
+  function initAllSliders() {
+    initCardSlider('.feature-grid',  '.feature-card',  'feature-dots');
+    initCardSlider('.platform-grid', '.platform-card', 'platform-dots');
+  }
+
+  initAllSliders();
+  window.addEventListener('resize', initAllSliders);
+
+  /* ---------- 5. Stat counters ---------- */
   const stats = document.querySelectorAll('.stat-num');
   const animateStat = (el) => {
     const target = parseFloat(el.dataset.target);

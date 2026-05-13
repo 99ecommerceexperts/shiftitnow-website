@@ -1,0 +1,394 @@
+/* ============================================================
+   ShiftItNow — Mobile & Responsive Styles
+   All media queries live here. styles.css (desktop) is untouched.
+   ============================================================ */
+
+/* ---------- 125% zoom on 1920p / very large desktop (≤1600px) ---------- */
+@media (max-width: 1600px) {
+  /* Scale section spacing ~20% */
+  :root { --section-y: clamp(58px, 8vw, 104px); }
+
+  /* Headings ~20% smaller */
+  h1 { font-size: clamp(2rem, 4.4vw, 3.5rem); }
+  h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
+  h3 { font-size: 1.1rem; }
+
+  /* Hero */
+  .hero-inner  { column-gap: 48px; }
+  .hero-visual { max-width: 520px; }
+  .hero-title  { font-size: clamp(1.5rem, 2.4vw, 2.1rem); }
+  .hero-sub    { font-size: clamp(0.88rem, 1.1vw, 1rem); }
+
+  /* Body/sub text */
+  .section-sub { font-size: clamp(0.88rem, 1.1vw, 1rem); }
+
+  /* Stat numbers ~20% smaller */
+  .stat-num  { font-size: clamp(2rem, 4vw, 2.9rem); }
+  .stat-unit { font-size: clamp(1.6rem, 3.2vw, 2.3rem); }
+
+  /* Card paddings ~20% smaller */
+  .feature-card  { padding: 26px 22px; }
+  .platform-card { padding: 22px 20px; }
+  .testimonial   { padding: 26px 24px; }
+  .price-card    { padding: 29px 24px; }
+  .cta-card      { padding: 42px 38px; }
+
+  /* Platform card internals ~20% smaller */
+  .platform-logo          { width: 42px; height: 42px; margin-bottom: 14px; }
+  .platform-card h3       { font-size: 1rem; }
+  .platform-card p        { font-size: 0.82rem; margin-bottom: 14px; }
+  .platform-card .badge   { font-size: 0.72rem; padding: 4px 10px; }
+
+  /* Chip offsets */
+  .chip-woo         { left: -5%;  }
+  .chip-magento     { right: -5%; }
+  .chip-wix         { left: -4%;  }
+  .chip-squarespace { right: -3%; }
+  .chip-shopify     { right: -6%; }
+}
+
+/* ---------- Large desktops / 125% zoom on 1920p (≤1400px) ---------- */
+@media (max-width: 1400px) {
+  .hero-inner { gap: 48px; }
+  .hero-visual { max-width: 500px; }
+
+  /* Pull chips with large negative offsets inward */
+  .chip-woo         { left: -4%; }
+  .chip-magento     { right: -4%; }
+  .chip-wix         { left: -5%; }
+  .chip-squarespace { right: -2%; }
+  .chip-shopify     { right: -8%; }
+}
+
+/* ---------- Mid-range / 125% zoom on 1440p (≤1200px) ---------- */
+@media (max-width: 1200px) {
+  .hero-inner { gap: 36px; }
+  .hero-visual { max-width: 460px; }
+  .hero-title  { font-size: clamp(1.7rem, 2.8vw, 2.4rem); }
+
+  /* Chips fully inside visual — no overflow */
+  .chip-woo         { left: 0%; }
+  .chip-magento     { right: 0%; }
+  .chip-wix         { left: -2%; }
+  .chip-squarespace { right: -2%; }
+  .chip-shopify     { right: -6%; }
+
+  .feature-grid  { gap: 16px; }
+  .platform-grid { gap: 16px; }
+}
+
+/* ---------- Large tablets / small laptops (≤1100px) ---------- */
+@media (max-width: 1100px) {
+  .footer-grid { grid-template-columns: 1.4fr 1fr 1fr; }
+  .footer-grid > :nth-child(4) { grid-column: 1 / -1; }
+
+  .platform-grid { grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .feature-grid  { grid-template-columns: repeat(3, 1fr); gap: 18px; }
+
+  /* Hero tightening for 125% on 1366p screens */
+  .hero-inner  { gap: 28px; }
+  .hero-visual { max-width: 420px; }
+  .primary-nav a { font-size: 0.88rem; }
+
+  /* Chips fully inward — matches tablet values */
+  .chip-woo         { left: 2%; }
+  .chip-magento     { right: 2%; }
+  .chip-wix         { left: 2%; }
+  .chip-squarespace { right: 2%; }
+  .chip-shopify     { right: -4%; }
+}
+
+/* ---------- Tablets (≤960px) ---------- */
+@media (max-width: 960px) {
+  /* Hero: switch to flex column so visual can be reordered between text and buttons */
+  .hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+  .hero-copy   { order: 1; max-width: 700px; width: 100%; }
+  .hero-visual { order: 2; max-width: 440px; margin-top: 24px; }
+  .hero-cta    { order: 3; justify-content: center; margin-top: 28px; }
+  .hero-trust  { order: 4; justify-content: center; margin-top: 20px; }
+  .hero-sub    { margin-left: auto; margin-right: auto; }
+
+  /* Pull chips inward so they don't overflow on tablet */
+  .chip-woo         { left: 2%; }
+  .chip-magento     { right: 2%; }
+  .chip-wix         { left: 2%; }
+  .chip-squarespace { right: 2%; }
+  .chip-shopify     { right: -4%; }
+
+  /* Vertical roadmap layout */
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .steps::before {
+    content: '';
+    position: absolute;
+    left: 29px;
+    top: 30px;
+    bottom: 30px;
+    width: 2px;
+    background: repeating-linear-gradient(
+      180deg,
+      var(--teal-light) 0, var(--teal-light) 6px,
+      transparent 6px, transparent 12px
+    );
+    z-index: 0;
+  }
+  .step-line { display: none; }
+  .step {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: auto auto auto;
+    column-gap: 16px;
+    text-align: left;
+    padding: 0 0 32px 0;
+  }
+  .step:last-child { padding-bottom: 0; }
+  .step-num {
+    grid-column: 1;
+    grid-row: 1 / 4;
+    align-self: start;
+    margin-bottom: 0;
+  }
+  .step h3   { grid-column: 2; grid-row: 1; margin-bottom: 6px; }
+  .step p    { grid-column: 2; grid-row: 2; margin-bottom: 10px; }
+  .step-time { grid-column: 2; grid-row: 3; align-self: start; justify-self: start; }
+
+  .migrated-inner,
+  .contact-inner,
+  .faq-inner { grid-template-columns: 1fr; }
+  .section-head-left { max-width: 100%; }
+
+  .stat-grid { grid-template-columns: repeat(2, 1fr); gap: 32px 16px; }
+  .testimonial-grid { gap: 16px; }
+  :root { --section-y: clamp(56px, 9vw, 100px); }
+
+  .price-card-featured { transform: none; }
+  .price-card-featured:hover { transform: translateY(-4px); }
+
+  .platform-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .feature-grid  { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+  .cta-card    { padding: 40px 32px; border-radius: 20px; }
+  .cta-content h2 { font-size: 1.7rem; }
+}
+
+/* ---------- Phones (≤768px) ---------- */
+@media (max-width: 768px) {
+  /* Navigation — hide all nav buttons except hamburger */
+  .primary-nav { display: none; }
+  .nav-cta .btn:not(.nav-toggle) { display: none; }
+  .nav-toggle { display: flex; }
+
+  /* Announcement bar — single row on phone */
+  .announcement-bar { overflow: hidden; }
+  .announcement-inner {
+    font-size: 0.72rem;
+    padding: 7px 36px 7px 12px;
+    gap: 6px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+  .announcement-inner > span:not(.announce-dot) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+  }
+  .announce-link { white-space: nowrap; flex-shrink: 0; }
+  .announce-dot { display: none; }
+  .announce-close {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 26px;
+  }
+
+  /* Hero section spacing */
+  .hero { padding-top: 16px; }
+  .hero-inner { padding-top: 20px; padding-bottom: 36px; }
+
+  /* Hero text — smaller to fit 2-3 lines max */
+  .hero-title { font-size: 1.75rem; }
+  .hero-sub   { font-size: 0.88rem; margin-top: 12px; max-width: 100%; }
+
+  /* CTA buttons — full width stacked */
+  .hero-cta         { margin-top: 22px; flex-direction: column; align-items: stretch; width: 100%; }
+  .hero-cta .btn    { width: 100%; }
+  .hero-trust       { margin-top: 14px; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 10px 12px; }
+  .hero-trust li    { width: calc(50% - 6px); justify-content: center; }
+
+  .trust-strip-logos { gap: 8px 14px; font-size: 0.82rem; }
+
+  /* Hero visual */
+  .hero-visual { max-width: 300px; margin-top: 16px; }
+
+  /* Chips — icon only on mobile (hide text label to prevent overlap) */
+  .chip > span:last-child { display: none; }
+  .chip      { padding: 5px; gap: 0; }
+  .chip-icon { width: 20px; height: 20px; font-size: 0.58rem; }
+
+  /* 5 chips at clock positions on the orbit */
+  .chip-woo         { top: 28%;    left: 2%; }
+  .chip-magento     { top: 8%;     right: 8%; }
+  .chip-wix         { bottom: 22%; left: 2%; }
+  .chip-squarespace { bottom: 8%;  right: 8%; }
+  .chip-shopify     { top: 48%;    right: 2%; transform: none; }
+  .chip-shopify     { animation-name: floatChip; }
+
+  .data-pill   { font-size: 0.62rem; padding: 4px 8px; gap: 4px; }
+  .data-pill-1 { top: 6%; left: 2%; right: auto; transform: none; white-space: nowrap; }
+  .data-pill-2 { bottom: -2%; left: 50%; transform: translateX(-50%); white-space: nowrap; }
+  .data-pill-3 { display: none; }
+
+  /* Footer */
+  .footer-grid   { grid-template-columns: 1fr 1fr; }
+  .footer-brand  { grid-column: 1 / -1; }
+  .footer-bottom { flex-direction: column; text-align: center; align-items: flex-start; }
+
+  .migrated-grid { grid-template-columns: 1fr; gap: 22px; }
+  .form-row      { grid-template-columns: 1fr; }
+  .contact-items li { grid-template-columns: 1fr; gap: 4px; }
+
+  /* Platform cards — horizontal swipe slider */
+  .platforms .container { overflow: hidden; }
+  .platform-grid {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 12px;
+    padding: 4px 0 20px 0;
+    scrollbar-width: none;
+    grid-template-columns: unset;
+  }
+  .platform-grid::-webkit-scrollbar { display: none; }
+  .platform-card {
+    flex: 0 0 96%;
+    max-width: 96%;
+    scroll-snap-align: start;
+  }
+  .platform-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+  }
+  .platform-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--border-strong);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background 200ms, width 200ms, border-radius 200ms;
+    flex-shrink: 0;
+  }
+  .platform-dot.active {
+    background: var(--teal);
+    width: 24px;
+    border-radius: 4px;
+  }
+  .platform-grid .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Feature cards — horizontal swipe slider */
+  .features .container { overflow: hidden; }
+  .feature-grid {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 12px;
+    padding: 4px 0 20px 0;
+    scrollbar-width: none;
+    grid-template-columns: unset;
+  }
+  .feature-grid::-webkit-scrollbar { display: none; }
+  .feature-card {
+    flex: 0 0 96%;
+    max-width: 96%;
+    scroll-snap-align: start;
+    padding: 24px 20px;
+  }
+  /* Dots */
+  .feature-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+  }
+  .feature-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--border-strong);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background 200ms, width 200ms, border-radius 200ms;
+    flex-shrink: 0;
+  }
+  .feature-dot.active {
+    background: var(--teal);
+    width: 24px;
+    border-radius: 4px;
+  }
+  /* Disable scroll-reveal stagger for off-screen slider cards */
+  .feature-grid .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* CTA section card */
+  .cta-card    { padding: 36px 24px; border-radius: 18px; }
+  .cta-content h2 { font-size: 1.5rem; }
+  .cta-buttons { flex-direction: column; align-items: center; }
+  .cta-buttons .btn { width: 100%; max-width: 320px; }
+}
+
+/* ---------- Small phones (≤480px) ---------- */
+@media (max-width: 480px) {
+  :root { --gutter: 18px; }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.7rem; }
+  .hero-title { font-size: 1.55rem; }
+
+  .testimonial   { padding: 26px 22px; }
+  .price-card    { padding: 28px 22px; }
+  .platform-card { padding: 24px 22px; }
+
+  .cta-card    { padding: 30px 20px; border-radius: 16px; }
+  .cta-content h2 { font-size: 1.35rem; }
+
+  /* Hero visual — smallest phones */
+  .hero-visual { max-width: 260px; }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; }
+}
