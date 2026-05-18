@@ -177,8 +177,10 @@
   .platform-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .feature-grid  { grid-template-columns: repeat(2, 1fr); gap: 16px; }
 
+  .cta-section { padding-top: clamp(40px, 6vw, 64px); padding-bottom: clamp(40px, 6vw, 64px); }
   .cta-card    { padding: 40px 32px; border-radius: 20px; }
   .cta-content h2 { font-size: 1.7rem; }
+  .cta-buttons { gap: 12px; }
 }
 
 /* ---------- Phones (≤768px) ---------- */
@@ -358,10 +360,18 @@
   }
 
   /* CTA section card */
+  .cta-section { padding-top: 32px; padding-bottom: 32px; }
   .cta-card    { padding: 36px 24px; border-radius: 18px; }
   .cta-content h2 { font-size: 1.5rem; }
-  .cta-buttons { flex-direction: column; align-items: center; }
-  .cta-buttons .btn { width: 100%; max-width: 320px; }
+  .cta-content p  { font-size: 0.92rem; }
+  .cta-buttons { flex-direction: column; align-items: stretch; gap: 10px; }
+  .cta-buttons .btn { width: 100%; }
+}
+
+/* ---------- Tablet landscape — migrated grid (≤600px) ---------- */
+@media (max-width: 600px) {
+  .migrated-grid { grid-template-columns: 1fr; gap: 18px; }
+  .migrated-inner { gap: clamp(28px, 5vw, 48px); }
 }
 
 /* ---------- Small phones (≤480px) ---------- */
@@ -375,11 +385,40 @@
   .price-card    { padding: 28px 22px; }
   .platform-card { padding: 24px 22px; }
 
-  .cta-card    { padding: 30px 20px; border-radius: 16px; }
-  .cta-content h2 { font-size: 1.35rem; }
+  .cta-section { padding-top: 24px; padding-bottom: 24px; }
+  .cta-card    { padding: 28px 18px; border-radius: 16px; }
+  .cta-content h2 { font-size: 1.3rem; }
+  .cta-content p  { font-size: 0.88rem; }
+
+  /* Pricing plan cards — stack to single column */
+  .pricing-grid { grid-template-columns: 1fr; gap: 16px; }
+  .price-card-featured { transform: none; box-shadow: var(--shadow-md); }
+  .price-card-featured:hover { transform: translateY(-4px); }
+
+  /* Section head — prevent text clipping on inner pages */
+  .section-head { padding: 0; }
 
   /* Hero visual — smallest phones */
   .hero-visual { max-width: 260px; }
+}
+
+/* ---------- Very small phones (≤380px) ---------- */
+@media (max-width: 380px) {
+  h2 { font-size: 1.5rem; }
+
+  /* Stats — full single column so numbers aren't cramped */
+  .stat-grid { grid-template-columns: 1fr; gap: 20px; text-align: left; }
+  .stat-value { justify-content: flex-start; }
+
+  /* Footer — collapse to one column */
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-grid > * { grid-column: 1; }
+
+  /* Contact items */
+  .contact-items li { gap: 2px; }
+
+  /* Announcement bar */
+  .announcement-inner { font-size: 0.68rem; }
 }
 
 /* ---------- Reduced motion ---------- */

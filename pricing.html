@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0A1F2E" />
+  <meta name="theme-color" content="#EDE8DC" />
   <title>Pricing — ShiftItNow</title>
   <meta name="description" content="Simple, one-time pricing for your Shopify migration. No subscriptions. No hidden fees. Try a free demo before you commit a dollar." />
 
   <link rel="icon" type="image/webp" href="assets/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="mobile.css" />
   <link rel="stylesheet" href="pricing-calc.css" />
 </head>
-<body>
+<body class="pricing-page">
 
   <!-- ============== ANNOUNCEMENT BAR ============== -->
   <div class="announcement-bar" id="announcementBar" role="region" aria-label="Announcement">
@@ -41,7 +41,7 @@
         <ul>
           <li><a href="index.html#platforms">Platforms</a></li>
           <li><a href="index.html#features">Features</a></li>
-          <li><a href="index.html#how">How it works</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
           <li><a href="pricing.html" class="nav-active">Pricing</a></li>
           <li><a href="index.html#faq">FAQ</a></li>
         </ul>
@@ -64,7 +64,7 @@
       <ul>
         <li><a href="index.html#platforms">Platforms</a></li>
         <li><a href="index.html#features">Features</a></li>
-        <li><a href="index.html#how">How it works</a></li>
+        <li><a href="how-it-works.html">How it works</a></li>
         <li><a href="pricing.html">Pricing</a></li>
         <li><a href="index.html#faq">FAQ</a></li>
         <li><a href="index.html#contact">Talk to sales</a></li>
@@ -75,245 +75,297 @@
 
   <main>
 
-    <!-- ============== PRICING CALCULATOR ============== -->
-    <section class="section pricing-calc-section" id="pricing">
+    <!-- ============== HERO ============== -->
+    <section class="calc-hero">
       <div class="container">
+        <span class="calc-live-badge">• Live Migration Estimator</span>
+        <h1 class="calc-hero-title">
+          Move your store to <em class="calc-shopify-word">Shopify</em><br>
+          without the spreadsheet.
+        </h1>
+        <p class="calc-hero-sub">
+          Pick where you're coming from, drop in a few numbers, and we'll match
+          you to the right migration plan — in real time, no quotes.
+        </p>
+        <span class="calc-migrate-tag">Migrate</span>
+      </div>
+    </section>
 
-        <div class="section-head">
-          <span class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> Pricing</span>
-          <h2>Straightforward pricing. No surprises.</h2>
-          <p class="section-sub">Pay once per migration. No subscriptions. No hidden fees. Try a free demo before you commit a dollar.</p>
+    <!-- ============== CALCULATOR ============== -->
+    <section class="container">
+      <div class="calc-wrapper">
+
+        <!-- PLATFORM SELECTOR ROW -->
+        <div class="calc-platform-row">
+
+          <!-- FROM (dropdown) -->
+          <div class="calc-platform-card is-from" id="fromCard" role="button" aria-haspopup="listbox" aria-expanded="false" tabindex="0">
+            <div class="calc-plat-step">
+              <span class="calc-plat-num">1</span>
+              <span class="calc-plat-step-label">From</span>
+            </div>
+            <div class="calc-plat-inner">
+              <div class="calc-plat-icon" id="fromIcon">
+                <!-- Icon injected by JS -->
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              </div>
+              <div class="calc-plat-info">
+                <span class="calc-plat-name" id="fromName">WooCommerce</span>
+                <span class="calc-plat-sub"  id="fromSub">WordPress plugin</span>
+              </div>
+              <svg class="calc-plat-chevron" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+
+            <!-- Dropdown -->
+            <div class="calc-plat-dropdown" role="listbox" id="platformDropdown">
+              <div class="calc-plat-option active" data-platform="woocommerce" data-name="WooCommerce" data-sub="WordPress plugin" role="option">
+                <div class="calc-plat-opt-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                </div>
+                <div>
+                  <span class="calc-plat-opt-name">WooCommerce</span>
+                  <span class="calc-plat-opt-sub">WordPress plugin</span>
+                </div>
+              </div>
+              <div class="calc-plat-option" data-platform="wix" data-name="Wix" data-sub="Wix Stores" role="option">
+                <div class="calc-plat-opt-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12h8m-4-4 4 4-4 4"/></svg>
+                </div>
+                <div>
+                  <span class="calc-plat-opt-name">Wix</span>
+                  <span class="calc-plat-opt-sub">Wix Stores</span>
+                </div>
+              </div>
+              <div class="calc-plat-option" data-platform="squarespace" data-name="Squarespace" data-sub="7.0 or 7.1" role="option">
+                <div class="calc-plat-opt-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+                </div>
+                <div>
+                  <span class="calc-plat-opt-name">Squarespace</span>
+                  <span class="calc-plat-opt-sub">7.0 or 7.1</span>
+                </div>
+              </div>
+              <div class="calc-plat-option" data-platform="magento" data-name="Magento" data-sub="Adobe Commerce" role="option">
+                <div class="calc-plat-opt-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                </div>
+                <div>
+                  <span class="calc-plat-opt-name">Magento</span>
+                  <span class="calc-plat-opt-sub">Adobe Commerce</span>
+                </div>
+              </div>
+              <div class="calc-plat-option" data-platform="csv" data-name="CSV / Excel" data-sub="Spreadsheet import" role="option">
+                <div class="calc-plat-opt-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
+                </div>
+                <div>
+                  <span class="calc-plat-opt-name">CSV / Excel</span>
+                  <span class="calc-plat-opt-sub">Spreadsheet import</span>
+                </div>
+              </div>
+              <div class="calc-plat-option" data-platform="other" data-name="Other / Custom" data-sub="Custom platform" role="option">
+                <div class="calc-plat-opt-icon">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+                </div>
+                <div>
+                  <span class="calc-plat-opt-name">Other / Custom</span>
+                  <span class="calc-plat-opt-sub">Custom platform</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Arrow -->
+          <div class="calc-platform-arrow" aria-hidden="true">›</div>
+
+          <!-- TO (locked) -->
+          <div class="calc-platform-card">
+            <div class="calc-plat-step">
+              <span class="calc-plat-num" style="background:var(--teal-dark);">2</span>
+              <span class="calc-plat-step-label">To</span>
+              <span class="calc-locked-badge">Locked</span>
+            </div>
+            <div class="calc-plat-inner">
+              <div class="calc-plat-icon shopify-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M19.5 8.25h-3.75V6a3.75 3.75 0 0 0-7.5 0v2.25H4.5A1.5 1.5 0 0 0 3 9.75v9.75A1.5 1.5 0 0 0 4.5 21h15a1.5 1.5 0 0 0 1.5-1.5V9.75a1.5 1.5 0 0 0-1.5-1.5Zm-9.75-2.25a2.25 2.25 0 0 1 4.5 0v2.25h-4.5V6Z"/></svg>
+              </div>
+              <div class="calc-plat-info">
+                <span class="calc-plat-name">Shopify</span>
+                <span class="calc-plat-sub">→ Free trial + 3 months for $1</span>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.calc-platform-row -->
+
+        <!-- MAIN CARD -->
+        <div class="calc-main-card">
+
+          <!-- LEFT: inputs -->
+          <div class="calc-inputs-panel">
+            <div class="calc-inputs-label">What are we moving?</div>
+
+            <div class="calc-input-row">
+              <div class="calc-input-icon-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="8" height="8" rx="1"/><rect x="14" y="3" width="8" height="8" rx="1"/><rect x="2" y="13" width="8" height="8" rx="1"/><rect x="14" y="13" width="8" height="8" rx="1"/></svg>
+              </div>
+              <div class="calc-input-meta">
+                <h4>Products</h4>
+                <input type="number" class="calc-big-input" id="inputProducts" placeholder="0" min="0" value="0" aria-label="Number of products" />
+              </div>
+              <div class="calc-input-edit-icon">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+              </div>
+            </div>
+
+            <div class="calc-input-row">
+              <div class="calc-input-icon-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              </div>
+              <div class="calc-input-meta">
+                <h4>Customers</h4>
+                <input type="number" class="calc-big-input" id="inputCustomers" placeholder="0" min="0" value="0" aria-label="Number of customers" />
+              </div>
+              <div class="calc-input-edit-icon">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+              </div>
+            </div>
+
+            <div class="calc-input-row">
+              <div class="calc-input-icon-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+              </div>
+              <div class="calc-input-meta">
+                <h4>Orders</h4>
+                <input type="number" class="calc-big-input" id="inputOrders" placeholder="0" min="0" value="0" aria-label="Number of orders" />
+              </div>
+              <div class="calc-input-edit-icon">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+              </div>
+            </div>
+
+            <div class="calc-input-row">
+              <div class="calc-input-icon-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              </div>
+              <div class="calc-input-meta">
+                <h4>Pages</h4>
+                <input type="number" class="calc-big-input" id="inputPages" placeholder="0" min="0" value="0" aria-label="Number of pages" />
+              </div>
+              <div class="calc-input-edit-icon">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+              </div>
+            </div>
+
+            <div class="calc-input-row">
+              <div class="calc-input-icon-sm">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+              </div>
+              <div class="calc-input-meta">
+                <h4>Blog Posts</h4>
+                <input type="number" class="calc-big-input" id="inputPosts" placeholder="0" min="0" value="0" aria-label="Number of blog posts" />
+              </div>
+              <div class="calc-input-edit-icon">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+              </div>
+            </div>
+
+          </div><!-- /.calc-inputs-panel -->
+
+          <!-- RIGHT: result -->
+          <div class="calc-result-panel">
+            <div class="calc-result-live-label">Your Migration · Live</div>
+            <div class="calc-price-display" id="priceDisplay">Free</div>
+            <div class="calc-price-meta"    id="priceMeta">No service charge</div>
+            <div class="calc-result-plan-name" id="resultPlanName">Starter plan</div>
+            <div class="calc-data-pills" id="dataPills"></div>
+            <div class="calc-result-divider"></div>
+            <div class="calc-plan-features" id="planFeatures"></div>
+            <div class="calc-capacity-section">
+              <div class="calc-capacity-row">
+                <span class="calc-capacity-label">Plan capacity</span>
+                <span class="calc-capacity-pct" id="capacityPct">0% used</span>
+              </div>
+              <div class="calc-capacity-bar-track">
+                <div class="calc-capacity-bar-fill" id="capacityBar"></div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.calc-main-card -->
+
+        <!-- PLAN SELECTOR -->
+        <div class="calc-plan-selector">
+          <div class="calc-plan-card active" data-plan-id="free">
+            <span class="calc-plan-tier">Starter</span>
+            <span class="calc-plan-price">Free</span>
+            <span class="calc-plan-capacity">up to 100 products</span>
+            <span class="calc-plan-check" aria-hidden="true">
+              <svg viewBox="0 0 12 12" width="8" height="8" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+            </span>
+          </div>
+          <div class="calc-plan-card" data-plan-id="growth">
+            <span class="calc-plan-tier">Growth</span>
+            <span class="calc-plan-price">$89</span>
+            <span class="calc-plan-capacity">up to 1,000 products</span>
+            <span class="calc-plan-check" aria-hidden="true">
+              <svg viewBox="0 0 12 12" width="8" height="8" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+            </span>
+          </div>
+          <div class="calc-plan-card" data-plan-id="scale">
+            <span class="calc-plan-tier">Scale</span>
+            <span class="calc-plan-price">$149</span>
+            <span class="calc-plan-capacity">up to 10,000 products</span>
+            <span class="calc-plan-check" aria-hidden="true">
+              <svg viewBox="0 0 12 12" width="8" height="8" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+            </span>
+          </div>
+          <div class="calc-plan-card" data-plan-id="enterprise">
+            <span class="calc-plan-tier">Enterprise</span>
+            <span class="calc-plan-price">Custom</span>
+            <span class="calc-plan-capacity">unlimited</span>
+            <span class="calc-plan-check" aria-hidden="true">
+              <svg viewBox="0 0 12 12" width="8" height="8" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+            </span>
+          </div>
+        </div><!-- /.calc-plan-selector -->
+
+        <!-- CTA ROW -->
+        <div class="calc-cta-row">
+          <a href="index.html#contact" class="calc-secondary-btn" id="expertBtn">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Chat with an expert
+          </a>
+          <a href="index.html#install" class="calc-primary-btn" id="ctaBtn">
+            <span id="ctaBtnText">Get started — install free</span>
+            <span class="calc-btn-arrow">
+              <svg viewBox="0 0 12 12" width="8" height="8" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4"/></svg>
+            </span>
+          </a>
         </div>
 
-        <!-- ══════════════ CALCULATOR CARD ══════════════ -->
-        <div class="calc-card">
-
-          <!-- HEADER -->
-          <div class="calc-header">
-            <div class="calc-logo-wrap">
-              <img src="assets/logo.webp" alt="ShiftItNow" />
-            </div>
-            <div class="calc-header-text">
-              <h3>Migration Cost Calculator</h3>
-              <p>Enter your store data — we'll find the right plan for you instantly</p>
-            </div>
-            <div class="calc-header-badge">
-              <span class="hb-label">Service Charge</span>
-              <span class="hb-price" id="hbPrice">Free</span>
-              <span class="hb-sub"   id="hbSub">no charge</span>
-            </div>
+        <!-- TRUST BAR -->
+        <div class="calc-trust-bar">
+          <div class="calc-trust-left">
+            <span class="calc-trust-stars">★★★★★</span>
+            <span><strong>4.9/5</strong> · 2,400+ successful migrations</span>
           </div>
-
-          <!-- BODY -->
-          <div class="calc-body">
-
-            <!-- ── LEFT ── -->
-            <div class="calc-left">
-
-              <div class="calc-step-label">Step 1 — Migrating from</div>
-              <div class="plat-select-grid">
-
-                <button class="plat-btn active" data-platform="woocommerce" type="button">
-                  <div class="plat-btn-icon">
-                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
-                    </svg>
-                  </div>
-                  <span class="plat-name">WooCommerce</span>
-                </button>
-
-                <button class="plat-btn" data-platform="wix" type="button">
-                  <div class="plat-btn-icon">
-                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <circle cx="12" cy="12" r="10"/><path d="M8 12h8m-4-4 4 4-4 4"/>
-                    </svg>
-                  </div>
-                  <span class="plat-name">Wix</span>
-                </button>
-
-                <button class="plat-btn" data-platform="squarespace" type="button">
-                  <div class="plat-btn-icon">
-                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
-                    </svg>
-                  </div>
-                  <span class="plat-name">Squarespace</span>
-                </button>
-
-                <button class="plat-btn" data-platform="wordpress" type="button">
-                  <div class="plat-btn-icon">
-                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
-                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                    </svg>
-                  </div>
-                  <span class="plat-name">WordPress</span>
-                </button>
-
-                <button class="plat-btn" data-platform="csv" type="button">
-                  <div class="plat-btn-icon">
-                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <rect x="3" y="3" width="18" height="18" rx="2"/>
-                      <line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/>
-                      <line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/>
-                    </svg>
-                  </div>
-                  <span class="plat-name">CSV / Excel</span>
-                </button>
-
-                <button class="plat-btn" data-platform="other" type="button">
-                  <div class="plat-btn-icon">
-                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/>
-                    </svg>
-                  </div>
-                  <span class="plat-name">Other</span>
-                </button>
-
-              </div><!-- /.plat-select-grid -->
-
-              <div class="calc-step-label">Step 2 — Enter your store data</div>
-              <div class="calc-input-list">
-
-                <div class="calc-input-row">
-                  <div class="calc-input-icon">
-                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <rect x="2" y="3" width="8" height="8" rx="1"/><rect x="14" y="3" width="8" height="8" rx="1"/><rect x="2" y="13" width="8" height="8" rx="1"/><rect x="14" y="13" width="8" height="8" rx="1"/>
-                    </svg>
-                  </div>
-                  <div class="calc-input-label"><h4>Products</h4><p>Total products in your store</p></div>
-                  <div class="calc-num-wrap">
-                    <input type="number" class="calc-qty-input" id="inputProducts" placeholder="0" min="0" value="0" />
-                    <span class="calc-qty-unit">products</span>
-                  </div>
-                </div>
-
-                <div class="calc-input-row">
-                  <div class="calc-input-icon">
-                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
-                    </svg>
-                  </div>
-                  <div class="calc-input-label"><h4>Customers</h4><p>Total registered customers</p></div>
-                  <div class="calc-num-wrap">
-                    <input type="number" class="calc-qty-input" id="inputCustomers" placeholder="0" min="0" value="0" />
-                    <span class="calc-qty-unit">customers</span>
-                  </div>
-                </div>
-
-                <div class="calc-input-row">
-                  <div class="calc-input-icon">
-                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                      <polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/>
-                    </svg>
-                  </div>
-                  <div class="calc-input-label"><h4>Orders</h4><p>Total past orders to migrate</p></div>
-                  <div class="calc-num-wrap">
-                    <input type="number" class="calc-qty-input" id="inputOrders" placeholder="0" min="0" value="0" />
-                    <span class="calc-qty-unit">orders</span>
-                  </div>
-                </div>
-
-                <div class="calc-input-row">
-                  <div class="calc-input-icon">
-                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
-                      <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
-                    </svg>
-                  </div>
-                  <div class="calc-input-label"><h4>Pages</h4><p>Static pages (About, Contact…)</p></div>
-                  <div class="calc-num-wrap">
-                    <input type="number" class="calc-qty-input" id="inputPages" placeholder="0" min="0" value="0" />
-                    <span class="calc-qty-unit">pages</span>
-                  </div>
-                </div>
-
-                <div class="calc-input-row">
-                  <div class="calc-input-icon">
-                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-                      <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-                    </svg>
-                  </div>
-                  <div class="calc-input-label"><h4>Blog Posts</h4><p>Total blog / news articles</p></div>
-                  <div class="calc-num-wrap">
-                    <input type="number" class="calc-qty-input" id="inputPosts" placeholder="0" min="0" value="0" />
-                    <span class="calc-qty-unit">posts</span>
-                  </div>
-                </div>
-
-              </div><!-- /.calc-input-list -->
-            </div><!-- /.calc-left -->
-
-            <!-- ── RIGHT ── -->
-            <div class="calc-right">
-
-              <div class="calc-right-label">Recommended Plan</div>
-
-              <div class="calc-result-plan" id="resultPlan">
-                <span class="calc-rec-badge" id="recBadge">Best match for your needs</span>
-                <div class="calc-plan-name" id="planName">Starter</div>
-                <div class="calc-price-row">
-                  <span class="calc-price-num is-free" id="planPrice">Free</span>
-                  <span class="calc-price-tag"         id="planPriceTag">no charge</span>
-                </div>
-                <p class="calc-plan-desc" id="planDesc">Perfect for small stores migrating to Shopify — no service charge.</p>
-                <table class="calc-limits-table">
-                  <tbody id="limitsBody">
-                    <tr><td>Products</td>  <td>Up to 100</td></tr>
-                    <tr><td>Customers</td> <td>Up to 50</td></tr>
-                    <tr><td>Orders</td>    <td>Up to 50</td></tr>
-                    <tr><td>Pages</td>     <td>Up to 5</td></tr>
-                    <tr><td>Blog Posts</td><td>Up to 5</td></tr>
-                  </tbody>
-                </table>
-                <ul class="calc-feat-list" id="featList"></ul>
-              </div>
-
-              <div class="calc-plans-label">All Plans</div>
-              <div class="calc-plans-row">
-                <div class="calc-mini-card active" data-plan-id="free">
-                  <span class="calc-mini-price">Free</span>
-                  <span class="calc-mini-name">Starter</span>
-                </div>
-                <div class="calc-mini-card" data-plan-id="growth">
-                  <span class="calc-mini-price">$89</span>
-                  <span class="calc-mini-name">Growth</span>
-                </div>
-                <div class="calc-mini-card" data-plan-id="scale">
-                  <span class="calc-mini-price">$149</span>
-                  <span class="calc-mini-name">Scale</span>
-                </div>
-                <div class="calc-mini-card is-gold" data-plan-id="enterprise">
-                  <span class="calc-mini-price">Custom</span>
-                  <span class="calc-mini-name">Enterprise</span>
-                </div>
-              </div>
-
-              <a href="index.html#install" class="calc-cta-btn" id="ctaBtn">
-                <span id="ctaBtnText">Get started — install for free</span>
-                <span class="calc-cta-arrow">
-                  <svg viewBox="0 0 12 12" width="8" height="8" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4"/></svg>
-                </span>
-              </a>
-
-            </div><!-- /.calc-right -->
-          </div><!-- /.calc-body -->
-
-          <!-- FOOTER -->
-          <div class="calc-footer">
-            <p>Powered by <a href="index.html">Shift It Now</a> — a product by Expert Village Media</p>
-            <div class="calc-trust-pills">
-              <span class="calc-trust-pill">✓ No data loss</span>
-              <span class="calc-trust-pill">✓ No downtime</span>
-              <span class="calc-trust-pill">✓ Expert support</span>
-              <span class="calc-trust-pill">✓ One-time fee</span>
-            </div>
+          <div class="calc-trust-right">
+            <span class="calc-trust-item">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              No data loss guarantee
+            </span>
+            <span class="calc-trust-item">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              Zero downtime
+            </span>
+            <span class="calc-trust-item">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              24/7 expert support
+            </span>
           </div>
+        </div>
 
-        </div><!-- /.calc-card -->
-      </div><!-- /.container -->
+      </div><!-- /.calc-wrapper -->
     </section>
 
   </main>
@@ -346,7 +398,7 @@
           <ul>
             <li><a href="index.html#features">Features</a></li>
             <li><a href="index.html#platforms">Platforms</a></li>
-            <li><a href="index.html#how">How it works</a></li>
+            <li><a href="how-it-works.html">How it works</a></li>
             <li><a href="pricing.html">Pricing</a></li>
             <li><a href="index.html#install">Shopify App Store</a></li>
           </ul>
@@ -384,68 +436,148 @@
   <script src="script.js" defer></script>
 
   <script>
-  /* ── PRICING CALCULATOR ── */
   (function () {
+    'use strict';
 
-    var CHECK = '<svg viewBox="0 0 12 12" width="7" height="7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>';
-
+    /* ── PLAN DATA ── */
     var PLANS = {
       free: {
         id: 'free', name: 'Starter',
-        priceStr: 'Free', priceTag: 'no charge',
-        isFree: true, isEnterprise: false, isContact: false,
-        desc: 'Perfect for small stores migrating to Shopify — no service charge.',
-        limits: [
-          ['Products','Up to 100'],['Customers','Up to 50'],
-          ['Orders','Up to 50'],['Pages','Up to 5'],['Blog Posts','Up to 5']
-        ],
-        features: ['100 products','50 customers','50 orders','5 pages','5 blog posts',
-          'WooCommerce, Wix, WordPress, Squarespace, CSV','Basic email support'],
-        cta: 'Get started — install for free', ctaHref: 'index.html#install'
+        priceStr: 'Free', priceMeta: 'No service charge',
+        isFree: true, isContact: false,
+        limits: { products: 100, customers: 50, orders: 500, pages: 5, posts: 5 },
+        features: ['Up to 100 products & variants', 'All images & media files', 'Basic SEO meta data', 'Email support included'],
+        cta: 'Get started — install free', ctaHref: 'index.html#install'
       },
       growth: {
         id: 'growth', name: 'Growth',
-        priceStr: '$89', priceTag: 'one-time',
-        isFree: false, isEnterprise: false, isContact: false,
-        desc: 'For growing stores that need more data migrated.',
-        limits: [
-          ['Products','Up to 1,000'],['Customers','Up to 500'],
-          ['Orders','Up to 500'],['Pages','Up to 20'],['Blog Posts','Up to 20']
-        ],
-        features: ['1,000 products','500 customers','500 orders',
-          '20 pages & 20 blog posts','SEO redirect mapping',
-          'All supported platforms','Priority email support'],
-        cta: 'Start migration', ctaHref: 'index.html#install'
+        priceStr: '$89', priceMeta: 'One-time fee · all data, all preserved',
+        isFree: false, isContact: false,
+        limits: { products: 1000, customers: 500, orders: 500, pages: 20, posts: 20 },
+        features: ['Up to 1,000 products & variants', 'Full customer & order history', 'SEO data + URL redirects', 'Priority Slack support'],
+        cta: 'Continue — Install Growth', ctaHref: 'index.html#install'
       },
       scale: {
         id: 'scale', name: 'Scale',
-        priceStr: '$149', priceTag: 'one-time',
-        isFree: false, isEnterprise: false, isContact: false,
-        desc: 'For established stores with large catalogs and customer bases.',
-        limits: [
-          ['Products','Up to 10,000'],['Customers','Up to 5,000'],
-          ['Orders','Up to 5,000'],['Pages','Up to 100'],['Blog Posts','Up to 100']
-        ],
-        features: ['10,000 products','5,000 customers & orders',
-          'Custom field mapping','Reviews, blogs & pages',
-          'Delta sync until launch','Priority chat support'],
-        cta: 'Start migration', ctaHref: 'index.html#install'
+        priceStr: '$149', priceMeta: 'One-time fee · all data, all preserved',
+        isFree: false, isContact: false,
+        limits: { products: 10000, customers: 5000, orders: 5000, pages: 100, posts: 100 },
+        features: ['Up to 10,000 products & variants', 'Bulk metafields & custom data', 'Advanced redirect mapping', 'Dedicated migration manager'],
+        cta: 'Continue — Install Scale', ctaHref: 'index.html#install'
       },
       enterprise: {
         id: 'enterprise', name: 'Enterprise',
-        priceStr: 'Custom', priceTag: 'contact sales',
-        isFree: false, isEnterprise: true, isContact: true,
-        desc: 'High-SKU, B2B, multi-store migrations — fully managed by our team.',
-        limits: [
-          ['Products','Unlimited'],['Customers','Unlimited'],
-          ['Orders','Unlimited'],['Stores','Multi-store'],['Engineer','Dedicated']
-        ],
-        features: ['Unlimited products & data','Multi-store / multi-currency',
-          'B2B catalog + price lists','Dedicated migration engineer','SLA-backed timeline'],
+        priceStr: 'Custom', priceMeta: 'Contact our sales team',
+        isFree: false, isContact: true,
+        limits: { products: Infinity, customers: Infinity, orders: Infinity, pages: Infinity, posts: Infinity },
+        features: ['Unlimited products & data', 'White-glove managed migration', 'Custom API & integrations', 'SLA + 24/7 dedicated support'],
         cta: 'Talk to sales', ctaHref: 'index.html#contact'
       }
     };
 
+    /* ── MOTION PREFERENCE ── */
+    var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* ── ANIMATION STATE ── */
+    var _prevPlanId  = null;
+    var _prevCapPct  = 0;
+    var _countFrame  = null;
+    var _capFrame    = null;
+    var _priceEl     = document.getElementById('priceDisplay');
+    var _panelEl     = _priceEl.closest('.calc-result-panel');
+
+    /* Panel-wide shimmer sweep on plan change */
+    function triggerPanelShimmer() {
+      if (prefersReduced || !_panelEl) return;
+      _panelEl.classList.remove('is-animating');
+      void _panelEl.offsetWidth;
+      _panelEl.classList.add('is-animating');
+    }
+
+    /* Spring-punch on price after count-up lands */
+    function triggerPricePunch() {
+      if (prefersReduced) return;
+      _priceEl.classList.remove('is-punch');
+      void _priceEl.offsetWidth;
+      _priceEl.classList.add('is-punch');
+    }
+
+    /* Count-up for numeric prices ($89 → $149), fade-reveal for text (Free, Custom) */
+    function animatePrice(targetText, extraClass) {
+      var prevText = _priceEl.textContent;
+      var prevNum  = parseFloat(prevText.replace(/[^0-9]/g, ''));
+      var targNum  = parseFloat(targetText.replace(/[^0-9]/g, ''));
+      var prefix   = targetText.charAt(0) === '$' ? '$' : '';
+      var canCount = !prefersReduced && !isNaN(prevNum) && !isNaN(targNum) && prevNum !== targNum;
+
+      _priceEl.className = 'calc-price-display' + extraClass;
+
+      if (canCount) {
+        if (_countFrame) { cancelAnimationFrame(_countFrame); _countFrame = null; }
+        var start = null, dur = 420, from = prevNum;
+        (function step(ts) {
+          if (!start) start = ts;
+          var t    = Math.min((ts - start) / dur, 1);
+          var ease = 1 - Math.pow(1 - t, 3);
+          _priceEl.textContent = prefix + Math.round(from + (targNum - from) * ease);
+          if (t < 1) { _countFrame = requestAnimationFrame(step); }
+          else        {
+            _priceEl.textContent = targetText;
+            _countFrame = null;
+            triggerPricePunch();
+          }
+        })();
+      } else {
+        _priceEl.textContent = targetText;
+        if (!prefersReduced && prevText !== targetText) {
+          _priceEl.classList.remove('is-switching');
+          void _priceEl.offsetWidth;
+          _priceEl.classList.add('is-switching');
+        }
+      }
+    }
+
+    /* Glow-ring pulse on the plan name badge */
+    function pulseBadge(el) {
+      if (prefersReduced) return;
+      el.classList.remove('is-pulsing');
+      void el.offsetWidth;
+      el.classList.add('is-pulsing');
+    }
+
+    /* Feature list: set HTML + staggered slide-in on plan change */
+    function populateFeatures(container, html, animate) {
+      container.innerHTML = html;
+      if (!animate || prefersReduced) return;
+      container.classList.remove('is-populating');
+      void container.offsetWidth;
+      container.classList.add('is-populating');
+    }
+
+    /* Capacity bar burst glow on value change */
+    function triggerBarBurst(bar, from, to) {
+      if (prefersReduced || from === to) return;
+      bar.classList.remove('is-filling');
+      void bar.offsetWidth;
+      bar.classList.add('is-filling');
+    }
+
+    /* Count-up for capacity percentage label */
+    function animateCapacityCount(pctEl, from, to) {
+      if (prefersReduced) { pctEl.textContent = to + '% used'; return; }
+      if (_capFrame) { cancelAnimationFrame(_capFrame); _capFrame = null; }
+      var start = null, dur = 520;
+      (function step(ts) {
+        if (!start) start = ts;
+        var t    = Math.min((ts - start) / dur, 1);
+        var ease = 1 - Math.pow(1 - t, 3);
+        pctEl.textContent = Math.round(from + (to - from) * ease) + '% used';
+        if (t < 1) { _capFrame = requestAnimationFrame(step); }
+        else        { pctEl.textContent = to + '% used'; _capFrame = null; }
+      })();
+    }
+
+    /* ── RECOMMEND ── */
     function recommend(p, c, o, pg, b) {
       p  = parseInt(p)  || 0; c  = parseInt(c)  || 0;
       o  = parseInt(o)  || 0; pg = parseInt(pg) || 0; b = parseInt(b) || 0;
@@ -455,52 +587,72 @@
       return PLANS.free;
     }
 
+    /* ── RENDER ── */
     function render(plan) {
-      /* Header badge */
-      document.getElementById('hbPrice').textContent = plan.priceStr;
-      document.getElementById('hbSub').textContent   = plan.priceTag;
+      var p  = parseInt(document.getElementById('inputProducts').value)  || 0;
+      var c  = parseInt(document.getElementById('inputCustomers').value) || 0;
+      var o  = parseInt(document.getElementById('inputOrders').value)    || 0;
+      var planChanged = plan.id !== _prevPlanId;
 
-      /* Plan card */
-      document.getElementById('resultPlan').className =
-        'calc-result-plan' + (plan.isEnterprise ? ' is-enterprise' : '');
+      /* Shimmer the whole panel on plan change */
+      if (planChanged) triggerPanelShimmer();
 
-      /* Badge */
-      document.getElementById('recBadge').className =
-        'calc-rec-badge' + (plan.isEnterprise ? ' is-enterprise' : '');
+      /* Price with count-up or reveal animation */
+      var cls = (plan.isFree ? ' is-free' : '') + (plan.isContact ? ' is-contact' : '');
+      animatePrice(plan.priceStr, cls);
 
-      /* Text */
-      document.getElementById('planName').textContent     = plan.name;
-      document.getElementById('planDesc').textContent     = plan.desc;
-      document.getElementById('planPriceTag').textContent = plan.priceTag;
+      /* Meta */
+      document.getElementById('priceMeta').textContent = plan.priceMeta;
 
-      var priceEl = document.getElementById('planPrice');
-      priceEl.textContent = plan.priceStr;
-      priceEl.className   = 'calc-price-num' +
-        (plan.isFree ? ' is-free' : '') + (plan.isContact ? ' is-contact' : '');
+      /* Plan name badge — glow-ring pulse when tier changes */
+      var planNameEl = document.getElementById('resultPlanName');
+      planNameEl.textContent = plan.name + ' plan';
+      if (planChanged) pulseBadge(planNameEl);
 
-      /* Limits */
-      document.getElementById('limitsBody').innerHTML = plan.limits.map(function(row) {
-        var gold = plan.isEnterprise ? ' class="is-gold"' : '';
-        return '<tr><td>' + row[0] + '</td><td' + gold + '>' + row[1] + '</td></tr>';
+      /* Data pills */
+      var pillsEl = document.getElementById('dataPills');
+      var pills = [];
+      if (p > 0) pills.push(p.toLocaleString() + ' products');
+      if (o > 0) pills.push(o.toLocaleString() + ' orders');
+      if (c > 0) pills.push(c.toLocaleString() + ' customers');
+      pillsEl.innerHTML = pills.map(function(t) {
+        return '<span class="calc-data-pill">' + t + '</span>';
       }).join('');
 
-      /* Features */
-      document.getElementById('featList').innerHTML = plan.features.map(function(f, i) {
-        var gold = plan.isEnterprise && i >= 2;
-        return '<li><span class="calc-feat-dot' + (gold ? ' is-gold' : '') + '">' + CHECK + '</span>' + f + '</li>';
+      /* Plan features — stagger entry only on plan change */
+      var featuresEl = document.getElementById('planFeatures');
+      var checkSvg = '<svg viewBox="0 0 12 12" width="8" height="8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2 6 5 9 10 3"/></svg>';
+      var featHtml = plan.features.map(function(f) {
+        return '<div class="calc-plan-feature"><span class="calc-plan-feature-check">' + checkSvg + '</span>' + f + '</div>';
       }).join('');
+      populateFeatures(featuresEl, featHtml, planChanged);
+
+      /* Capacity bar: CSS transition for width + burst glow + count-up label */
+      var lim = plan.limits;
+      var pcts = [];
+      if (lim.products !== Infinity && p > 0) pcts.push(p / lim.products);
+      if (lim.customers !== Infinity && c > 0) pcts.push(c / lim.customers);
+      if (lim.orders !== Infinity && o > 0)   pcts.push(o / lim.orders);
+      var maxPct = pcts.length ? Math.min(Math.max.apply(null, pcts), 1) : 0;
+      var pctInt = plan.isContact ? 100 : Math.round(maxPct * 100);
+      var barEl = document.getElementById('capacityBar');
+      barEl.style.width = pctInt + '%';
+      triggerBarBurst(barEl, _prevCapPct, pctInt);
+      animateCapacityCount(document.getElementById('capacityPct'), _prevCapPct, pctInt);
+      _prevCapPct = pctInt;
+
+      /* Plan cards */
+      document.querySelectorAll('.calc-plan-card').forEach(function(card) {
+        card.classList.toggle('active', card.dataset.planId === plan.id);
+      });
 
       /* CTA */
       var btn = document.getElementById('ctaBtn');
-      btn.href      = plan.ctaHref;
-      btn.className = 'calc-cta-btn' + (plan.isContact ? ' is-contact' : '');
+      btn.href = plan.ctaHref;
+      btn.className = 'calc-primary-btn' + (plan.isContact ? ' is-contact' : '');
       document.getElementById('ctaBtnText').textContent = plan.cta;
 
-      /* Mini cards */
-      document.querySelectorAll('.calc-mini-card').forEach(function(c) {
-        c.classList.remove('active');
-        if (c.dataset.planId === plan.id) c.classList.add('active');
-      });
+      _prevPlanId = plan.id;
     }
 
     function update() {
@@ -513,29 +665,58 @@
       ));
     }
 
-    /* Init */
-    update();
-
-    /* Platform buttons */
-    document.querySelectorAll('.plat-btn').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        document.querySelectorAll('.plat-btn').forEach(function(b) { b.classList.remove('active'); });
-        btn.classList.add('active');
-      });
-    });
-
-    /* Live update on every input change */
+    /* ── LIVE INPUT LISTENERS ── */
     ['inputProducts','inputCustomers','inputOrders','inputPages','inputPosts'].forEach(function(id) {
       document.getElementById(id).addEventListener('input', update);
     });
 
-    /* Mini card manual override */
-    document.querySelectorAll('.calc-mini-card').forEach(function(card) {
-      card.addEventListener('click', function() {
-        var plan = PLANS[card.dataset.planId];
-        if (plan) render(plan);
+
+    /* ── PLATFORM DROPDOWN ── */
+    var fromCard = document.getElementById('fromCard');
+    var fromName = document.getElementById('fromName');
+    var fromSub  = document.getElementById('fromSub');
+
+    fromCard.addEventListener('click', function(e) {
+      if (e.target.closest('.calc-plat-option')) return;
+      var isOpen = fromCard.classList.toggle('open');
+      fromCard.setAttribute('aria-expanded', isOpen);
+    });
+
+    document.querySelectorAll('.calc-plat-option').forEach(function(opt) {
+      opt.addEventListener('click', function(e) {
+        e.stopPropagation();
+        document.querySelectorAll('.calc-plat-option').forEach(function(o) { o.classList.remove('active'); });
+        opt.classList.add('active');
+        fromName.textContent = opt.dataset.name;
+        fromSub.textContent  = opt.dataset.sub;
+        fromCard.classList.remove('open');
+        fromCard.setAttribute('aria-expanded', 'false');
       });
     });
+
+    document.addEventListener('click', function(e) {
+      if (!fromCard.contains(e.target)) {
+        fromCard.classList.remove('open');
+        fromCard.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    fromCard.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        fromCard.click();
+      }
+      if (e.key === 'Escape') {
+        fromCard.classList.remove('open');
+        fromCard.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    /* ── INIT ── */
+    update();
+
+    var yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   })();
   </script>
