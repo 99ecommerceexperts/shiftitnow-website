@@ -1,0 +1,27 @@
+name: Deploy preview to Firebase Hosting (PR)
+
+# Builds a temporary preview channel for every pull request and posts
+# the preview URL as a comment on the PR. The channel auto-expires.
+on:
+  pull_request:
+
+permissions:
+  checks: write
+  contents: read
+  pull-requests: write
+
+jobs:
+  deploy_preview:
+    # Skip PRs opened from forks — they can't access repository secrets.
+    if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy to a Firebase Hosting preview channel
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SHIFTITNOW_5CC4B }}
+          projectId: shiftitnow-5cc4b
+          expires: 7d

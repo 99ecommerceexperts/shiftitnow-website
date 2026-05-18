@@ -1,0 +1,25 @@
+name: Deploy to Firebase Hosting (production)
+
+# Deploys to the live channel whenever code lands on master.
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  checks: write
+  contents: read
+
+jobs:
+  deploy_live:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy to Firebase Hosting (live)
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SHIFTITNOW_5CC4B }}
+          projectId: shiftitnow-5cc4b
+          channelId: live

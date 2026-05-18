@@ -1,0 +1,16 @@
+# Firebase
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+*-debug.log
+.runtimeconfig.json
+
+# Dependencies
+node_modules/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+
+# Stray asset (byte-for-byte duplicate of assets/logo.webp)
+CN_knuiD3Y8DEAE=.webp
