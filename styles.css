@@ -2130,6 +2130,239 @@ p  { margin: 0; }
   .hero-title::after { display: none; }
 }
 
+/* ============================================================
+   PROSE / LEGAL PAGES (Privacy, Terms)
+   ============================================================ */
+.prose {
+  max-width: 760px;
+  margin: 0 auto;
+  color: var(--gray-700);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+.prose h2 {
+  font-size: 1.5rem;
+  margin: 48px 0 14px;
+  color: var(--gray-900);
+}
+.prose h3 {
+  font-size: 1.1rem;
+  margin: 28px 0 10px;
+  color: var(--gray-900);
+}
+.prose p { margin: 0 0 16px; }
+.prose ul { margin: 0 0 18px; padding: 0; }
+.prose ul li {
+  position: relative;
+  padding: 4px 0 4px 24px;
+}
+.prose ul li::before {
+  content: "";
+  position: absolute;
+  left: 6px; top: 14px;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+}
+.prose a { color: var(--teal); font-weight: 600; }
+.prose a:hover { color: var(--gold); }
+.prose strong { color: var(--gray-900); font-weight: 600; }
+.prose .updated {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: var(--r-pill);
+  background: var(--gray-50);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 28px;
+}
+
+/* ============================================================
+   STATUS PAGE
+   ============================================================ */
+.status-overall {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 24px 28px;
+  background: linear-gradient(135deg, rgba(34, 139, 87, 0.12), rgba(34, 139, 87, 0.04));
+  border: 1px solid rgba(34, 139, 87, 0.25);
+  border-radius: var(--r-lg);
+  margin-bottom: 40px;
+}
+.status-overall-dot {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: #22A06B;
+  box-shadow: 0 0 0 6px rgba(34, 160, 107, 0.18), 0 0 16px rgba(34, 160, 107, 0.6);
+  animation: pulseDot 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+.status-overall-text strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: #1A7A4D;
+  margin-bottom: 4px;
+}
+.status-overall-text span { color: var(--gray-600); font-size: 0.92rem; }
+
+.status-grid {
+  display: grid;
+  gap: 12px;
+}
+.status-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 18px 22px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  transition: border-color var(--t-base), transform var(--t-base);
+}
+.status-row:hover { border-color: var(--teal-light); transform: translateX(2px); }
+.status-row-name strong {
+  display: block;
+  color: var(--gray-900);
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+.status-row-name span { color: var(--text-muted); font-size: 0.85rem; }
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: var(--r-pill);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+.status-pill-ok    { background: rgba(34, 160, 107, 0.10); color: #1A7A4D; }
+.status-pill-warn  { background: rgba(242, 181, 68, 0.14); color: #B07D14; }
+.status-pill-down  { background: rgba(217, 48, 37, 0.10); color: #C0392B; }
+.status-pill-dot   { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+
+.uptime-strip {
+  display: flex;
+  gap: 3px;
+  margin-top: 12px;
+}
+.uptime-bar {
+  flex: 1;
+  height: 22px;
+  border-radius: 3px;
+  background: #22A06B;
+  opacity: 0.85;
+  transition: opacity var(--t-fast);
+}
+.uptime-bar:hover { opacity: 1; }
+.uptime-bar-warn { background: var(--gold); }
+.uptime-bar-down { background: #D93025; }
+
+@media (max-width: 600px) {
+  .status-row { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   PLATFORM COMPARISON TABLE
+   ============================================================ */
+.compare-section { background: var(--white); }
+.compare-wrap {
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  overflow-x: auto;
+  box-shadow: var(--shadow-sm);
+}
+.compare-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+.compare-table thead th {
+  background: linear-gradient(180deg, var(--off-white), var(--gray-50));
+  color: var(--gray-900);
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-align: left;
+  padding: 18px 16px;
+  border-bottom: 2px solid var(--border-strong);
+  position: sticky;
+  top: 0;
+  white-space: nowrap;
+}
+.compare-table thead th:first-child {
+  background: linear-gradient(180deg, var(--white), var(--off-white));
+}
+.compare-table tbody td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  color: var(--gray-700);
+  vertical-align: middle;
+}
+.compare-table tbody tr:last-child td { border-bottom: 0; }
+.compare-table tbody tr:hover { background: rgba(95, 177, 192, 0.04); }
+.compare-table tbody th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--gray-900);
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--off-white);
+}
+.compare-yes {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: rgba(34, 160, 107, 0.12);
+  color: #1A7A4D;
+}
+.compare-no {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--gray-50);
+  color: var(--gray-400);
+}
+.compare-partial {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--r-pill);
+  background: var(--gold-soft);
+  color: #B07D14;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.compare-platform-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.compare-logo {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.compare-logo img { width: 60%; height: 60%; object-fit: contain; }
+.compare-section .compare-note {
+  margin-top: 18px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
 /* Responsive styles are in mobile.css */
 
 /* ---------- 20. PAGE HERO (inner pages) ---------- */

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0A1F2E" />
+  <title>System Status — ShiftItNow</title>
+  <meta name="description" content="Live status of the ShiftItNow migration engine, API, dashboard and platform connectors. 90-day uptime history." />
+
+  <link rel="icon" type="image/webp" href="assets/logo.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="mobile.css" />
+</head>
+<body>
+
+  <div class="announcement-bar" id="announcementBar" role="region" aria-label="Announcement">
+    <div class="container announcement-inner">
+      <span class="announce-dot" aria-hidden="true"></span>
+      <span>New: <strong>BigCommerce migration</strong> arriving soon — join the waitlist for early access.</span>
+      <a href="contact.html#waitlist" class="announce-link">Join waitlist <span aria-hidden="true">→</span></a>
+      <button class="announce-close" id="announceClose" aria-label="Dismiss announcement">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" aria-label="ShiftItNow home">
+        <img src="assets/logo.webp" alt="" class="brand-mark" />
+        <span class="brand-name">Shift<span class="brand-accent">It</span>Now</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="platforms.html">Platforms</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-ghost btn-sm">Talk to sales</a>
+        <a href="https://apps.shopify.com/shift-it-now" class="btn btn-primary btn-sm">Install on Shopify</a>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <ul>
+        <li><a href="platforms.html">Platforms</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="how-it-works.html">How it works</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Talk to sales</a></li>
+      </ul>
+      <a href="https://apps.shopify.com/shift-it-now" class="btn btn-primary btn-block">Install on Shopify</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> System status</span>
+        <h1>All systems operational.</h1>
+        <p class="page-hero-sub">Real-time status of the ShiftItNow migration engine, dashboard, API and platform connectors. Refreshed every 60&nbsp;seconds.</p>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--off-white);">
+      <div class="container" style="max-width: 880px;">
+
+        <div class="status-overall">
+          <span class="status-overall-dot"></span>
+          <div class="status-overall-text">
+            <strong>All systems operational</strong>
+            <span>Updated just now · 90-day uptime: 99.987%</span>
+          </div>
+        </div>
+
+        <h2 style="font-size: 1.25rem; margin: 8px 0 18px; color: var(--gray-900);">Core services</h2>
+
+        <div class="status-grid">
+          <div class="status-row">
+            <div class="status-row-name">
+              <strong>Migration engine</strong>
+              <span>Processing migrations and delta syncs</span>
+              <div class="uptime-strip" aria-label="90-day uptime">
+                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+              </div>
+            </div>
+            <span class="status-pill status-pill-ok"><span class="status-pill-dot"></span> Operational</span>
+          </div>
+
+          <div class="status-row">
+            <div class="status-row-name">
+              <strong>Merchant dashboard</strong>
+              <span>app.shiftitnow.app</span>
+              <div class="uptime-strip" aria-label="90-day uptime">
+                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+              </div>
+            </div>
+            <span class="status-pill status-pill-ok"><span class="status-pill-dot"></span> Operational</span>
+          </div>
+
+          <div class="status-row">
+            <div class="status-row-name">
+              <strong>Public API</strong>
+              <span>api.shiftitnow.app</span>
+              <div class="uptime-strip" aria-label="90-day uptime">
+                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+                <span class="uptime-bar uptime-bar-warn"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+              </div>
+            </div>
+            <span class="status-pill status-pill-ok"><span class="status-pill-dot"></span> Operational</span>
+          </div>
+
+          <div class="status-row">
+            <div class="status-row-name">
+              <strong>Webhook delivery</strong>
+              <span>Outbound webhooks to your apps</span>
+              <div class="uptime-strip" aria-label="90-day uptime">
+                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+              </div>
+            </div>
+            <span class="status-pill status-pill-ok"><span class="status-pill-dot"></span> Operational</span>
+          </div>
+        </div>
+
+        <h2 style="font-size: 1.25rem; margin: 40px 0 18px; color: var(--gray-900);">Platform connectors</h2>
+
+        <div class="status-grid">
+          <div class="status-row">
+            <div class="status-row-name"><strong>WooCommerce</strong><span>REST API connector</span></div>
+            <span class="status-pill status-pill-ok"><span class="status-pill-dot"></span> Operational</span>
+          </div>
+          <div class="status-row">
+            <div class="status-row-name"><strong>Magento / Adobe Commerce</strong><span>REST + bridge module</span></div>
+            <span class="status-pill status-pill-ok"><span class="status-pill-dot"></span> Operational</span>
+          </div>
+          <div class="status-row">
+            <div class="status-row-name"><strong>Wix</strong><span>Wix Stores OAuth</span></div>
+            <span class="status-pill status-pill-ok"><span class="status-pill-dot"></span> Operational</span>
+          </div>
+          <div class="status-row">
+            <div class="status-row-name"><strong>Squarespace</strong><span>Commerce API</span></div>
+            <span class="status-pill status-pill-warn"><span class="status-pill-dot"></span> Degraded — vendor</span>
+          </div>
+          <div class="status-row">
+            <div class="status-row-name"><strong>BigCommerce</strong><span>Coming soon — joining waitlist below</span></div>
+            <span class="status-pill status-pill-warn"><span class="status-pill-dot"></span> Pre-release</span>
+          </div>
+          <div class="status-row">
+            <div class="status-row-name"><strong>Shopify destination</strong><span>Admin API + GraphQL</span></div>
+            <span class="status-pill status-pill-ok"><span class="status-pill-dot"></span> Operational</span>
+          </div>
+        </div>
+
+        <h2 style="font-size: 1.25rem; margin: 40px 0 18px; color: var(--gray-900);">Recent incidents</h2>
+
+        <div class="status-grid">
+          <div class="status-row">
+            <div class="status-row-name">
+              <strong>Squarespace connector — degraded response times</strong>
+              <span>Vendor-side rate limiting affecting new connections · 12 Jan 2026 · Ongoing, monitoring</span>
+            </div>
+            <span class="status-pill status-pill-warn"><span class="status-pill-dot"></span> Monitoring</span>
+          </div>
+          <div class="status-row">
+            <div class="status-row-name">
+              <strong>Public API — elevated 5xx errors</strong>
+              <span>15 min partial outage caused by a deploy regression · 04 Jan 2026 · Resolved</span>
+            </div>
+            <span class="status-pill status-pill-ok"><span class="status-pill-dot"></span> Resolved</span>
+          </div>
+          <div class="status-row">
+            <div class="status-row-name">
+              <strong>Scheduled maintenance — engine v4.2</strong>
+              <span>22 min planned downtime, all migrations paused and resumed cleanly · 18 Dec 2025 · Completed</span>
+            </div>
+            <span class="status-pill status-pill-ok"><span class="status-pill-dot"></span> Completed</span>
+          </div>
+        </div>
+
+        <p style="margin-top: 40px; text-align: center; color: var(--text-muted); font-size: 0.9rem;">Subscribe to status updates: <a href="contact.html" class="link-accent">contact us</a> · RSS feed at <code>/status.rss</code></p>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <img src="assets/logo.webp" alt="" class="brand-mark" />
+            <span class="brand-name">Shift<span class="brand-accent">It</span>Now</span>
+          </a>
+          <p>The Shopify migration app for merchants who need it done right — the first time.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="platforms.html">Platforms</a></li>
+            <li><a href="how-it-works.html">How it works</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="status.html">Status</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> ShiftItNow. Made for Shopify merchants who don't have time to lose.</p>
+        <p class="footer-meta">Shopify is a trademark of Shopify Inc. ShiftItNow is an independent app and is not endorsed by Shopify Inc.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
