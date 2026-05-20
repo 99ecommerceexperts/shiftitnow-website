@@ -1390,6 +1390,128 @@ p  { margin: 0; }
 }
 
 /* ============================================================
+   HERO FLOW VISUAL (replaces the old orbiting-chips circle)
+   The migration flow viz lives inside .hero-visual.
+   ============================================================ */
+.hero-flow {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  max-width: min(560px, 48vw);
+  margin: 0 auto;
+}
+.hero-flow .flow-source {
+  position: absolute;
+  font-size: 0.82rem;
+  padding: 8px 14px 8px 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--r-pill);
+  backdrop-filter: blur(12px);
+  color: var(--white);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  animation: floatChip 7s ease-in-out infinite;
+  z-index: 2;
+}
+.hero-flow .flow-source-icon {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.hero-flow .flow-source-icon img { width: 60%; height: 60%; object-fit: contain; }
+
+/* 5 sources distributed down the left side */
+.hero-flow .flow-source-1 { top: 4%;  left: -6%; animation-delay: 0s; }
+.hero-flow .flow-source-2 { top: 26%; left: -10%; animation-delay: 0.8s; }
+.hero-flow .flow-source-3 { top: 48%; left: -6%; animation-delay: 1.4s; }
+.hero-flow .flow-source-4 { top: 70%; left: -10%; animation-delay: 2.2s; }
+.hero-flow .flow-source-5 { top: 92%; left: -6%; animation-delay: 3s; }
+
+/* Shopify destination — smaller in hero */
+.hero-flow .flow-dest {
+  position: absolute;
+  right: -2%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 110px; height: 110px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(149, 191, 71, 0.30), rgba(149, 191, 71, 0.05) 60%, transparent);
+  display: flex; align-items: center; justify-content: center;
+  border: 2px solid rgba(149, 191, 71, 0.45);
+  box-shadow:
+    0 0 0 8px rgba(149, 191, 71, 0.08),
+    0 0 60px rgba(149, 191, 71, 0.3);
+  animation: destPulse 3s ease-in-out infinite;
+  z-index: 2;
+}
+.hero-flow .flow-dest-inner {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #95BF47, #5E8E2E);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.12);
+}
+.hero-flow .flow-dest-inner svg { width: 32px; height: 32px; color: var(--white); }
+.hero-flow .flow-dest-label {
+  position: absolute;
+  bottom: -26px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gray-300);
+  white-space: nowrap;
+}
+
+.hero-flow .flow-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Tablet (≤960px) — slightly smaller, sources hug the visual */
+@media (max-width: 960px) {
+  .hero-flow { max-width: 460px; }
+  .hero-flow .flow-source { font-size: 0.78rem; padding: 7px 12px 7px 7px; }
+  .hero-flow .flow-source-1 { left: 0%; }
+  .hero-flow .flow-source-2 { left: -4%; }
+  .hero-flow .flow-source-3 { left: 0%; }
+  .hero-flow .flow-source-4 { left: -4%; }
+  .hero-flow .flow-source-5 { left: 0%; }
+  .hero-flow .flow-dest { right: 2%; }
+}
+
+/* Phones — hide text labels on source pills to save space, keep icons */
+@media (max-width: 600px) {
+  .hero-flow { max-width: 340px; aspect-ratio: 1 / 1; }
+  .hero-flow .flow-source { padding: 5px; gap: 0; font-size: 0; }
+  .hero-flow .flow-source > *:not(.flow-source-icon) { display: none; }
+  .hero-flow .flow-source-icon { width: 26px; height: 26px; }
+  .hero-flow .flow-source-1 { top: 6%;  left: -2%; }
+  .hero-flow .flow-source-2 { top: 26%; left: -6%; }
+  .hero-flow .flow-source-3 { top: 48%; left: -2%; }
+  .hero-flow .flow-source-4 { top: 70%; left: -6%; }
+  .hero-flow .flow-source-5 { top: 90%; left: -2%; }
+  .hero-flow .flow-dest { width: 80px; height: 80px; right: -2%; }
+  .hero-flow .flow-dest-inner { width: 54px; height: 54px; }
+  .hero-flow .flow-dest-inner svg { width: 24px; height: 24px; }
+  .hero-flow .flow-dest-label { font-size: 0.62rem; bottom: -22px; }
+}
+
+/* ============================================================
    ORBITING HERO CHIPS
    Each chip is wrapped in .chip-orbit which spins around the
    hero-visual centre; the .chip inside counter-rotates so its
