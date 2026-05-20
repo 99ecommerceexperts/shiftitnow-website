@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -28,7 +28,7 @@
     <div class="container announcement-inner">
       <span class="announce-dot" aria-hidden="true"></span>
       <span>New: <strong>BigCommerce migration</strong> arriving soon — join the waitlist for early access.</span>
-      <a href="#waitlist" class="announce-link">Join waitlist <span aria-hidden="true">→</span></a>
+      <a href="contact.html#waitlist" class="announce-link">Join waitlist <span aria-hidden="true">→</span></a>
       <button class="announce-close" id="announceClose" aria-label="Dismiss announcement">
         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
       </button>
@@ -49,12 +49,12 @@
           <li><a href="features.html">Features</a></li>
           <li><a href="how-it-works.html">How it works</a></li>
           <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li><a href="faq.html">FAQ</a></li>
         </ul>
       </nav>
 
       <div class="nav-cta">
-        <a href="#contact" class="btn btn-ghost btn-sm">Talk to sales</a>
+        <a href="contact.html" class="btn btn-ghost btn-sm">Talk to sales</a>
         <a href="https://apps.shopify.com/shift-it-now" class="btn btn-primary btn-sm">
           <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="currentColor"><path d="M19.5 8.25h-3.75V6a3.75 3.75 0 0 0-7.5 0v2.25H4.5A1.5 1.5 0 0 0 3 9.75v9.75A1.5 1.5 0 0 0 4.5 21h15a1.5 1.5 0 0 0 1.5-1.5V9.75a1.5 1.5 0 0 0-1.5-1.5Zm-9.75-2.25a2.25 2.25 0 0 1 4.5 0v2.25h-4.5V6Z"/></svg>
           Install on Shopify
@@ -72,8 +72,8 @@
         <li><a href="features.html">Features</a></li>
         <li><a href="how-it-works.html">How it works</a></li>
         <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contact">Talk to sales</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Talk to sales</a></li>
       </ul>
       <a href="https://apps.shopify.com/shift-it-now" class="btn btn-primary btn-block">Install on Shopify</a>
     </div>
@@ -87,6 +87,10 @@
         <div class="hero-grid"></div>
         <div class="hero-glow hero-glow-1"></div>
         <div class="hero-glow hero-glow-2"></div>
+        <div class="hero-particles">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
       </div>
 
       <div class="container hero-inner">
@@ -113,36 +117,46 @@
             <img src="assets/logo.webp" alt="ShiftItNow" class="hero-logo" />
           </div>
 
-          <!-- Floating platform chips -->
-          <div class="chip chip-woo">
-            <span class="chip-icon" style="background:#7B519C;">
-              <img src="assets/Logo-White.webp" alt="" width="14" height="14" />
-            </span>
-            <span>WooCommerce</span>
+          <!-- Orbiting platform chips -->
+          <div class="chip-orbit chip-orbit-1">
+            <div class="chip chip-woo">
+              <span class="chip-icon" style="background:#7B519C;">
+                <img src="assets/Logo-White.webp" alt="" width="14" height="14" />
+              </span>
+              <span>WooCommerce</span>
+            </div>
           </div>
-          <div class="chip chip-magento">
-            <span class="chip-icon" style="background:#F26322;">
-              <img src="assets/magento-2-logo-svgrepo-com.svg" alt="" width="14" height="14" />
-            </span>
-            <span>Magento</span>
+          <div class="chip-orbit chip-orbit-2">
+            <div class="chip chip-magento">
+              <span class="chip-icon" style="background:#F26322;">
+                <img src="assets/magento-2-logo-svgrepo-com.svg" alt="" width="14" height="14" />
+              </span>
+              <span>Magento</span>
+            </div>
           </div>
-          <div class="chip chip-wix">
-            <span class="chip-icon" style="background:#0C6EFC;">
-              <img src="assets/wix-svgrepo-com.svg" alt="" width="14" height="14" />
-            </span>
-            <span>Wix</span>
+          <div class="chip-orbit chip-orbit-3">
+            <div class="chip chip-wix">
+              <span class="chip-icon" style="background:#0C6EFC;">
+                <img src="assets/wix-svgrepo-com.svg" alt="" width="14" height="14" />
+              </span>
+              <span>Wix</span>
+            </div>
           </div>
-          <div class="chip chip-squarespace">
-            <span class="chip-icon" style="background:#000;">
-              <img src="assets/squarespace-svgrepo-com.svg" alt="" width="14" height="14" />
-            </span>
-            <span>Squarespace</span>
+          <div class="chip-orbit chip-orbit-4">
+            <div class="chip chip-squarespace">
+              <span class="chip-icon" style="background:#000;">
+                <img src="assets/squarespace-svgrepo-com.svg" alt="" width="14" height="14" />
+              </span>
+              <span>Squarespace</span>
+            </div>
           </div>
-          <div class="chip chip-shopify">
-            <span class="chip-icon" style="background:#95BF47;">
-              <img src="assets/icons8-shopify.svg" alt="" width="14" height="14" />
-            </span>
-            <span>Shopify</span>
+          <div class="chip-orbit chip-orbit-5">
+            <div class="chip chip-shopify">
+              <span class="chip-icon" style="background:#95BF47;">
+                <img src="assets/icons8-shopify.svg" alt="" width="14" height="14" />
+              </span>
+              <span>Shopify</span>
+            </div>
           </div>
 
           <div class="data-pill data-pill-1">
@@ -197,6 +211,110 @@
           <span>99.98% data accuracy</span>
           <span class="sep" aria-hidden="true"></span>
           <span>24/7 expert support</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== MARQUEE STRIP ============== -->
+    <div class="marquee" aria-label="Supported platforms">
+      <div class="marquee-track">
+        <span class="marquee-item"><span class="marquee-dot"></span> WooCommerce → Shopify</span>
+        <span class="marquee-item gold"><span class="marquee-dot"></span> 50M+ products migrated</span>
+        <span class="marquee-item"><span class="marquee-dot"></span> Magento → Shopify</span>
+        <span class="marquee-item gold"><span class="marquee-dot"></span> 99.98% data accuracy</span>
+        <span class="marquee-item"><span class="marquee-dot"></span> Wix → Shopify</span>
+        <span class="marquee-item gold"><span class="marquee-dot"></span> Zero downtime</span>
+        <span class="marquee-item"><span class="marquee-dot"></span> Squarespace → Shopify</span>
+        <span class="marquee-item gold"><span class="marquee-dot"></span> SEO preserved</span>
+        <span class="marquee-item"><span class="marquee-dot"></span> BigCommerce → Shopify</span>
+        <span class="marquee-item gold"><span class="marquee-dot"></span> 24/7 expert support</span>
+        <!-- Duplicate for seamless loop -->
+        <span class="marquee-item"><span class="marquee-dot"></span> WooCommerce → Shopify</span>
+        <span class="marquee-item gold"><span class="marquee-dot"></span> 50M+ products migrated</span>
+        <span class="marquee-item"><span class="marquee-dot"></span> Magento → Shopify</span>
+        <span class="marquee-item gold"><span class="marquee-dot"></span> 99.98% data accuracy</span>
+        <span class="marquee-item"><span class="marquee-dot"></span> Wix → Shopify</span>
+        <span class="marquee-item gold"><span class="marquee-dot"></span> Zero downtime</span>
+        <span class="marquee-item"><span class="marquee-dot"></span> Squarespace → Shopify</span>
+        <span class="marquee-item gold"><span class="marquee-dot"></span> SEO preserved</span>
+        <span class="marquee-item"><span class="marquee-dot"></span> BigCommerce → Shopify</span>
+        <span class="marquee-item gold"><span class="marquee-dot"></span> 24/7 expert support</span>
+      </div>
+    </div>
+
+    <!-- ============== LIVE MIGRATION FLOW ============== -->
+    <section class="flow-viz" aria-label="Live migration data flow">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Live migration engine</span>
+          <h2>Watch your data move home.</h2>
+          <p class="section-sub">Every product, customer and order streams through our migration engine and lands on Shopify — fully mapped, fully validated.</p>
+        </div>
+
+        <div class="flow-stage">
+          <!-- Source pills -->
+          <span class="flow-source flow-source-1">
+            <span class="flow-source-icon" style="background:#7B519C;"><img src="assets/Logo-White.webp" alt=""/></span>
+            WooCommerce
+          </span>
+          <span class="flow-source flow-source-2">
+            <span class="flow-source-icon" style="background:#F26322;"><img src="assets/magento-2-logo-svgrepo-com.svg" alt="" style="filter:brightness(0) invert(1);"/></span>
+            Magento
+          </span>
+          <span class="flow-source flow-source-3">
+            <span class="flow-source-icon" style="background:#0C6EFC;"><img src="assets/wix-svgrepo-com.svg" alt="" style="filter:brightness(0) invert(1);"/></span>
+            Wix
+          </span>
+          <span class="flow-source flow-source-4">
+            <span class="flow-source-icon" style="background:#000;"><img src="assets/squarespace-svgrepo-com.svg" alt=""/></span>
+            Squarespace
+          </span>
+          <span class="flow-source flow-source-5">
+            <span class="flow-source-icon" style="background:#34313F;"><img src="assets/bigcommerce-svgrepo-com.svg" alt="" style="filter:brightness(0) invert(1);"/></span>
+            BigCommerce
+          </span>
+
+          <!-- Destination -->
+          <div class="flow-dest">
+            <div class="flow-dest-inner">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15.34 4.86c-.07-.05-.31-.08-.49-.08L13.5 5c-.5-.5-1.2-.9-2-.9-.4 0-.7.1-1.1.3-.1-.4-.4-.6-.8-.6-2.5 0-3.7 3.1-4.1 4.7L3.7 9c-.4.1-.4.2-.5.5L2 19.5l8.4 1.6L18 19.6c0-.1-2.5-14.6-2.66-14.74Z"/></svg>
+            </div>
+            <span class="flow-dest-label">Shopify</span>
+          </div>
+
+          <!-- Animated SVG flow lines + traveling data packets -->
+          <svg class="flow-svg" viewBox="0 0 880 440" preserveAspectRatio="none" aria-hidden="true">
+            <path class="flow-path flow-path-1" d="M 140 35  C 360 35,  500 200, 720 220" />
+            <path class="flow-path flow-path-2" d="M 130 130 C 360 130, 520 200, 720 220" />
+            <path class="flow-path flow-path-3" d="M 140 240 C 360 240, 520 230, 720 220" />
+            <path class="flow-path flow-path-4" d="M 130 340 C 360 340, 520 260, 720 220" />
+
+            <circle r="4" class="flow-packet">
+              <animateMotion dur="3.2s" repeatCount="indefinite" path="M 140 35  C 360 35,  500 200, 720 220" />
+            </circle>
+            <circle r="4" class="flow-packet-gold">
+              <animateMotion dur="3.8s" begin="0.6s" repeatCount="indefinite" path="M 130 130 C 360 130, 520 200, 720 220" />
+            </circle>
+            <circle r="4" class="flow-packet">
+              <animateMotion dur="3.4s" begin="1.1s" repeatCount="indefinite" path="M 140 240 C 360 240, 520 230, 720 220" />
+            </circle>
+            <circle r="4" class="flow-packet-gold">
+              <animateMotion dur="4s"   begin="1.7s" repeatCount="indefinite" path="M 130 340 C 360 340, 520 260, 720 220" />
+            </circle>
+            <circle r="3" class="flow-packet">
+              <animateMotion dur="2.8s" begin="2.2s" repeatCount="indefinite" path="M 140 35  C 360 35,  500 200, 720 220" />
+            </circle>
+            <circle r="3" class="flow-packet-gold">
+              <animateMotion dur="3.2s" begin="0.3s" repeatCount="indefinite" path="M 140 240 C 360 240, 520 230, 720 220" />
+            </circle>
+          </svg>
+        </div>
+
+        <div class="flow-meta">
+          <span class="flow-meta-item"><span class="flow-meta-dot"></span> <strong>Live</strong> migration engine</span>
+          <span class="flow-meta-item"><strong>~4,200</strong> records / minute</span>
+          <span class="flow-meta-item"><strong>99.98%</strong> data accuracy</span>
+          <span class="flow-meta-item"><strong>Zero</strong> downtime guaranteed</span>
         </div>
       </div>
     </section>
@@ -262,15 +380,16 @@
             </div>
             <h3>Custom / Other</h3>
             <p>Got a custom-built store or an unusual platform? Our team will scope a tailored migration.</p>
-            <a href="#contact" class="badge badge-link">Talk to us →</a>
+            <a href="contact.html" class="badge badge-link">Talk to us →</a>
           </article>
         </div>
       </div>
     </section>
 
     <!-- ============== FEATURES ============== -->
-    <section class="section features" id="features">
+    <section class="section features section-featured" id="features">
       <div class="container">
+        <span class="featured-flag" aria-hidden="true">★ Featured</span>
         <div class="section-head">
           <span class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> Why ShiftItNow</span>
           <h2>Every piece of your store. Migrated, mapped, ready.</h2>
@@ -330,8 +449,9 @@
     </section>
 
     <!-- ============== HOW IT WORKS ============== -->
-    <section class="section how" id="how">
+    <section class="section how section-featured" id="how">
       <div class="container">
+        <span class="featured-flag" aria-hidden="true">★ Featured</span>
         <div class="section-head">
           <span class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> The process</span>
           <h2>Four steps. One smooth shift.</h2>
@@ -379,7 +499,7 @@
           <span class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> Scope of migration</span>
           <h2>If it's in your store, we move it.</h2>
           <p>No partial migrations. No "we don't do that." A complete, faithful copy of your storefront — landed on Shopify with all relationships intact.</p>
-          <a href="#contact" class="btn btn-dark btn-md">
+          <a href="contact.html" class="btn btn-dark btn-md">
             Request a custom audit
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
@@ -467,8 +587,9 @@
     </section>
 
     <!-- ============== TESTIMONIALS ============== -->
-    <section class="section testimonials">
+    <section class="section testimonials section-featured">
       <div class="container">
+        <span class="featured-flag" aria-hidden="true">★ Featured</span>
         <div class="section-head">
           <span class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> Merchant stories</span>
           <h2>The team you wish you had hired sooner.</h2>
@@ -520,7 +641,7 @@
         <div class="section-head section-head-left">
           <span class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> FAQ</span>
           <h2>Answers, before you ask.</h2>
-          <p class="section-sub">Didn't find what you're looking for? <a href="#contact" class="link-accent">Send us a question →</a></p>
+          <p class="section-sub">Didn't find what you're looking for? <a href="contact.html" class="link-accent">Send us a question →</a></p>
         </div>
 
         <div class="faq-list">
@@ -570,7 +691,7 @@
               <span class="faq-chev" aria-hidden="true"></span>
             </summary>
             <div class="faq-body">
-              <p>BigCommerce migrations are launching shortly. <a href="#waitlist" class="link-accent">Join the waitlist</a> to be one of the first 50 merchants on board — and get 20% off your migration.</p>
+              <p>BigCommerce migrations are launching shortly. <a href="contact.html#waitlist" class="link-accent">Join the waitlist</a> to be one of the first 50 merchants on board — and get 20% off your migration.</p>
             </div>
           </details>
 
@@ -580,7 +701,7 @@
               <span class="faq-chev" aria-hidden="true"></span>
             </summary>
             <div class="faq-body">
-              <p>Yes. Our Enterprise team handles custom platforms, headless setups and exotic data shapes regularly. <a href="#contact" class="link-accent">Tell us about your stack</a> and we'll scope a tailored migration in 24 hours.</p>
+              <p>Yes. Our Enterprise team handles custom platforms, headless setups and exotic data shapes regularly. <a href="contact.html" class="link-accent">Tell us about your stack</a> and we'll scope a tailored migration in 24 hours.</p>
             </div>
           </details>
         </div>
@@ -603,7 +724,7 @@
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M15.34 4.86c-.07-.05-.31-.08-.49-.08L13.5 5c-.5-.5-1.2-.9-2-.9-.4 0-.7.1-1.1.3-.1-.4-.4-.6-.8-.6-2.5 0-3.7 3.1-4.1 4.7L3.7 9c-.4.1-.4.2-.5.5L2 19.5l8.4 1.6L18 19.6c0-.1-2.5-14.6-2.66-14.74Z"/></svg>
                 Install on Shopify
               </a>
-              <a href="#contact" class="btn btn-ghost btn-lg">Talk to a migration expert</a>
+              <a href="contact.html" class="btn btn-ghost btn-lg">Talk to a migration expert</a>
             </div>
           </div>
         </div>
@@ -725,14 +846,14 @@
             <li><a href="platforms.html">Magento → Shopify</a></li>
             <li><a href="platforms.html">Wix → Shopify</a></li>
             <li><a href="platforms.html">Squarespace → Shopify</a></li>
-            <li><a href="#waitlist">BigCommerce → Shopify</a></li>
+            <li><a href="contact.html#waitlist">BigCommerce → Shopify</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4>Company</h4>
           <ul>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
             <li><a href="#">Privacy</a></li>
             <li><a href="#">Terms</a></li>
             <li><a href="#">Status</a></li>

@@ -421,6 +421,66 @@
   .announcement-inner { font-size: 0.68rem; }
 }
 
+/* ---------- Responsive polish (added) ---------- */
+
+/* Page-hero (inner pages) — tighten on phones */
+@media (max-width: 768px) {
+  .page-hero {
+    padding-top: clamp(40px, 8vw, 64px);
+    padding-bottom: clamp(32px, 6vw, 48px);
+  }
+  .page-hero h1 { font-size: clamp(1.8rem, 6vw, 2.4rem); }
+  .page-hero-sub { font-size: 0.92rem; line-height: 1.6; }
+  .page-hero-cta { flex-direction: column; align-items: stretch; gap: 10px; }
+  .page-hero-cta .btn { width: 100%; }
+}
+
+/* Larger, easier touch targets on form controls */
+@media (max-width: 768px) {
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    font-size: 16px; /* prevents iOS auto-zoom on focus */
+    padding: 14px 14px;
+  }
+  .btn { min-height: 44px; }
+}
+
+/* Brand name shrinks on tiny screens to avoid hamburger crowding */
+@media (max-width: 420px) {
+  .brand-mark { width: 30px; height: 30px; }
+  .brand-name { font-size: 1rem; }
+  .nav-inner { gap: 10px; height: 64px; }
+}
+
+/* FAQ summary text fits better on small screens */
+@media (max-width: 480px) {
+  .faq-item summary {
+    padding: 16px 18px;
+    font-size: 0.94rem;
+    gap: 12px;
+  }
+  .faq-body { padding: 0 18px 18px; font-size: 0.9rem; }
+}
+
+/* Contact items list — preserve readable layout on mid screens */
+@media (max-width: 960px) and (min-width: 481px) {
+  .contact-items li { grid-template-columns: 120px 1fr; }
+}
+
+/* Section spacing tightens on phones to avoid huge whitespace */
+@media (max-width: 480px) {
+  :root { --section-y: clamp(44px, 9vw, 72px); }
+  .section-head { margin-bottom: 32px; }
+}
+
+/* Stop horizontal scroll caused by hero glows on very small screens */
+@media (max-width: 480px) {
+  .hero { padding-left: 0; padding-right: 0; }
+  .hero > .container { padding-left: var(--gutter); padding-right: var(--gutter); }
+  .hero-glow-1, .hero-glow-2 { width: 360px; height: 360px; }
+}
+
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

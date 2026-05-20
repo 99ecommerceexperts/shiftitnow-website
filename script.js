@@ -211,6 +211,68 @@
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* ---------- 8a. Hero mouse-follow spotlight ---------- */
+  const hero = document.querySelector('.hero');
+  if (hero && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    hero.addEventListener('mousemove', (e) => {
+      const r = hero.getBoundingClientRect();
+      const x = ((e.clientX - r.left) / r.width)  * 100;
+      const y = ((e.clientY - r.top)  / r.height) * 100;
+      hero.style.setProperty('--mx', x + '%');
+      hero.style.setProperty('--my', y + '%');
+    });
+  }
+
+  /* ---------- 8b. Scroll progress bar ---------- */
+  const progress = document.createElement('div');
+  progress.className = 'scroll-progress';
+  progress.setAttribute('aria-hidden', 'true');
+  document.body.prepend(progress);
+  const updateProgress = () => {
+    const h = document.documentElement;
+    const scrolled = h.scrollTop;
+    const max = h.scrollHeight - h.clientHeight;
+    const pct = max > 0 ? (scrolled / max) * 100 : 0;
+    progress.style.width = pct + '%';
+  };
+  updateProgress();
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+
+  /* ---------- 8c. Card 3D tilt on hover (desktop, no reduced-motion) ---------- */
+  const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const motionOK = window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
+  if (supportsHover && motionOK) {
+    const tiltCards = document.querySelectorAll('.platform-card, .feature-card, .testimonial, .price-card, .pdp-card');
+    tiltCards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width  - 0.5;
+        const y = (e.clientY - r.top)  / r.height - 0.5;
+        const rx = (-y * 6).toFixed(2);
+        const ry = ( x * 6).toFixed(2);
+        card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-4px)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+  }
+
+  /* ---------- 8d. In-view class on stats for glow animation ---------- */
+  if ('IntersectionObserver' in window) {
+    const statBoxes = document.querySelectorAll('.stat');
+    const sObs = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if (en.isIntersecting) {
+          en.target.classList.add('in-view');
+          sObs.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    statBoxes.forEach(s => sObs.observe(s));
+  }
+
   /* ---------- 9. Parallax on hero visual (subtle, desktop only) ---------- */
   const heroVisual = document.querySelector('.hero-visual');
   if (heroVisual && window.matchMedia('(min-width: 961px) and (prefers-reduced-motion: no-preference)').matches) {

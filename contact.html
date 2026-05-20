@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0A1F2E" />
+  <title>Contact — ShiftItNow</title>
+  <meta name="description" content="Get in touch with ShiftItNow. Custom quotes, migration walk-throughs, BigCommerce waitlist access — we'll reply within one business day." />
+
+  <link rel="icon" type="image/webp" href="assets/logo.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="mobile.css" />
+</head>
+<body>
+
+  <!-- ============== ANNOUNCEMENT BAR ============== -->
+  <div class="announcement-bar" id="announcementBar" role="region" aria-label="Announcement">
+    <div class="container announcement-inner">
+      <span class="announce-dot" aria-hidden="true"></span>
+      <span>New: <strong>BigCommerce migration</strong> arriving soon — join the waitlist for early access.</span>
+      <a href="#waitlist" class="announce-link">Join waitlist <span aria-hidden="true">→</span></a>
+      <button class="announce-close" id="announceClose" aria-label="Dismiss announcement">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ============== NAVIGATION ============== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" aria-label="ShiftItNow home">
+        <img src="assets/logo.webp" alt="" class="brand-mark" />
+        <span class="brand-name">Shift<span class="brand-accent">It</span>Now</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="platforms.html">Platforms</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-ghost btn-sm nav-active">Talk to sales</a>
+        <a href="https://apps.shopify.com/shift-it-now" class="btn btn-primary btn-sm">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="currentColor"><path d="M19.5 8.25h-3.75V6a3.75 3.75 0 0 0-7.5 0v2.25H4.5A1.5 1.5 0 0 0 3 9.75v9.75A1.5 1.5 0 0 0 4.5 21h15a1.5 1.5 0 0 0 1.5-1.5V9.75a1.5 1.5 0 0 0-1.5-1.5Zm-9.75-2.25a2.25 2.25 0 0 1 4.5 0v2.25h-4.5V6Z"/></svg>
+          Install on Shopify
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <ul>
+        <li><a href="platforms.html">Platforms</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="how-it-works.html">How it works</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Talk to sales</a></li>
+      </ul>
+      <a href="https://apps.shopify.com/shift-it-now" class="btn btn-primary btn-block">Install on Shopify</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============== PAGE HERO ============== -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> Get in touch</span>
+        <h1>Tell us about your store.</h1>
+        <p class="page-hero-sub">Whether you want a custom quote, a migration walk-through, or early access to BigCommerce migrations — we'll get back within one business day.</p>
+      </div>
+    </section>
+
+    <!-- ============== CONTACT / WAITLIST ============== -->
+    <section class="section contact" id="waitlist">
+      <div class="container contact-inner">
+        <div class="contact-copy">
+          <span class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> We're listening</span>
+          <h2>One form. One business day.</h2>
+          <p>Tell us your platform, your catalog size, and anything weird about your stack. A real migration engineer will review and reply — no chatbots, no tier-1 scripts.</p>
+          <ul class="contact-items">
+            <li>
+              <strong>Email</strong>
+              <a href="mailto:hello@shiftitnow.app">hello@shiftitnow.app</a>
+            </li>
+            <li>
+              <strong>Support hours</strong>
+              <span>24/7 chat for active migrations</span>
+            </li>
+            <li>
+              <strong>Sales</strong>
+              <a href="mailto:sales@shiftitnow.app">sales@shiftitnow.app</a>
+            </li>
+            <li>
+              <strong>Waitlist</strong>
+              <span>BigCommerce early access — use the form →</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <label>
+              <span>Full name</span>
+              <input type="text" name="name" required autocomplete="name" placeholder="Jane Patel" />
+            </label>
+            <label>
+              <span>Work email</span>
+              <input type="email" name="email" required autocomplete="email" placeholder="jane@store.com" />
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              <span>Current platform</span>
+              <select name="platform" required>
+                <option value="">Select your platform</option>
+                <option>WooCommerce</option>
+                <option>Magento / Adobe Commerce</option>
+                <option>Wix</option>
+                <option>Squarespace</option>
+                <option>BigCommerce (waitlist)</option>
+                <option>Other / Custom</option>
+              </select>
+            </label>
+            <label>
+              <span>Approx. products</span>
+              <select name="catalogSize" required>
+                <option value="">Catalog size</option>
+                <option>1 – 500</option>
+                <option>500 – 2,500</option>
+                <option>2,500 – 10,000</option>
+                <option>10,000 – 50,000</option>
+                <option>50,000+</option>
+              </select>
+            </label>
+          </div>
+          <label class="form-block">
+            <span>Tell us anything we should know</span>
+            <textarea name="message" rows="4" placeholder="Custom fields, B2B, multi-store, target launch date…"></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">
+            Send message
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+          <p class="form-success" id="formSuccess" hidden>Thanks! We'll be in touch within one business day.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <img src="assets/logo.webp" alt="" class="brand-mark" />
+            <span class="brand-name">Shift<span class="brand-accent">It</span>Now</span>
+          </a>
+          <p>The Shopify migration app for merchants who need it done right — the first time.</p>
+          <div class="footer-social" aria-label="Social links">
+            <a href="#" aria-label="Twitter / X">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M18.244 2H21.5l-7.55 8.63L23 22h-6.79l-4.66-6.21L6.2 22H3l8.07-9.23L2.5 2h6.94l4.22 5.62L18.244 2Zm-2.4 18h1.84L7.27 4h-1.94l10.51 16Z"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.02H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .78 0 1.74v20.51C0 23.22.79 24 1.77 24h20.45C23.21 24 24 23.22 24 22.25V1.74C24 .78 23.21 0 22.22 0Z"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.51 3.5 12 3.5 12 3.5s-7.51 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.49 20.5 12 20.5 12 20.5s7.51 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="platforms.html">Platforms</a></li>
+            <li><a href="how-it-works.html">How it works</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="https://apps.shopify.com/shift-it-now">Shopify App Store</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Migrations</h4>
+          <ul>
+            <li><a href="platforms.html">WooCommerce → Shopify</a></li>
+            <li><a href="platforms.html">Magento → Shopify</a></li>
+            <li><a href="platforms.html">Wix → Shopify</a></li>
+            <li><a href="platforms.html">Squarespace → Shopify</a></li>
+            <li><a href="contact.html#waitlist">BigCommerce → Shopify</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> ShiftItNow. Made for Shopify merchants who don't have time to lose.</p>
+        <p class="footer-meta">Shopify is a trademark of Shopify Inc. ShiftItNow is an independent app and is not endorsed by Shopify Inc.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
