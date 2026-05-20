@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
    ShiftItNow — Marketing Site
    Design tokens, layout, components, and animations.
    ============================================================ */
@@ -1393,7 +1393,7 @@ p  { margin: 0; }
    HERO FLOW VISUAL (replaces the old orbiting-chips circle)
    The migration flow viz lives inside .hero-visual.
    ============================================================ */
-.hero-flow {
+.hero-visual.hero-flow {
   position: relative;
   aspect-ratio: 1 / 1;
   width: 100%;
@@ -1418,14 +1418,14 @@ p  { margin: 0; }
   animation: floatChip 7s ease-in-out infinite;
   z-index: 2;
 }
-.hero-flow .flow-source-icon {
+.hero-visual.hero-flow .flow-source-icon {
   width: 22px; height: 22px;
   border-radius: 50%;
   display: inline-flex; align-items: center; justify-content: center;
   overflow: hidden;
   flex-shrink: 0;
 }
-.hero-flow .flow-source-icon img { width: 60%; height: 60%; object-fit: contain; }
+.hero-visual.hero-flow .flow-source-icon img { width: 60%; height: 60%; object-fit: contain; }
 
 /* 5 sources distributed down the left side */
 .hero-flow .flow-source-1 { top: 4%;  left: -6%; animation-delay: 0s; }
@@ -1454,11 +1454,18 @@ p  { margin: 0; }
 .hero-flow .flow-dest-inner {
   width: 72px; height: 72px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #95BF47, #5E8E2E);
+  background: #FFFFFF;
   display: flex; align-items: center; justify-content: center;
-  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.12);
+  box-shadow:
+    inset 0 -3px 0 rgba(0, 0, 0, 0.06),
+    0 4px 14px rgba(0, 0, 0, 0.18);
 }
-.hero-flow .flow-dest-inner svg { width: 32px; height: 32px; color: var(--white); }
+.hero-flow .flow-dest-inner svg,
+.hero-flow .flow-dest-inner img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
 .hero-flow .flow-dest-label {
   position: absolute;
   bottom: -26px;
@@ -1484,7 +1491,7 @@ p  { margin: 0; }
 
 /* Tablet (≤960px) — slightly smaller, sources hug the visual */
 @media (max-width: 960px) {
-  .hero-flow { max-width: 460px; }
+  .hero-visual.hero-flow { max-width: 460px; }
   .hero-flow .flow-source { font-size: 0.78rem; padding: 7px 12px 7px 7px; }
   .hero-flow .flow-source-1 { left: 0%; }
   .hero-flow .flow-source-2 { left: -4%; }
@@ -1494,21 +1501,82 @@ p  { margin: 0; }
   .hero-flow .flow-dest { right: 2%; }
 }
 
-/* Phones — hide text labels on source pills to save space, keep icons */
+/* Phones (≤600px) — compact, clean stacked layout, no overflow */
 @media (max-width: 600px) {
-  .hero-flow { max-width: 340px; aspect-ratio: 1 / 1; }
-  .hero-flow .flow-source { padding: 5px; gap: 0; font-size: 0; }
-  .hero-flow .flow-source > *:not(.flow-source-icon) { display: none; }
-  .hero-flow .flow-source-icon { width: 26px; height: 26px; }
-  .hero-flow .flow-source-1 { top: 6%;  left: -2%; }
-  .hero-flow .flow-source-2 { top: 26%; left: -6%; }
-  .hero-flow .flow-source-3 { top: 48%; left: -2%; }
-  .hero-flow .flow-source-4 { top: 70%; left: -6%; }
-  .hero-flow .flow-source-5 { top: 90%; left: -2%; }
-  .hero-flow .flow-dest { width: 80px; height: 80px; right: -2%; }
+  .hero-visual.hero-flow {
+    aspect-ratio: auto;
+    max-width: 100%;
+    width: 100%;
+    min-height: 280px;
+    height: 280px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .hero-flow .flow-svg { display: none; }
+
+  /* Source pills: keep labels, smaller font, no negative offsets */
+  .hero-flow .flow-source {
+    font-size: 0.75rem;
+    padding: 6px 12px 6px 6px;
+    gap: 7px;
+    animation: floatChip 6s ease-in-out infinite;
+  }
+  .hero-visual.hero-flow .flow-source-icon { width: 22px; height: 22px; }
+  .hero-visual.hero-flow .flow-source-icon img { width: 56%; height: 56%; }
+
+  /* Stack sources vertically on the left half, evenly spaced */
+  .hero-flow .flow-source-1 { top:  6%; left: 0; }
+  .hero-flow .flow-source-2 { top: 26%; left: 4%; }
+  .hero-flow .flow-source-3 { top: 46%; left: 0; }
+  .hero-flow .flow-source-4 { top: 66%; left: 4%; }
+  .hero-flow .flow-source-5 { top: 86%; left: 0; opacity: 0.7; }
+
+  /* Shopify dest: compact orb on the right side, vertically centered */
+  .hero-flow .flow-dest {
+    width: 96px; height: 96px;
+    right: 4%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .hero-flow .flow-dest-inner { width: 62px; height: 62px; }
+  .hero-flow .flow-dest-inner svg, .hero-flow .flow-dest-inner img { width: 36px; height: 36px; }
+  .hero-flow .flow-dest-label {
+    font-size: 0.62rem;
+    bottom: -22px;
+    letter-spacing: 0.1em;
+  }
+
+  /* Subtle vertical connector hint (since SVG is hidden) */
+  .hero-flow::before {
+    content: "";
+    position: absolute;
+    left: 38%; right: 22%;
+    top: 50%;
+    height: 1px;
+    background: repeating-linear-gradient(90deg, rgba(95,177,192,0.35) 0, rgba(95,177,192,0.35) 4px, transparent 4px, transparent 8px);
+    z-index: 0;
+  }
+}
+
+/* Very small phones (≤380px) — even tighter */
+@media (max-width: 380px) {
+  .hero-visual.hero-flow {
+    height: 240px;
+    min-height: 240px;
+  }
+  .hero-flow .flow-source {
+    font-size: 0.7rem;
+    padding: 5px 10px 5px 5px;
+    gap: 6px;
+  }
+  .hero-visual.hero-flow .flow-source-icon { width: 20px; height: 20px; }
+  .hero-flow .flow-source-5 { display: none; }
+  .hero-flow .flow-source-1 { top:  4%; }
+  .hero-flow .flow-source-2 { top: 28%; }
+  .hero-flow .flow-source-3 { top: 52%; }
+  .hero-flow .flow-source-4 { top: 76%; }
+  .hero-flow .flow-dest { width: 84px; height: 84px; right: 2%; }
   .hero-flow .flow-dest-inner { width: 54px; height: 54px; }
-  .hero-flow .flow-dest-inner svg { width: 24px; height: 24px; }
-  .hero-flow .flow-dest-label { font-size: 0.62rem; bottom: -22px; }
 }
 
 /* ============================================================
@@ -1693,7 +1761,7 @@ p  { margin: 0; }
   text-transform: uppercase;
   box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.12);
 }
-.flow-dest-inner svg { width: 36px; height: 36px; }
+.flow-dest-inner svg, .flow-dest-inner img { width: 36px; height: 36px; }
 .flow-dest-label {
   position: absolute;
   bottom: -34px;
@@ -1779,7 +1847,7 @@ p  { margin: 0; }
   .flow-source-5 { display: none; }
   .flow-dest { width: 110px; height: 110px; right: 50%; top: auto; bottom: 0; transform: translate(50%, 0); }
   .flow-dest-inner { width: 70px; height: 70px; font-size: 0.7rem; }
-  .flow-dest-inner svg { width: 28px; height: 28px; }
+  .flow-dest-inner svg, .flow-dest-inner img { width: 28px; height: 28px; }
   .flow-svg { display: none; } /* keep mobile clean — lines look messy at this size */
   .flow-source-1 { top: 0;   left: 0; }
   .flow-source-2 { top: 18%; left: 8%; }
