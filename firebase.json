@@ -9,7 +9,7 @@
       "README.md",
       "ONBOARDING.md"
     ],
-    "cleanUrls": false,
+    "cleanUrls": true,
     "trailingSlash": false,
     "headers": [
       {
