@@ -174,18 +174,21 @@
     });
   });
 
-  /* ---------- 7. Contact form (client-side only) ---------- */
+  /* ---------- 7. Contact form (Web3Forms) ---------- */
   const form = document.getElementById('contactForm');
   const success = document.getElementById('formSuccess');
+  const errorEl = document.getElementById('formError');
   if (form && success) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      // Native HTML5 validation
       if (!form.checkValidity()) {
         form.reportValidity();
         return;
       }
+
+      success.hidden = true;
+      if (errorEl) errorEl.hidden = true;
 
       const submitBtn = form.querySelector('button[type="submit"]');
       const originalLabel = submitBtn ? submitBtn.innerHTML : '';
@@ -194,16 +197,37 @@
         submitBtn.innerHTML = 'Sending…';
       }
 
-      // Simulate submit; replace this block with a real endpoint when wiring up.
-      setTimeout(() => {
-        form.reset();
-        success.hidden = false;
+      const restoreBtn = () => {
         if (submitBtn) {
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalLabel;
         }
-        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 800);
+      };
+
+      try {
+        const formData = new FormData(form);
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { Accept: 'application/json' }
+        });
+        const json = await res.json().catch(() => ({}));
+
+        if (res.ok && json.success !== false) {
+          form.reset();
+          success.hidden = false;
+          success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          throw new Error(json.message || 'Submission failed');
+        }
+      } catch (err) {
+        if (errorEl) {
+          errorEl.hidden = false;
+          errorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      } finally {
+        restoreBtn();
+      }
     });
   }
 
