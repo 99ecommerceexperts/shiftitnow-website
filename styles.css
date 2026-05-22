@@ -1512,82 +1512,67 @@ p  { margin: 0; }
   .hero-flow .flow-dest { right: 2%; }
 }
 
-/* Phones (≤600px) — compact, clean stacked layout, no overflow */
+/* Phones (≤600px) — square stage so the flow animation renders cleanly */
 @media (max-width: 600px) {
   .hero-visual.hero-flow {
-    aspect-ratio: auto;
-    max-width: 100%;
+    aspect-ratio: 1 / 1;
     width: 100%;
-    min-height: 280px;
-    height: 280px;
+    max-width: min(380px, 84vw);
     margin: 0 auto;
-    overflow: hidden;
+    overflow: visible;
   }
-  .hero-flow .flow-svg { display: none; }
 
-  /* Source pills: keep labels, smaller font, no negative offsets */
+  /* Keep the animated SVG flow VISIBLE on mobile */
+  .hero-flow .flow-svg { display: block; }
+
+  /* Source pills: smaller, aligned to the SVG path start points */
   .hero-flow .flow-source {
-    font-size: 0.75rem;
-    padding: 6px 12px 6px 6px;
-    gap: 7px;
+    font-size: 0.72rem;
+    padding: 5px 11px 5px 5px;
+    gap: 6px;
     animation: floatChip 6s ease-in-out infinite;
   }
-  .hero-visual.hero-flow .flow-source-icon { width: 22px; height: 22px; }
+  .hero-visual.hero-flow .flow-source-icon { width: 20px; height: 20px; }
   .hero-visual.hero-flow .flow-source-icon img { width: 56%; height: 56%; }
 
-  /* Stack sources vertically on the left half, evenly spaced */
-  .hero-flow .flow-source-1 { top:  6%; left: 0; }
-  .hero-flow .flow-source-2 { top: 26%; left: 4%; }
-  .hero-flow .flow-source-3 { top: 46%; left: 0; }
-  .hero-flow .flow-source-4 { top: 66%; left: 4%; }
-  .hero-flow .flow-source-5 { top: 86%; left: 0; opacity: 0.7; }
+  /* Stack sources down the left, lining up with the SVG paths */
+  .hero-flow .flow-source-1 { top:  7%; left: 0; }
+  .hero-flow .flow-source-2 { top: 27%; left: 0; }
+  .hero-flow .flow-source-3 { top: 47%; left: 0; }
+  .hero-flow .flow-source-4 { top: 67%; left: 0; }
+  .hero-flow .flow-source-5 { top: 86%; left: 0; opacity: 0.8; }
 
-  /* Shopify dest: compact orb on the right side, vertically centered */
+  /* Shopify dest: aligned to the SVG path end point */
   .hero-flow .flow-dest {
-    width: 96px; height: 96px;
-    right: 4%;
+    width: 88px; height: 88px;
+    right: 2%;
     top: 50%;
     transform: translateY(-50%);
   }
-  .hero-flow .flow-dest-inner { width: 62px; height: 62px; }
-  .hero-flow .flow-dest-inner svg, .hero-flow .flow-dest-inner img { width: 36px; height: 36px; }
+  .hero-flow .flow-dest-inner { width: 58px; height: 58px; }
+  .hero-flow .flow-dest-inner svg, .hero-flow .flow-dest-inner img { width: 34px; height: 34px; }
   .hero-flow .flow-dest-label {
     font-size: 0.62rem;
     bottom: -22px;
     letter-spacing: 0.1em;
   }
-
-  /* Subtle vertical connector hint (since SVG is hidden) */
-  .hero-flow::before {
-    content: "";
-    position: absolute;
-    left: 38%; right: 22%;
-    top: 50%;
-    height: 1px;
-    background: repeating-linear-gradient(90deg, rgba(95,177,192,0.35) 0, rgba(95,177,192,0.35) 4px, transparent 4px, transparent 8px);
-    z-index: 0;
-  }
 }
 
-/* Very small phones (≤380px) — even tighter */
+/* Very small phones (≤380px) — keep square, just tighter */
 @media (max-width: 380px) {
   .hero-visual.hero-flow {
-    height: 240px;
-    min-height: 240px;
+    aspect-ratio: 1 / 1;
+    max-width: 90vw;
   }
   .hero-flow .flow-source {
-    font-size: 0.7rem;
-    padding: 5px 10px 5px 5px;
-    gap: 6px;
+    font-size: 0.66rem;
+    padding: 4px 9px 4px 4px;
+    gap: 5px;
   }
-  .hero-visual.hero-flow .flow-source-icon { width: 20px; height: 20px; }
-  .hero-flow .flow-source-5 { display: none; }
-  .hero-flow .flow-source-1 { top:  4%; }
-  .hero-flow .flow-source-2 { top: 28%; }
-  .hero-flow .flow-source-3 { top: 52%; }
-  .hero-flow .flow-source-4 { top: 76%; }
-  .hero-flow .flow-dest { width: 84px; height: 84px; right: 2%; }
-  .hero-flow .flow-dest-inner { width: 54px; height: 54px; }
+  .hero-visual.hero-flow .flow-source-icon { width: 18px; height: 18px; }
+  .hero-flow .flow-dest { width: 76px; height: 76px; right: 2%; }
+  .hero-flow .flow-dest-inner { width: 50px; height: 50px; }
+  .hero-flow .flow-dest-inner svg, .hero-flow .flow-dest-inner img { width: 28px; height: 28px; }
 }
 
 /* ============================================================
