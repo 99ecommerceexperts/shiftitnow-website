@@ -71,7 +71,7 @@
 
 /* ---------- 2. RESET ---------- */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
+html { -webkit-text-size-adjust: 100%; overflow-x: hidden; } /* native smooth-scroll removed — Lenis handles it */
 body {
   margin: 0;
   font-family: var(--font-sans);
@@ -190,6 +190,18 @@ p  { margin: 0; }
   color: var(--navy-deep);
   box-shadow: 0 8px 24px rgba(242, 181, 68, 0.35), inset 0 -1px 0 rgba(0,0,0,0.08);
 }
+
+/* Shopify icon on buttons — preserve natural color, align cleanly */
+.btn-shopify-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  flex-shrink: 0;
+  object-fit: contain;
+  vertical-align: middle;
+}
+.btn-sm .btn-shopify-icon { width: 16px; height: 16px; }
+.btn-lg .btn-shopify-icon { width: 20px; height: 20px; }
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 14px 32px rgba(242, 181, 68, 0.45);

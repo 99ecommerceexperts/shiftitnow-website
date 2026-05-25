@@ -5,6 +5,26 @@
 (() => {
   'use strict';
 
+  /* ---------- 0a. Lenis smooth scroll ---------- */
+  let lenis = null;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (typeof Lenis !== 'undefined' && !reducedMotion) {
+    lenis = new Lenis({
+      duration: 1.15,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      smoothTouch: false,
+      wheelMultiplier: 1,
+      touchMultiplier: 1.4,
+    });
+    const raf = (time) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
+    requestAnimationFrame(raf);
+    window.lenis = lenis;
+  }
+
   /* ---------- 0. Announcement bar dismiss ---------- */
   const announceClose = document.getElementById('announceClose');
   const announcementBar = document.getElementById('announcementBar');
@@ -160,7 +180,7 @@
     });
   });
 
-  /* ---------- 6. Smooth-scroll w/ sticky-header offset ---------- */
+  /* ---------- 6. Smooth-scroll w/ sticky-header offset (uses Lenis if available) ---------- */
   const headerOffset = () => (header ? header.offsetHeight + 8 : 0);
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
@@ -169,8 +189,12 @@
       const target = document.querySelector(id);
       if (!target) return;
       e.preventDefault();
-      const y = target.getBoundingClientRect().top + window.scrollY - headerOffset();
-      window.scrollTo({ top: y, behavior: 'smooth' });
+      if (lenis) {
+        lenis.scrollTo(target, { offset: -headerOffset(), duration: 1.2 });
+      } else {
+        const y = target.getBoundingClientRect().top + window.scrollY - headerOffset();
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
     });
   });
 
