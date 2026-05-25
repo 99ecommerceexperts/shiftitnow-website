@@ -1558,7 +1558,7 @@ p  { margin: 0; }
   .hero-flow .flow-source-2 { top: 27%; left: 0; }
   .hero-flow .flow-source-3 { top: 47%; left: 0; }
   .hero-flow .flow-source-4 { top: 67%; left: 0; }
-  .hero-flow .flow-source-5 { top: 86%; left: 0; opacity: 0.8; }
+  .hero-flow .flow-source-5 { top: 86%; left: 0; }
 
   /* Shopify dest: aligned to the SVG path end point */
   .hero-flow .flow-dest {
@@ -1742,7 +1742,7 @@ p  { margin: 0; }
 .flow-source-2 { top: 28%; left: 0%; }
 .flow-source-3 { top: 52%; left: 2%; }
 .flow-source-4 { top: 76%; left: 0%; }
-.flow-source-5 { top: 95%; left: 4%; opacity: 0.6; }
+.flow-source-5 { top: 95%; left: 4%; }
 
 /* Central Shopify destination */
 .flow-dest {
