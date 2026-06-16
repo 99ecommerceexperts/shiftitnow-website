@@ -11,6 +11,23 @@
     ],
     "cleanUrls": true,
     "trailingSlash": false,
+    "redirects": [
+      {
+        "source": "/blog/how-to-migrate-wix-to-shopify",
+        "destination": "/blog/migrate-wix-shopify",
+        "type": 301
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/blogs",
+        "destination": "/blogs.html"
+      },
+      {
+        "source": "/blog/**",
+        "destination": "/blog/index.html"
+      }
+    ],
     "headers": [
       {
         "source": "**",

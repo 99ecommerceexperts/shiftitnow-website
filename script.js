@@ -75,7 +75,7 @@
 
   /* ---------- 3. Scroll-reveal ---------- */
   const revealTargets = document.querySelectorAll(
-    '.section-head, .platform-card, .feature-card, .step, .testimonial, .price-card, .faq-item, .stat, .mig-col, .cta-card, .contact-form, .contact-copy, .hero-copy, .hero-visual'
+    '.section-head, .platform-card, .feature-card, .step, .testimonial, .price-card, .faq-item, .stat, .mig-col, .cta-card, .contact-form, .contact-copy, .hero-copy, .hero-visual, .blog-card, .blog-index-copy, .blog-index-featured, .blog-post-meta, .blog-post-main, .blog-sidebar-card, .blog-gallery-card, .blog-content, .blog-trust-copy, .blog-trust-points, .blog-post-hero-panel'
   );
   revealTargets.forEach(el => el.classList.add('reveal'));
 

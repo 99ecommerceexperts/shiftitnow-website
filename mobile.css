@@ -260,6 +260,18 @@
   .footer-brand  { grid-column: 1 / -1; }
   .footer-bottom { flex-direction: column; text-align: center; align-items: flex-start; }
 
+  .blog-discovery-shell h1 { font-size: 2.35rem; }
+  .blog-discovery-sub { font-size: 0.94rem; }
+  .blog-discovery-points { text-align: left; }
+  .blog-catalog-grid { grid-template-columns: 1fr; }
+  .blog-toolbar { margin-bottom: 20px; }
+  .blog-filter-chips { justify-content: flex-start; overflow-x: auto; padding-bottom: 4px; }
+  .blog-filter-chips::-webkit-scrollbar { display: none; }
+  .blog-filter-chip { white-space: nowrap; }
+  .blog-catalog-actions .btn { width: 100%; }
+  .blog-detail-meta-row { gap: 8px 14px; }
+  .blog-detail-sidecard { padding: 18px; }
+
   .migrated-grid { grid-template-columns: 1fr; gap: 22px; }
   .form-row      { grid-template-columns: 1fr; }
   .contact-items li { grid-template-columns: 1fr; gap: 4px; }
