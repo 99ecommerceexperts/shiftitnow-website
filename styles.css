@@ -3122,11 +3122,17 @@ p  { margin: 0; }
 }
 .blog-content-table {
   width: 100%;
+  min-width: 520px;
   border-collapse: collapse;
   overflow: hidden;
   border-radius: 16px;
   border-style: hidden;
   box-shadow: 0 0 0 1px var(--border);
+}
+.blog-content-table-wrap {
+  margin-bottom: 16px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .blog-content-table th,
 .blog-content-table td {
