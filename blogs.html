@@ -86,13 +86,7 @@
     <section class="blog-discovery-hero">
       <div class="container blog-discovery-shell">
         <span class="blog-discovery-badge">Migration Notes</span>
-        <h1>Guides for moving to Shopify without messy launches.</h1>
-        <p class="blog-discovery-sub">Search practical migration writeups, filter by topic, and read the next steps before you touch your live store.</p>
-        <div class="blog-discovery-points">
-          <span><strong>Search by problem</strong> like SEO, launch, or platform migration</span>
-          <span><strong>Filter by category</strong> when you only want the relevant playbooks</span>
-          <span><strong>Read in batches</strong> with a clean load-more flow</span>
-        </div>
+        <h2>Guides for moving to Shopify without messy launches.</h2>
       </div>
       <div class="blog-discovery-orb blog-discovery-orb-left" aria-hidden="true"></div>
       <div class="blog-discovery-orb blog-discovery-orb-right" aria-hidden="true"></div>
@@ -101,26 +95,8 @@
     <section class="blog-catalog-section">
       <div class="container">
         <div class="blog-catalog-head">
-          <span class="blog-catalog-kicker" id="blogCatalogCount">0 posts</span>
           <h2>Latest articles</h2>
-          <p class="blog-catalog-intro">Use search or category filters to narrow the list. The first 9 posts load immediately.</p>
         </div>
-
-        <div class="blog-toolbar" aria-label="Blog filters">
-          <label class="blog-search-field" for="blogSearch">
-            <svg class="blog-search-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"></circle>
-              <path d="m20 20-3.6-3.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-            </svg>
-            <input id="blogSearch" class="blog-search-input" type="search" placeholder="Search migration, SEO, redirects..." autocomplete="off" />
-          </label>
-
-          <div class="blog-filter-row">
-            <div class="blog-filter-chips" id="blogFilterChips" role="tablist" aria-label="Blog categories"></div>
-          </div>
-        </div>
-
-        <div class="blog-results-copy" id="blogResultsCopy">Loading posts...</div>
         <div class="blog-catalog-grid" id="blogCatalogGrid"></div>
 
         <div class="blog-catalog-actions">
@@ -178,11 +154,11 @@
         <div class="footer-col">
           <h4>Migrations</h4>
           <ul>
+            <li><a href="/blog/shopify-store-migration-guide-2026">Shopify Migration Guide</a></li>
             <li><a href="/blog/migrate-wix-shopify">Wix &rarr; Shopify</a></li>
             <li><a href="/blog/woocommerce-to-shopify-checklist">WooCommerce &rarr; Shopify</a></li>
             <li><a href="/blog/magento-to-shopify-data-cleanup">Magento &rarr; Shopify</a></li>
             <li><a href="/blog/squarespace-to-shopify-seo-redirects">Squarespace &rarr; Shopify</a></li>
-            <li><a href="/blog/bigcommerce-to-shopify-launch-plan">BigCommerce &rarr; Shopify</a></li>
           </ul>
         </div>
 
@@ -208,365 +184,524 @@
 
   <script>
     window.shiftItNowBlogPosts = [
+  {
+    "slug": "shopify-store-migration-guide-2026",
+    "title": "The Step-by-Step Shopify Store Migration Guide (2026)",
+    "category": "Migration Guide",
+    "date": "June 16, 2026",
+    "readTime": "12 min read",
+    "author": "Prakash Carpenter",
+    "excerpt": "A practical 2026 migration guide covering timeline, cost, SEO, customer accounts, redirects, and the 7-step move to Shopify.",
+    "badge": "2026 Guide",
+    "accent": "strategy",
+    "stats": [
+      "2-5 day plan",
+      "SEO-safe",
+      "Launch-ready"
+    ],
+    "focus": "Planning, SEO, redirects, and launch prep",
+    "cta": "Use this guide as your migration checklist, then run the move with ShiftItNow.",
+    "content": [
       {
-        "slug": "migrate-wix-shopify",
-        "title": "How to Migrate from Wix to Shopify Without Losing SEO, Orders, or Sleep",
-        "category": "Wix Migration",
-        "date": "June 16, 2026",
-        "readTime": "9 min read",
-        "author": "Prakash Carpenter",
-        "excerpt": "A launch-focused Wix to Shopify migration guide covering products, redirects, SEO continuity, and go-live prep.",
-        "badge": "Featured Guide",
-        "accent": "wix",
-        "stats": ["Redirect-safe", "SEO-aware", "Launch-ready"],
-        "focus": "SEO, redirects, launch prep",
-        "cta": "Run a demo migration before your final cutover.",
-        "content": [
-          {
-            "h2": "Why merchants move from Wix to Shopify",
-            "ps": [
-              "Wix works when the catalog is small and the operational setup is simple. Once the store grows, merchants usually want stronger app integrations, better storefront control, and a stack that is built around ecommerce first.",
-              "The migration itself is not difficult because of Shopify. It becomes difficult when products, URLs, SEO signals, and navigation are moved without a proper launch sequence."
-            ]
-          },
-          {
-            "h2": "What needs to move cleanly",
-            "bullets": [
-              "Products, variants, descriptions, images, SKU, and inventory",
-              "Collections and navigation structure",
-              "Customers and historical orders",
-              "Policies, FAQ pages, and other conversion-supporting content",
-              "Meta titles, descriptions, image alt text, and redirect mappings"
-            ]
-          },
-          {
-            "h2": "The migration sequence that avoids cleanup",
-            "bullets": [
-              "Audit the Wix store before touching Shopify",
-              "Prepare the destination store structure first",
-              "Run a sample migration and verify formatting",
-              "Map redirects before launch day",
-              "Freeze changes during the final sync",
-              "Validate checkout, top landing pages, and mobile flows before pointing traffic"
-            ]
-          },
-          {
-            "h2": "Where ShiftItNow fits",
-            "ps": [
-              "ShiftItNow is built for merchants who want a repeatable path, not manual copy-paste work. You can test the move on real data, inspect the output, and tighten the launch plan before the final cutover.",
-              "That reduces risk where most migrations normally fail: inconsistent product mapping, broken URLs, and rushed launch-day decisions."
-            ]
-          }
+        "h2": "Why this migration guide matters",
+        "ps": [
+          "Thinking about moving your store to Shopify usually comes with the same fears: losing product data, breaking customer access, causing downtime, damaging SEO, and wasting days rebuilding everything manually.",
+          "The good news from the document is simple: with the right workflow, most merchants can migrate in 2 to 5 days and avoid the usual mess."
+        ],
+        "bullets": [
+          "Protect your product and customer data",
+          "Avoid unnecessary downtime during launch",
+          "Preserve rankings with redirects and post-launch checks",
+          "Stop manually recreating what should be migrated automatically"
         ]
       },
       {
-        "slug": "woocommerce-to-shopify-checklist",
-        "title": "WooCommerce to Shopify Migration Checklist for Busy Store Owners",
-        "category": "WooCommerce Migration",
-        "date": "June 14, 2026",
-        "readTime": "7 min read",
-        "author": "Prakash Carpenter",
-        "excerpt": "A practical checklist for cleaning data, preserving URLs, and moving WooCommerce stores to Shopify without chaos.",
-        "badge": "Checklist",
-        "accent": "woocommerce",
-        "stats": ["Catalog audit", "URL mapping", "Cutover plan"],
-        "focus": "Catalog cleanup, URL mapping",
-        "cta": "Shorten the WooCommerce cleanup cycle before launch.",
-        "content": [
-          {
-            "h2": "Start with the catalog, not the theme",
-            "ps": [
-              "Most WooCommerce stores carry years of plugin residue, inconsistent attributes, and category sprawl. Fixing those issues before migration saves far more time than trying to make the new Shopify theme carry bad structure forward."
-            ]
-          },
-          {
-            "h2": "Checklist before import",
-            "bullets": [
-              "Normalize product attributes and variant naming",
-              "Remove duplicate or archived products you do not plan to sell",
-              "Export customers and order history in a usable format",
-              "List all high-value URLs and top traffic landing pages",
-              "Review coupon, tax, and shipping logic separately from product data"
-            ]
-          },
-          {
-            "h2": "Checklist before launch",
-            "bullets": [
-              "Verify collections and menus",
-              "Test carts, checkout, and transactional notifications",
-              "Add redirects for product, category, and blog paths",
-              "Check image rendering and product page formatting on mobile"
-            ]
-          }
+        "h2": "Do you actually need to migrate to Shopify?",
+        "ps": [
+          "Before starting, confirm that Shopify is actually the right next platform for the business."
+        ],
+        "bullets": [
+          "Good candidates include stores currently on WooCommerce, BigCommerce, Magento, Squarespace, Etsy, 3dcart, PrestaShop, or aging custom platforms.",
+          "You probably do not need to migrate if you are already on Shopify, the catalog is tiny, revenue is still minimal, or the current platform is genuinely working well."
         ]
       },
       {
-        "slug": "magento-to-shopify-data-cleanup",
-        "title": "Magento to Shopify: The Data Cleanup Work Most Teams Underestimate",
-        "category": "Magento Migration",
-        "date": "June 12, 2026",
-        "readTime": "8 min read",
-        "author": "Prakash Carpenter",
-        "excerpt": "Magento migrations rarely fail on export. They fail when attributes, variants, and catalog logic reach Shopify in messy form.",
-        "badge": "Deep Dive",
-        "accent": "magento",
-        "stats": ["Attribute cleanup", "Variant sanity", "Launch control"],
-        "focus": "Attributes, variants, catalog logic",
-        "cta": "Make Magento data readable before it reaches Shopify.",
-        "content": [
-          {
-            "h2": "Why Magento migrations feel heavy",
-            "ps": [
-              "Magento stores usually have deeper attribute logic, layered navigation rules, and custom data patterns. The more custom the source setup is, the more important the field mapping and cleanup become before import."
-            ]
-          },
-          {
-            "h2": "What to review early",
-            "bullets": [
-              "Custom attributes that should become Shopify metafields",
-              "Variant combinations that need to stay merchandisable",
-              "Retired product records that should not clutter the new store",
-              "Store-view content that needs a clear destination plan"
-            ]
-          },
-          {
-            "h2": "Do not leave launch prep to the end",
-            "ps": [
-              "Teams often spend all of their time on export and import, then rush redirect checks and storefront QA. That is backwards. Migration is only finished when the destination store is ready for real customers."
-            ]
-          }
+        "h2": "5 things every merchant should know before starting",
+        "bullets": [
+          "Timeline: small stores can move in 2 to 3 days with a tool, medium stores in 3 to 5 days, and larger stores in 5 to 7 days.",
+          "Cost: tool-led migration usually lands around $200 to $500, while tool plus professional help typically costs $1,700 to $3,500.",
+          "SEO: rankings can be preserved if 301 redirects, sitemap updates, and Search Console checks are handled correctly.",
+          "Customer accounts: passwords do not transfer to Shopify, so customers need a password reset flow.",
+          "Risk control: never delete the old store immediately. Keep it available for at least 30 days after launch."
         ]
       },
       {
-        "slug": "squarespace-to-shopify-seo-redirects",
-        "title": "Squarespace to Shopify SEO Redirects: What to Map Before You Switch",
-        "category": "SEO Migration",
-        "date": "June 11, 2026",
-        "readTime": "6 min read",
-        "author": "Prakash Carpenter",
-        "excerpt": "A simple redirect planning guide for merchants leaving Squarespace and wanting Shopify without broken traffic paths.",
-        "badge": "SEO Guide",
-        "accent": "seo",
-        "stats": ["301 planning", "Landing pages", "Traffic protection"],
-        "focus": "Redirects and landing-page continuity",
-        "cta": "Protect landing pages before the domain switch.",
-        "content": [
-          {
-            "h2": "Redirect planning is not optional",
-            "ps": [
-              "Squarespace and Shopify rarely keep the exact same URL structure. If you ignore that difference, rankings and bookmarked traffic break the moment the new store goes live."
-            ]
-          },
-          {
-            "h2": "Pages to map first",
-            "bullets": [
-              "Top product pages",
-              "Top collection or category paths",
-              "Blog posts with organic traffic",
-              "Policy pages that are linked from campaigns or emails"
-            ]
-          },
-          {
-            "h2": "After launch",
-            "bullets": [
-              "Upload the updated sitemap",
-              "Check Google Search Console coverage",
-              "Spot-check the highest traffic old URLs manually",
-              "Monitor 404 patterns during the first week"
-            ]
-          }
+        "h2": "Pre-migration checklist",
+        "ps": [
+          "The document stresses that migrations go better when you audit the source store first instead of jumping straight into import tools."
+        ],
+        "bullets": [
+          "Count products, variants, images, and any custom product fields.",
+          "List customer accounts and decide whether order history must be preserved.",
+          "Document custom code, integrations, and special storefront behavior.",
+          "If the store has 500 plus products or complex integrations, plan for expert support instead of pure DIY."
         ]
       },
       {
-        "slug": "bigcommerce-to-shopify-launch-plan",
-        "title": "BigCommerce to Shopify Launch Plan: What to Validate in the Final 48 Hours",
-        "category": "Launch Checklist",
-        "date": "June 9, 2026",
-        "readTime": "5 min read",
-        "author": "Prakash Carpenter",
-        "excerpt": "The final 48-hour checklist for a cleaner BigCommerce to Shopify launch with fewer surprises after the DNS switch.",
-        "badge": "Launch Plan",
-        "accent": "bigcommerce",
-        "stats": ["Final sync", "Checkout QA", "DNS-ready"],
-        "focus": "Launch-day validation",
-        "cta": "Keep launch-day work operational, not emotional.",
-        "content": [
-          {
-            "h2": "The last 48 hours matter more than most teams think",
-            "ps": [
-              "A migration can look complete on paper and still fail at launch because small customer-facing issues were never checked. Final validation should focus on store behavior, not just data totals."
-            ]
-          },
-          {
-            "h2": "What to validate",
-            "bullets": [
-              "Navigation and search",
-              "Collections and product templates",
-              "Taxes, shipping rates, and checkout",
-              "Transactional email flows",
-              "Core redirects and campaign landing pages"
-            ]
-          }
+        "h2": "Choose the right migration method",
+        "bullets": [
+          "Automated tool: best for most merchants, fastest execution, lowest manual effort.",
+          "Hybrid approach: migration tool plus expert support, best for mid-sized stores that want fewer launch risks.",
+          "Manual migration: only makes sense for very small catalogs and teams with patience for repetitive cleanup."
         ]
       },
       {
-        "slug": "shopify-migration-seo-handoff",
-        "title": "How to Handle SEO Handoff During a Shopify Migration",
-        "category": "SEO Migration",
-        "date": "June 7, 2026",
-        "readTime": "6 min read",
-        "author": "Prakash Carpenter",
-        "excerpt": "SEO continuity depends on mapping, metadata, and launch discipline. This guide focuses on the handoff points teams miss.",
-        "badge": "SEO Handoff",
-        "accent": "seo",
-        "stats": ["Metadata carryover", "Redirect logic", "Post-launch checks"],
-        "focus": "SEO continuity",
-        "cta": "Carry your search signals into the new store.",
-        "content": [
-          {
-            "h2": "SEO loss usually comes from missing process",
-            "ps": [
-              "Search visibility often drops after migration because teams treat SEO as a single checkbox instead of a handoff sequence between content, development, and launch ops."
-            ]
-          },
-          {
-            "h2": "Critical handoff points",
-            "bullets": [
-              "Capture current metadata before rebuild work starts",
-              "Keep a redirect owner for launch week",
-              "Review canonical tags and sitemap output after go-live",
-              "Check indexable templates and noindex settings on the new theme"
-            ]
-          }
+        "h2": "The 7-step Shopify migration process",
+        "bullets": [
+          "Set up the Shopify store first so the destination is ready.",
+          "Move products with a test import before full migration.",
+          "Import customers and order history if continuity matters.",
+          "Point the domain only near launch, not too early.",
+          "Set up 301 redirects for products, collections, and important content.",
+          "Test desktop and mobile flows before launch day.",
+          "Go live, monitor errors, and stay responsive in the first 24 hours."
         ]
       },
       {
-        "slug": "shopify-migration-demo-run",
-        "title": "Why a Demo Migration Run Saves More Time Than Another Planning Meeting",
-        "category": "Migration Strategy",
-        "date": "June 5, 2026",
-        "readTime": "4 min read",
-        "author": "Prakash Carpenter",
-        "excerpt": "A demo migration exposes field-mapping problems early and gives teams something real to validate before launch.",
-        "badge": "Strategy Note",
-        "accent": "strategy",
-        "stats": ["Field mapping", "Real validation", "Lower risk"],
-        "focus": "Demo-first migration process",
-        "cta": "Test with real data before final cutover.",
-        "content": [
-          {
-            "h2": "Planning has limits",
-            "ps": [
-              "Meetings and spreadsheets can describe a migration, but they cannot show how real products, customers, and URLs will behave in the destination store. That is what the demo run is for."
-            ]
-          },
-          {
-            "h2": "What a demo reveals",
-            "bullets": [
-              "Broken variant structures",
-              "Image formatting issues",
-              "Unexpected field truncation",
-              "Collection logic that needs adjustment before launch"
-            ]
-          }
+        "h2": "How to protect SEO during migration",
+        "ps": [
+          "The guide is very clear here: most SEO damage is self-inflicted. Merchants lose rankings when they skip redirects, fail to track old URLs, or forget to validate Search Console after launch."
+        ],
+        "bullets": [
+          "Capture your current ranking baseline before the move.",
+          "Redirect every important old URL to the best matching Shopify page.",
+          "Upload the new sitemap and monitor crawl errors after launch.",
+          "Expect a short dip, but recovery usually follows if redirects are correct."
         ]
       },
       {
-        "slug": "shopify-launch-content-freeze",
-        "title": "Why You Need a Content Freeze Before Final Shopify Migration",
-        "category": "Launch Checklist",
-        "date": "June 3, 2026",
-        "readTime": "4 min read",
-        "author": "Prakash Carpenter",
-        "excerpt": "Late edits on the source store create mismatches. A simple content freeze window prevents unnecessary reconciliation work.",
-        "badge": "Ops Tip",
-        "accent": "launch",
-        "stats": ["Fewer mismatches", "Cleaner final sync", "Better QA"],
-        "focus": "Operational discipline",
-        "cta": "Freeze edits before the last data pull.",
-        "content": [
-          {
-            "h2": "Last-minute edits create avoidable problems",
-            "ps": [
-              "Teams often keep editing products, pages, or menus while the final migration is happening. That creates uncertainty about what actually made it into Shopify and what still needs manual fixing."
-            ]
-          },
-          {
-            "h2": "A useful freeze window",
-            "bullets": [
-              "Pause non-essential content changes",
-              "Route urgent edits through one owner",
-              "Communicate the freeze to marketing and support",
-              "Use the freeze period for QA and redirect validation"
-            ]
-          }
+        "h2": "Why a migration tool changes the timeline",
+        "ps": [
+          "According to the document, tools like ShiftItNow automate the heavy repetitive work and make reruns possible if something needs fixing. That is the main difference between a controlled launch and a stressful manual rebuild."
+        ],
+        "bullets": [
+          "Faster product migration and cleaner repeat runs",
+          "Lower risk of formatting or mapping errors",
+          "Much less manual copy-paste work",
+          "Better support for realistic launch schedules"
         ]
       },
       {
-        "slug": "shopify-post-migration-qa",
-        "title": "Post-Migration QA for Shopify: The Short List That Catches Real Problems",
-        "category": "Migration Strategy",
-        "date": "June 1, 2026",
-        "readTime": "5 min read",
-        "author": "Prakash Carpenter",
-        "excerpt": "A concise QA list focused on customer-facing issues after a migration, not endless internal checklists.",
-        "badge": "QA List",
-        "accent": "strategy",
-        "stats": ["Customer-facing QA", "Mobile checks", "Revenue protection"],
-        "focus": "QA after go-live",
-        "cta": "Validate what customers actually touch first.",
-        "content": [
-          {
-            "h2": "QA should start where revenue is exposed",
-            "ps": [
-              "After migration, the most valuable checks are the ones tied directly to product discovery, purchase flow, and trust. That means search, collections, product pages, cart, checkout, and contact paths get tested first."
-            ]
-          },
-          {
-            "h2": "Short list",
-            "bullets": [
-              "Search and collection filtering",
-              "Product variants and pricing display",
-              "Cart and checkout flow",
-              "Mobile spacing and readability",
-              "Redirects from top landing pages"
-            ]
-          }
-        ]
-      },
-      {
-        "slug": "shopify-replatforming-timeline",
-        "title": "How Long Does a Shopify Replatforming Project Actually Take?",
-        "category": "Migration Strategy",
-        "date": "May 29, 2026",
-        "readTime": "5 min read",
-        "author": "Prakash Carpenter",
-        "excerpt": "The real answer depends less on platform size and more on data quality, decision speed, and launch discipline.",
-        "badge": "Planning",
-        "accent": "strategy",
-        "stats": ["Timeline ranges", "Risk factors", "Planning reality"],
-        "focus": "Project planning",
-        "cta": "Plan around real blockers, not optimistic guesses.",
-        "content": [
-          {
-            "h2": "Timelines stretch for predictable reasons",
-            "ps": [
-              "Projects slow down when the source store is messy, the destination setup is undecided, or approvals arrive late. Stores with smaller catalogs can still run long if the migration sequence is weak."
-            ]
-          },
-          {
-            "h2": "What changes the timeline most",
-            "bullets": [
-              "Catalog cleanliness",
-              "Redirect planning",
-              "Theme readiness",
-              "Operational approvals",
-              "How early the team runs a realistic test migration"
-            ]
-          }
+        "h2": "Quick FAQ from the guide",
+        "bullets": [
+          "How long does it take? Usually 2 to 7 days with a tool, much longer manually.",
+          "How much does it cost? Anywhere from a few hundred dollars with a tool to several thousand with professional support.",
+          "Will you lose rankings? Not if redirects and SEO handoff are handled properly.",
+          "What about customer accounts? Passwords reset, but customer records can still be preserved.",
+          "What if something breaks? Keep the old store and backup available until the new setup is stable."
         ]
       }
-    ];
+    ]
+  },
+  {
+    "slug": "migrate-wix-shopify",
+    "title": "How to Migrate from Wix to Shopify Without Losing SEO, Orders, or Sleep",
+    "category": "Wix Migration",
+    "date": "June 16, 2026",
+    "readTime": "9 min read",
+    "author": "Prakash Carpenter",
+    "excerpt": "A launch-focused Wix to Shopify migration guide covering products, redirects, SEO continuity, and go-live prep.",
+    "badge": "Featured Guide",
+    "accent": "wix",
+    "stats": [
+      "Redirect-safe",
+      "SEO-aware",
+      "Launch-ready"
+    ],
+    "focus": "SEO, redirects, launch prep",
+    "cta": "Run a demo migration before your final cutover.",
+    "content": [
+      {
+        "h2": "Why merchants move from Wix to Shopify",
+        "ps": [
+          "Wix works when the catalog is small and the operational setup is simple. Once the store grows, merchants usually want stronger app integrations, better storefront control, and a stack that is built around ecommerce first.",
+          "The migration itself is not difficult because of Shopify. It becomes difficult when products, URLs, SEO signals, and navigation are moved without a proper launch sequence."
+        ]
+      },
+      {
+        "h2": "What needs to move cleanly",
+        "bullets": [
+          "Products, variants, descriptions, images, SKU, and inventory",
+          "Collections and navigation structure",
+          "Customers and historical orders",
+          "Policies, FAQ pages, and other conversion-supporting content",
+          "Meta titles, descriptions, image alt text, and redirect mappings"
+        ]
+      },
+      {
+        "h2": "The migration sequence that avoids cleanup",
+        "bullets": [
+          "Audit the Wix store before touching Shopify",
+          "Prepare the destination store structure first",
+          "Run a sample migration and verify formatting",
+          "Map redirects before launch day",
+          "Freeze changes during the final sync",
+          "Validate checkout, top landing pages, and mobile flows before pointing traffic"
+        ]
+      },
+      {
+        "h2": "Where ShiftItNow fits",
+        "ps": [
+          "ShiftItNow is built for merchants who want a repeatable path, not manual copy-paste work. You can test the move on real data, inspect the output, and tighten the launch plan before the final cutover.",
+          "That reduces risk where most migrations normally fail: inconsistent product mapping, broken URLs, and rushed launch-day decisions."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "woocommerce-to-shopify-checklist",
+    "title": "WooCommerce to Shopify Migration Checklist for Busy Store Owners",
+    "category": "WooCommerce Migration",
+    "date": "June 14, 2026",
+    "readTime": "7 min read",
+    "author": "Prakash Carpenter",
+    "excerpt": "A practical checklist for cleaning data, preserving URLs, and moving WooCommerce stores to Shopify without chaos.",
+    "badge": "Checklist",
+    "accent": "woocommerce",
+    "stats": [
+      "Catalog audit",
+      "URL mapping",
+      "Cutover plan"
+    ],
+    "focus": "Catalog cleanup, URL mapping",
+    "cta": "Shorten the WooCommerce cleanup cycle before launch.",
+    "content": [
+      {
+        "h2": "Start with the catalog, not the theme",
+        "ps": [
+          "Most WooCommerce stores carry years of plugin residue, inconsistent attributes, and category sprawl. Fixing those issues before migration saves far more time than trying to make the new Shopify theme carry bad structure forward."
+        ]
+      },
+      {
+        "h2": "Checklist before import",
+        "bullets": [
+          "Normalize product attributes and variant naming",
+          "Remove duplicate or archived products you do not plan to sell",
+          "Export customers and order history in a usable format",
+          "List all high-value URLs and top traffic landing pages",
+          "Review coupon, tax, and shipping logic separately from product data"
+        ]
+      },
+      {
+        "h2": "Checklist before launch",
+        "bullets": [
+          "Verify collections and menus",
+          "Test carts, checkout, and transactional notifications",
+          "Add redirects for product, category, and blog paths",
+          "Check image rendering and product page formatting on mobile"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "magento-to-shopify-data-cleanup",
+    "title": "Magento to Shopify: The Data Cleanup Work Most Teams Underestimate",
+    "category": "Magento Migration",
+    "date": "June 12, 2026",
+    "readTime": "8 min read",
+    "author": "Prakash Carpenter",
+    "excerpt": "Magento migrations rarely fail on export. They fail when attributes, variants, and catalog logic reach Shopify in messy form.",
+    "badge": "Deep Dive",
+    "accent": "magento",
+    "stats": [
+      "Attribute cleanup",
+      "Variant sanity",
+      "Launch control"
+    ],
+    "focus": "Attributes, variants, catalog logic",
+    "cta": "Make Magento data readable before it reaches Shopify.",
+    "content": [
+      {
+        "h2": "Why Magento migrations feel heavy",
+        "ps": [
+          "Magento stores usually have deeper attribute logic, layered navigation rules, and custom data patterns. The more custom the source setup is, the more important the field mapping and cleanup become before import."
+        ]
+      },
+      {
+        "h2": "What to review early",
+        "bullets": [
+          "Custom attributes that should become Shopify metafields",
+          "Variant combinations that need to stay merchandisable",
+          "Retired product records that should not clutter the new store",
+          "Store-view content that needs a clear destination plan"
+        ]
+      },
+      {
+        "h2": "Do not leave launch prep to the end",
+        "ps": [
+          "Teams often spend all of their time on export and import, then rush redirect checks and storefront QA. That is backwards. Migration is only finished when the destination store is ready for real customers."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "squarespace-to-shopify-seo-redirects",
+    "title": "Squarespace to Shopify SEO Redirects: What to Map Before You Switch",
+    "category": "SEO Migration",
+    "date": "June 11, 2026",
+    "readTime": "6 min read",
+    "author": "Prakash Carpenter",
+    "excerpt": "A simple redirect planning guide for merchants leaving Squarespace and wanting Shopify without broken traffic paths.",
+    "badge": "SEO Guide",
+    "accent": "seo",
+    "stats": [
+      "301 planning",
+      "Landing pages",
+      "Traffic protection"
+    ],
+    "focus": "Redirects and landing-page continuity",
+    "cta": "Protect landing pages before the domain switch.",
+    "content": [
+      {
+        "h2": "Redirect planning is not optional",
+        "ps": [
+          "Squarespace and Shopify rarely keep the exact same URL structure. If you ignore that difference, rankings and bookmarked traffic break the moment the new store goes live."
+        ]
+      },
+      {
+        "h2": "Pages to map first",
+        "bullets": [
+          "Top product pages",
+          "Top collection or category paths",
+          "Blog posts with organic traffic",
+          "Policy pages that are linked from campaigns or emails"
+        ]
+      },
+      {
+        "h2": "After launch",
+        "bullets": [
+          "Upload the updated sitemap",
+          "Check Google Search Console coverage",
+          "Spot-check the highest traffic old URLs manually",
+          "Monitor 404 patterns during the first week"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "bigcommerce-to-shopify-launch-plan",
+    "title": "BigCommerce to Shopify Launch Plan: What to Validate in the Final 48 Hours",
+    "category": "Launch Checklist",
+    "date": "June 9, 2026",
+    "readTime": "5 min read",
+    "author": "Prakash Carpenter",
+    "excerpt": "The final 48-hour checklist for a cleaner BigCommerce to Shopify launch with fewer surprises after the DNS switch.",
+    "badge": "Launch Plan",
+    "accent": "bigcommerce",
+    "stats": [
+      "Final sync",
+      "Checkout QA",
+      "DNS-ready"
+    ],
+    "focus": "Launch-day validation",
+    "cta": "Keep launch-day work operational, not emotional.",
+    "content": [
+      {
+        "h2": "The last 48 hours matter more than most teams think",
+        "ps": [
+          "A migration can look complete on paper and still fail at launch because small customer-facing issues were never checked. Final validation should focus on store behavior, not just data totals."
+        ]
+      },
+      {
+        "h2": "What to validate",
+        "bullets": [
+          "Navigation and search",
+          "Collections and product templates",
+          "Taxes, shipping rates, and checkout",
+          "Transactional email flows",
+          "Core redirects and campaign landing pages"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "shopify-migration-seo-handoff",
+    "title": "How to Handle SEO Handoff During a Shopify Migration",
+    "category": "SEO Migration",
+    "date": "June 7, 2026",
+    "readTime": "6 min read",
+    "author": "Prakash Carpenter",
+    "excerpt": "SEO continuity depends on mapping, metadata, and launch discipline. This guide focuses on the handoff points teams miss.",
+    "badge": "SEO Handoff",
+    "accent": "seo",
+    "stats": [
+      "Metadata carryover",
+      "Redirect logic",
+      "Post-launch checks"
+    ],
+    "focus": "SEO continuity",
+    "cta": "Carry your search signals into the new store.",
+    "content": [
+      {
+        "h2": "SEO loss usually comes from missing process",
+        "ps": [
+          "Search visibility often drops after migration because teams treat SEO as a single checkbox instead of a handoff sequence between content, development, and launch ops."
+        ]
+      },
+      {
+        "h2": "Critical handoff points",
+        "bullets": [
+          "Capture current metadata before rebuild work starts",
+          "Keep a redirect owner for launch week",
+          "Review canonical tags and sitemap output after go-live",
+          "Check indexable templates and noindex settings on the new theme"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "shopify-migration-demo-run",
+    "title": "Why a Demo Migration Run Saves More Time Than Another Planning Meeting",
+    "category": "Migration Strategy",
+    "date": "June 5, 2026",
+    "readTime": "4 min read",
+    "author": "Prakash Carpenter",
+    "excerpt": "A demo migration exposes field-mapping problems early and gives teams something real to validate before launch.",
+    "badge": "Strategy Note",
+    "accent": "strategy",
+    "stats": [
+      "Field mapping",
+      "Real validation",
+      "Lower risk"
+    ],
+    "focus": "Demo-first migration process",
+    "cta": "Test with real data before final cutover.",
+    "content": [
+      {
+        "h2": "Planning has limits",
+        "ps": [
+          "Meetings and spreadsheets can describe a migration, but they cannot show how real products, customers, and URLs will behave in the destination store. That is what the demo run is for."
+        ]
+      },
+      {
+        "h2": "What a demo reveals",
+        "bullets": [
+          "Broken variant structures",
+          "Image formatting issues",
+          "Unexpected field truncation",
+          "Collection logic that needs adjustment before launch"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "shopify-launch-content-freeze",
+    "title": "Why You Need a Content Freeze Before Final Shopify Migration",
+    "category": "Launch Checklist",
+    "date": "June 3, 2026",
+    "readTime": "4 min read",
+    "author": "Prakash Carpenter",
+    "excerpt": "Late edits on the source store create mismatches. A simple content freeze window prevents unnecessary reconciliation work.",
+    "badge": "Ops Tip",
+    "accent": "launch",
+    "stats": [
+      "Fewer mismatches",
+      "Cleaner final sync",
+      "Better QA"
+    ],
+    "focus": "Operational discipline",
+    "cta": "Freeze edits before the last data pull.",
+    "content": [
+      {
+        "h2": "Last-minute edits create avoidable problems",
+        "ps": [
+          "Teams often keep editing products, pages, or menus while the final migration is happening. That creates uncertainty about what actually made it into Shopify and what still needs manual fixing."
+        ]
+      },
+      {
+        "h2": "A useful freeze window",
+        "bullets": [
+          "Pause non-essential content changes",
+          "Route urgent edits through one owner",
+          "Communicate the freeze to marketing and support",
+          "Use the freeze period for QA and redirect validation"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "shopify-post-migration-qa",
+    "title": "Post-Migration QA for Shopify: The Short List That Catches Real Problems",
+    "category": "Migration Strategy",
+    "date": "June 1, 2026",
+    "readTime": "5 min read",
+    "author": "Prakash Carpenter",
+    "excerpt": "A concise QA list focused on customer-facing issues after a migration, not endless internal checklists.",
+    "badge": "QA List",
+    "accent": "strategy",
+    "stats": [
+      "Customer-facing QA",
+      "Mobile checks",
+      "Revenue protection"
+    ],
+    "focus": "QA after go-live",
+    "cta": "Validate what customers actually touch first.",
+    "content": [
+      {
+        "h2": "QA should start where revenue is exposed",
+        "ps": [
+          "After migration, the most valuable checks are the ones tied directly to product discovery, purchase flow, and trust. That means search, collections, product pages, cart, checkout, and contact paths get tested first."
+        ]
+      },
+      {
+        "h2": "Short list",
+        "bullets": [
+          "Search and collection filtering",
+          "Product variants and pricing display",
+          "Cart and checkout flow",
+          "Mobile spacing and readability",
+          "Redirects from top landing pages"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "shopify-replatforming-timeline",
+    "title": "How Long Does a Shopify Replatforming Project Actually Take?",
+    "category": "Migration Strategy",
+    "date": "May 29, 2026",
+    "readTime": "5 min read",
+    "author": "Prakash Carpenter",
+    "excerpt": "The real answer depends less on platform size and more on data quality, decision speed, and launch discipline.",
+    "badge": "Planning",
+    "accent": "strategy",
+    "stats": [
+      "Timeline ranges",
+      "Risk factors",
+      "Planning reality"
+    ],
+    "focus": "Project planning",
+    "cta": "Plan around real blockers, not optimistic guesses.",
+    "content": [
+      {
+        "h2": "Timelines stretch for predictable reasons",
+        "ps": [
+          "Projects slow down when the source store is messy, the destination setup is undecided, or approvals arrive late. Stores with smaller catalogs can still run long if the migration sequence is weak."
+        ]
+      },
+      {
+        "h2": "What changes the timeline most",
+        "bullets": [
+          "Catalog cleanliness",
+          "Redirect planning",
+          "Theme readiness",
+          "Operational approvals",
+          "How early the team runs a realistic test migration"
+        ]
+      }
+    ]
+  }
+];
   </script>
   <script src="/lenis.min.js" defer></script>
   <script src="/script.js" defer></script>
@@ -575,17 +710,11 @@
       const posts = Array.isArray(window.shiftItNowBlogPosts) ? [...window.shiftItNowBlogPosts] : [];
       const pageSize = 9;
       const state = {
-        query: '',
-        category: 'All',
         visible: pageSize
       };
 
-      const countEl = document.getElementById('blogCatalogCount');
-      const chipsEl = document.getElementById('blogFilterChips');
-      const resultsEl = document.getElementById('blogResultsCopy');
       const gridEl = document.getElementById('blogCatalogGrid');
       const loadMoreBtn = document.getElementById('blogLoadMore');
-      const searchInput = document.getElementById('blogSearch');
 
       const accentLabels = {
         wix: 'Wix to Shopify',
@@ -604,51 +733,14 @@
         .replace(/"/g, '&quot;')
         .replace(/'/g, '&#39;');
 
-      const categories = ['All', ...new Set(posts.map((post) => post.category))];
-
-      const renderChips = () => {
-        chipsEl.innerHTML = categories.map((category) => `
-          <button
-            type="button"
-            class="blog-filter-chip${category === state.category ? ' blog-filter-chip-active' : ''}"
-            data-category="${escapeHtml(category)}"
-          >${escapeHtml(category)}</button>
-        `).join('');
-
-        chipsEl.querySelectorAll('[data-category]').forEach((button) => {
-          button.addEventListener('click', () => {
-            state.category = button.dataset.category || 'All';
-            state.visible = pageSize;
-            renderChips();
-            renderCatalog();
-          });
-        });
-      };
-
-      const getFilteredPosts = () => {
-        const query = state.query.trim().toLowerCase();
-        return posts.filter((post) => {
-          const categoryMatch = state.category === 'All' || post.category === state.category;
-          const haystack = `${post.title} ${post.excerpt} ${post.category} ${post.focus}`.toLowerCase();
-          const queryMatch = !query || haystack.includes(query);
-          return categoryMatch && queryMatch;
-        });
-      };
-
       const renderCatalog = () => {
-        const filtered = getFilteredPosts();
-        const visiblePosts = filtered.slice(0, state.visible);
-        const resultLabel = `${filtered.length} ${filtered.length === 1 ? 'post' : 'posts'}`;
-        countEl.textContent = `${posts.length} ${posts.length === 1 ? 'post' : 'posts'}`;
-        resultsEl.textContent = filtered.length
-          ? `Showing ${visiblePosts.length} of ${filtered.length} articles${state.category !== 'All' ? ` in ${state.category}` : ''}.`
-          : 'No articles match this search yet.';
+        const visiblePosts = posts.slice(0, state.visible);
 
         if (!visiblePosts.length) {
           gridEl.innerHTML = `
             <div class="blog-empty-state blog-empty-message">
-              <h3>No matching blogs</h3>
-              <p>Try a broader search or switch back to the full catalog.</p>
+              <h3>No blogs available</h3>
+              <p>New migration articles will show up here once they are published.</p>
             </div>
           `;
         } else {
@@ -680,23 +772,16 @@
           `).join('');
         }
 
-        loadMoreBtn.hidden = filtered.length <= state.visible;
-        loadMoreBtn.textContent = filtered.length > state.visible ? `Load more blogs (${filtered.length - state.visible} left)` : 'Load more blogs';
+        loadMoreBtn.hidden = posts.length <= state.visible;
+        loadMoreBtn.textContent = posts.length > state.visible ? `Load more blogs (${posts.length - state.visible} left)` : 'Load more blogs';
         gridEl.setAttribute('aria-live', 'polite');
       };
-
-      searchInput.addEventListener('input', (event) => {
-        state.query = event.target.value || '';
-        state.visible = pageSize;
-        renderCatalog();
-      });
 
       loadMoreBtn.addEventListener('click', () => {
         state.visible += pageSize;
         renderCatalog();
       });
 
-      renderChips();
       renderCatalog();
     });
   </script>
