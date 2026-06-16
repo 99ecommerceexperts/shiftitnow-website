@@ -657,12 +657,12 @@
               <a href="/blog/${encodeURIComponent(post.slug)}" class="blog-card-link" aria-label="Read ${escapeHtml(post.title)}">
                 <div class="blog-card-media blog-card-media-accent blog-card-media-accent-${escapeHtml(post.accent)}">
                   <div class="blog-card-media-overlay">
-                    <span class="blog-card-media-tag">${escapeHtml(post.badge || post.category)}</span>
-                    <strong>${escapeHtml(accentLabels[post.accent] || post.category)}</strong>
+                    <span class="blog-card-media-tag">${escapeHtml(post.category)}</span>
                   </div>
                   <img src="/assets/logo.webp" alt="" class="blog-image-fallback" />
                 </div>
                 <div class="blog-card-content">
+                  <span class="blog-card-kicker">${escapeHtml(post.badge || accentLabels[post.accent] || post.category)}</span>
                   <div class="blog-card-meta">
                     <span>by ${escapeHtml(post.author)}</span>
                     <span>${escapeHtml(post.date)}</span>

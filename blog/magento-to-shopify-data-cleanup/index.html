@@ -564,35 +564,32 @@
         root.innerHTML = `
           <a href="/blogs" class="blog-detail-back">&larr; Back to all blogs</a>
           <div class="blog-detail-showcase">
-            <div class="blog-detail-banner blog-detail-banner-${escapeHtml(post.accent)}">
-              <div class="blog-detail-banner-copy">
-                <span class="blog-chip blog-chip-solid">${escapeHtml(post.category)}</span>
-                <h1>${escapeHtml(post.title)}</h1>
-                <p>${escapeHtml(post.excerpt)}</p>
+            <div class="blog-detail-hero-frame blog-detail-hero-frame-full">
+              <div class="blog-card-media blog-card-media-accent blog-card-media-accent-${escapeHtml(post.accent)} blog-card-media-detail">
+                <div class="blog-card-media-overlay">
+                  <span class="blog-card-media-tag">${escapeHtml(post.category)}</span>
+                </div>
+                <img src="/assets/logo.webp" alt="" class="blog-image-fallback" />
               </div>
-              <div class="blog-detail-banner-art">
-                <div class="blog-detail-stat-strip">
-                  ${(post.stats || []).map((stat) => `<span>${escapeHtml(stat)}</span>`).join('')}
-                </div>
-                <div class="blog-detail-hero-frame">
-                  <div class="blog-card-media blog-card-media-accent blog-card-media-accent-${escapeHtml(post.accent)} blog-card-media-detail">
-                    <div class="blog-card-media-overlay">
-                      <span class="blog-card-media-tag">${escapeHtml(post.badge || post.category)}</span>
-                      <strong>${escapeHtml(accentLabels[post.accent] || post.category)}</strong>
-                    </div>
-                    <img src="/assets/logo.webp" alt="" class="blog-image-fallback" />
-                  </div>
-                </div>
+              <div class="blog-detail-stat-strip">
+                ${(post.stats || []).map((stat) => `<span>${escapeHtml(stat)}</span>`).join('')}
               </div>
             </div>
           </div>
 
           <div class="blog-detail-layout">
             <article class="blog-detail-article">
-              <div class="blog-detail-meta-row">
-                <span>By ${escapeHtml(post.author)}</span>
-                <span>${escapeHtml(post.date)}</span>
-                <span>${escapeHtml(post.readTime)}</span>
+              <div class="blog-detail-intro">
+                <div class="blog-detail-headband">
+                  <span class="blog-detail-kicker">${escapeHtml(post.category)}</span>
+                </div>
+                <h1 class="blog-detail-title">${escapeHtml(post.title)}</h1>
+                <div class="blog-detail-meta-row">
+                  <span>By ${escapeHtml(post.author)}</span>
+                  <span>${escapeHtml(post.date)}</span>
+                  <span>${escapeHtml(post.readTime)}</span>
+                </div>
+                <p class="blog-detail-excerpt">${escapeHtml(post.excerpt)}</p>
               </div>
 
               <div class="blog-content">
