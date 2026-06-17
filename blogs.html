@@ -95,12 +95,12 @@
     <section class="blog-catalog-section">
       <div class="container">
         <div class="blog-catalog-head">
-          <h2>Latest articles</h2>
+          <h2>Featured article</h2>
         </div>
         <div class="blog-catalog-grid" id="blogCatalogGrid"></div>
 
         <div class="blog-catalog-actions">
-          <button id="blogLoadMore" class="btn btn-dark btn-md blog-load-more" type="button" hidden>Load more blogs</button>
+          <button id="blogLoadMore" class="btn btn-dark btn-md blog-load-more" type="button" hidden>Load more</button>
         </div>
       </div>
     </section>
@@ -155,10 +155,6 @@
           <h4>Migrations</h4>
           <ul>
             <li><a href="/blog/shopify-store-migration-guide-2026">Shopify Migration Guide</a></li>
-            <li><a href="/blog/migrate-wix-shopify">Wix &rarr; Shopify</a></li>
-            <li><a href="/blog/woocommerce-to-shopify-checklist">WooCommerce &rarr; Shopify</a></li>
-            <li><a href="/blog/magento-to-shopify-data-cleanup">Magento &rarr; Shopify</a></li>
-            <li><a href="/blog/squarespace-to-shopify-seo-redirects">Squarespace &rarr; Shopify</a></li>
           </ul>
         </div>
 
@@ -994,7 +990,10 @@
   <script src="/script.js" defer></script>
   <script>
     window.addEventListener('DOMContentLoaded', () => {
-      const posts = Array.isArray(window.shiftItNowBlogPosts) ? [...window.shiftItNowBlogPosts] : [];
+      const featuredSlug = 'shopify-store-migration-guide-2026';
+      const posts = Array.isArray(window.shiftItNowBlogPosts)
+        ? window.shiftItNowBlogPosts.filter((post) => post.slug === featuredSlug)
+        : [];
       const pageSize = 9;
       const state = {
         visible: pageSize
@@ -1038,7 +1037,7 @@
                   <div class="blog-card-media-overlay">
                     <span class="blog-card-media-tag">${escapeHtml(post.category)}</span>
                   </div>
-                  <img src="/assets/logo.webp" alt="" class="blog-image-fallback" />
+                  <img src="/assets/blog-images/blog-1-1.png" alt="${escapeHtml(post.title)}" class="blog-image-fallback" />
                 </div>
                 <div class="blog-card-content">
                   <span class="blog-card-kicker">${escapeHtml(post.badge || accentLabels[post.accent] || post.category)}</span>

@@ -115,10 +115,6 @@
           <h4>Migrations</h4>
           <ul>
             <li><a href="/blog/shopify-store-migration-guide-2026">Shopify Migration Guide</a></li>
-            <li><a href="/blog/migrate-wix-shopify">Wix &rarr; Shopify</a></li>
-            <li><a href="/blog/woocommerce-to-shopify-checklist">WooCommerce &rarr; Shopify</a></li>
-            <li><a href="/blog/magento-to-shopify-data-cleanup">Magento &rarr; Shopify</a></li>
-            <li><a href="/blog/squarespace-to-shopify-seo-redirects">Squarespace &rarr; Shopify</a></li>
           </ul>
         </div>
 
@@ -1535,7 +1531,10 @@
   <script src="/script.js" defer></script>
   <script>
     window.addEventListener('DOMContentLoaded', () => {
-      const posts = Array.isArray(window.shiftItNowBlogPosts) ? window.shiftItNowBlogPosts : [];
+      const featuredSlug = 'shopify-store-migration-guide-2026';
+      const posts = Array.isArray(window.shiftItNowBlogPosts)
+        ? window.shiftItNowBlogPosts.filter((post) => post.slug === featuredSlug)
+        : [];
       const root = document.getElementById('blogDetailRoot');
       const slug = decodeURIComponent(window.location.pathname.replace(/\/+$/, '').split('/').pop() || '');
 
@@ -1642,7 +1641,7 @@
                 <div class="blog-card-media-overlay">
                   <span class="blog-card-media-tag">${escapeHtml(post.category)}</span>
                 </div>
-                <img src="/assets/logo.webp" alt="" class="blog-image-fallback" />
+                <img src="/assets/blog-images/blog-1-2.png" alt="${escapeHtml(post.title)}" class="blog-image-fallback" />
               </div>
               <div class="blog-detail-stat-strip">
                 ${(post.stats || []).map((stat) => `<span>${escapeHtml(stat)}</span>`).join('')}
@@ -1710,6 +1709,13 @@
             </aside>
           </div>
         `;
+
+        if (!related.length) {
+          const relatedCard = root.querySelector('.blog-detail-sidebar .blog-detail-sidecard:last-child');
+          if (relatedCard && relatedCard.querySelector('h2')?.textContent === 'More reading') {
+            relatedCard.remove();
+          }
+        }
       };
 
       const post = findPost();

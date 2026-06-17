@@ -3068,10 +3068,12 @@ p  { margin: 0; }
   margin-bottom: 22px;
 }
 .blog-image-fallback {
-  object-fit: contain !important;
-  padding: 48px;
-  width: 1200px;
-  height: 300px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  object-fit: cover !important;
+  object-position: center;
 }
 .blog-inline-gallery {
   display: grid;
@@ -3387,46 +3389,31 @@ p  { margin: 0; }
   position: relative;
   overflow: hidden;
   min-height: 220px;
+  background: transparent;
 }
 .blog-card-media-accent {
-  background:
-    radial-gradient(circle at top right, rgba(255,255,255,0.18), transparent 36%),
-    linear-gradient(135deg, #0F2A3D 0%, #1C5562 100%);
+  background: transparent;
 }
 .blog-card-media-accent-wix {
-  background:
-    linear-gradient(135deg, rgba(242,181,68,0.22), transparent 45%),
-    linear-gradient(135deg, #F27B21 0%, #C85D10 100%);
+  background: transparent;
 }
 .blog-card-media-accent-woocommerce {
-  background:
-    linear-gradient(135deg, rgba(95,177,192,0.18), transparent 45%),
-    linear-gradient(135deg, #4A3D99 0%, #6A57CF 100%);
+  background: transparent;
 }
 .blog-card-media-accent-magento {
-  background:
-    linear-gradient(135deg, rgba(255,255,255,0.16), transparent 45%),
-    linear-gradient(135deg, #EF5F28 0%, #B84314 100%);
+  background: transparent;
 }
 .blog-card-media-accent-seo {
-  background:
-    linear-gradient(135deg, rgba(242,181,68,0.18), transparent 45%),
-    linear-gradient(135deg, #0E3B52 0%, #1F7C8C 100%);
+  background: transparent;
 }
 .blog-card-media-accent-bigcommerce {
-  background:
-    linear-gradient(135deg, rgba(95,177,192,0.16), transparent 45%),
-    linear-gradient(135deg, #102A44 0%, #203B7A 100%);
+  background: transparent;
 }
 .blog-card-media-accent-strategy {
-  background:
-    linear-gradient(135deg, rgba(242,181,68,0.18), transparent 45%),
-    linear-gradient(135deg, #102836 0%, #205B60 100%);
+  background: transparent;
 }
 .blog-card-media-accent-launch {
-  background:
-    linear-gradient(135deg, rgba(242,181,68,0.18), transparent 45%),
-    linear-gradient(135deg, #6A3A13 0%, #A85C17 100%);
+  background: transparent;
 }
 .blog-card-media-overlay {
   position: absolute;
@@ -3546,8 +3533,8 @@ p  { margin: 0; }
   min-height: 260px;
   border-radius: 22px;
   overflow: hidden;
-  background: rgba(255,255,255,0.92);
-  box-shadow: 0 16px 36px rgba(15,26,34,0.16);
+  background: transparent;
+  box-shadow: none;
   position: relative;
 }
 .blog-card-media-detail {
