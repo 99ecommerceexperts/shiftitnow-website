@@ -3123,7 +3123,7 @@ p  { margin: 0; }
 .blog-content ul,
 .blog-content ol,
 .blog-content table {
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
 }
 .blog-content ul,
 .blog-content ol {
