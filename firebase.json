@@ -13,6 +13,11 @@
     "trailingSlash": false,
     "redirects": [
       {
+        "source": "/llms.txt",
+        "destination": "https://shiftitnow.com",
+        "type": 301
+      },
+      {
         "source": "/blog/how-to-migrate-wix-to-shopify",
         "destination": "/blog/migrate-wix-shopify",
         "type": 301

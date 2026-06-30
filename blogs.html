@@ -10,7 +10,17 @@
   <meta property="og:description" content="Migration guides, launch checklists, and practical Shopify move advice from ShiftItNow." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://shiftitnow.app/assets/logo.webp" />
-  <link rel="canonical" href="https://shiftitnow.app/blogs" />
+  <link rel="canonical" href="https://shiftitnow.com/blogs" />
+  <script>
+    (function () {
+      var hostname = window.location.hostname;
+      var normalizedPath = window.location.pathname.replace(/\/+$/, '') || '/';
+
+      if (/^(.+\.)?shiftitnow\.app$/.test(hostname) && normalizedPath === '/blogs') {
+        window.location.replace('https://shiftitnow.com/blogs' + window.location.search + window.location.hash);
+      }
+    })();
+  </script>
   <link rel="icon" type="image/webp" href="/assets/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -94,7 +104,7 @@
     <section class="blog-catalog-section">
       <div class="container">
         <div class="blog-catalog-head">
-          <h2>Featured article</h2>
+          <h1>Featured article</h1>
         </div>
         <div class="blog-catalog-grid">
           <article class="blog-card blog-catalog-card">
