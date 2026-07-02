@@ -685,6 +685,7 @@ p  { margin: 0; }
 .platform-logo-wix       { background: linear-gradient(135deg, #0C6EFC, #0848B0); }
 .platform-logo-squarespace { background: linear-gradient(135deg, #1a1a1a, #000); }
 .platform-logo-bigc      { background: linear-gradient(135deg, #34313F, #121118); }
+.platform-logo-opencart  { background: linear-gradient(135deg, #F15A24, #C64014); }
 .platform-logo-custom    { background: linear-gradient(135deg, var(--teal), var(--navy)); color: var(--gold); }
 
 .platform-logo img {
@@ -695,7 +696,8 @@ p  { margin: 0; }
 }
 .platform-logo-magento img,
 .platform-logo-wix img,
-.platform-logo-bigc img { filter: brightness(0) invert(1); }
+.platform-logo-bigc img,
+.platform-logo-opencart img { filter: brightness(0) invert(1); }
 .platform-logo-squarespace img { width: 78%; height: 78%; border-radius: 50%; }
 
 .platform-card h3 { color: var(--gray-900); margin-bottom: 8px; }
@@ -1459,12 +1461,13 @@ p  { margin: 0; }
 }
 .hero-visual.hero-flow .flow-source-icon img { width: 60%; height: 60%; object-fit: contain; }
 
-/* 5 sources distributed down the left side */
+/* 6 sources distributed down the left side */
 .hero-flow .flow-source-1 { top: 4%;  left: -6%; animation-delay: 0s; }
-.hero-flow .flow-source-2 { top: 26%; left: -10%; animation-delay: 0.8s; }
-.hero-flow .flow-source-3 { top: 48%; left: -6%; animation-delay: 1.4s; }
-.hero-flow .flow-source-4 { top: 70%; left: -10%; animation-delay: 2.2s; }
-.hero-flow .flow-source-5 { top: 92%; left: -6%; animation-delay: 3s; }
+.hero-flow .flow-source-2 { top: 22%; left: -10%; animation-delay: 0.8s; }
+.hero-flow .flow-source-3 { top: 40%; left: -6%; animation-delay: 1.4s; }
+.hero-flow .flow-source-4 { top: 58%; left: -10%; animation-delay: 2.2s; }
+.hero-flow .flow-source-5 { top: 76%; left: -6%; animation-delay: 3s; }
+.hero-flow .flow-source-6 { top: 94%; left: -10%; animation-delay: 3.6s; }
 
 /* Shopify destination — smaller in hero */
 .hero-flow .flow-dest {
@@ -1530,6 +1533,7 @@ p  { margin: 0; }
   .hero-flow .flow-source-3 { left: 0%; }
   .hero-flow .flow-source-4 { left: -4%; }
   .hero-flow .flow-source-5 { left: 0%; }
+  .hero-flow .flow-source-6 { left: -4%; }
   .hero-flow .flow-dest { right: 2%; }
 }
 
@@ -1557,11 +1561,12 @@ p  { margin: 0; }
   .hero-visual.hero-flow .flow-source-icon img { width: 56%; height: 56%; }
 
   /* Stack sources down the left, lining up with the SVG paths */
-  .hero-flow .flow-source-1 { top:  7%; left: 0; }
-  .hero-flow .flow-source-2 { top: 27%; left: 0; }
-  .hero-flow .flow-source-3 { top: 47%; left: 0; }
-  .hero-flow .flow-source-4 { top: 67%; left: 0; }
-  .hero-flow .flow-source-5 { top: 86%; left: 0; }
+  .hero-flow .flow-source-1 { top:  6%; left: 0; }
+  .hero-flow .flow-source-2 { top: 22%; left: 0; }
+  .hero-flow .flow-source-3 { top: 38%; left: 0; }
+  .hero-flow .flow-source-4 { top: 54%; left: 0; }
+  .hero-flow .flow-source-5 { top: 70%; left: 0; }
+  .hero-flow .flow-source-6 { top: 86%; left: 0; }
 
   /* Shopify dest: aligned to the SVG path end point */
   .hero-flow .flow-dest {
@@ -2569,12 +2574,14 @@ p  { margin: 0; }
 .pdp-logo-wix        { background: linear-gradient(135deg, #0C6EFC, #0848B0); }
 .pdp-logo-squarespace{ background: linear-gradient(135deg, #1a1a1a, #000); }
 .pdp-logo-bigc       { background: linear-gradient(135deg, #34313F, #121118); }
+.pdp-logo-opencart   { background: linear-gradient(135deg, #F15A24, #C64014); }
 .pdp-logo-custom     { background: linear-gradient(135deg, var(--teal), var(--navy)); color: var(--gold); }
 
 /* Invert dark logos on coloured backgrounds */
 .pdp-logo-magento img,
 .pdp-logo-wix img,
 .pdp-logo-bigc img,
+.pdp-logo-opencart img,
 .pdp-logo-squarespace img { filter: brightness(0) invert(1); }
 .pdp-logo-squarespace img { width: 78%; height: 78%; }
 
