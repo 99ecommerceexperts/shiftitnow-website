@@ -38,7 +38,7 @@ services, a free demo, and instant plan estimates. Migrate today!" />
   <div class="announcement-bar" id="announcementBar" role="region" aria-label="Announcement">
     <div class="container announcement-inner">
       <span class="announce-dot" aria-hidden="true"></span>
-      <span>Now live: <strong>BigCommerce → Shopify migration</strong> is available — see the platform deep-dive.</span>
+      <span>Now live: <strong>BigCommerce → Shopify migration</strong> is available - see the platform deep-dive.</span>
       <a href="/platforms" class="announce-link">See the deep-dive <span aria-hidden="true">→</span></a>
       <button class="announce-close" id="announceClose" aria-label="Dismiss announcement">
         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
@@ -105,7 +105,7 @@ services, a free demo, and instant plan estimates. Migrate today!" />
         </h1>
         <p class="calc-hero-sub">
           Pick where you're coming from, drop in a few numbers, and we'll match
-          you to the right migration plan — in real time, no quotes.
+          you to the right migration plan - in real time, no quotes.
         </p>
         <span class="calc-migrate-tag">Migrate</span>
       </div>
@@ -367,7 +367,7 @@ services, a free demo, and instant plan estimates. Migrate today!" />
             Chat with an expert
           </a>
           <a href="https://apps.shopify.com/shift-it-now" class="calc-primary-btn" id="ctaBtn">
-            <span id="ctaBtnText">Get started — install free</span>
+            <span id="ctaBtnText">Get started - install free</span>
             <span class="calc-btn-arrow">
               <svg viewBox="0 0 12 12" width="8" height="8" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4"/></svg>
             </span>
@@ -410,7 +410,7 @@ services, a free demo, and instant plan estimates. Migrate today!" />
             <img src="assets/logo.webp" alt="" class="brand-mark" />
             <span class="brand-name">Shift<span class="brand-accent">It</span>Now</span>
           </a>
-          <p>The Shopify migration app for merchants who need it done right — the first time.</p>
+          <p>The Shopify migration app for merchants who need it done right - the first time.</p>
           <div class="footer-social" aria-label="Social links">
             <a href="#" aria-label="Twitter / X">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M18.244 2H21.5l-7.55 8.63L23 22h-6.79l-4.66-6.21L6.2 22H3l8.07-9.23L2.5 2h6.94l4.22 5.62L18.244 2Zm-2.4 18h1.84L7.27 4h-1.94l10.51 16Z"/></svg>
@@ -482,7 +482,7 @@ services, a free demo, and instant plan estimates. Migrate today!" />
         isFree: true, isContact: false,
         limits: { products: 100, customers: 50, orders: 500, pages: 5, posts: 5 },
         features: ['Up to 100 products & variants', 'All images & media files', 'Basic SEO meta data', 'Email support included'],
-        cta: 'Get started — install free', ctaHref: 'https://apps.shopify.com/shift-it-now'
+        cta: 'Get started - install free', ctaHref: 'https://apps.shopify.com/shift-it-now'
       },
       growth: {
         id: 'growth', name: 'Growth',
@@ -490,7 +490,7 @@ services, a free demo, and instant plan estimates. Migrate today!" />
         isFree: false, isContact: false,
         limits: { products: 1000, customers: 500, orders: 500, pages: 20, posts: 20 },
         features: ['Up to 1,000 products & variants', 'Full customer & order history', 'SEO data + URL redirects', 'Priority Slack support'],
-        cta: 'Continue — Install Growth', ctaHref: 'https://apps.shopify.com/shift-it-now'
+        cta: 'Continue - Install Growth', ctaHref: 'https://apps.shopify.com/shift-it-now'
       },
       scale: {
         id: 'scale', name: 'Scale',
@@ -498,7 +498,7 @@ services, a free demo, and instant plan estimates. Migrate today!" />
         isFree: false, isContact: false,
         limits: { products: 10000, customers: 5000, orders: 5000, pages: 100, posts: 100 },
         features: ['Up to 10,000 products & variants', 'Bulk metafields & custom data', 'Advanced redirect mapping', 'Dedicated migration manager'],
-        cta: 'Continue — Install Scale', ctaHref: 'https://apps.shopify.com/shift-it-now'
+        cta: 'Continue - Install Scale', ctaHref: 'https://apps.shopify.com/shift-it-now'
       },
       enterprise: {
         id: 'enterprise', name: 'Enterprise',
@@ -639,7 +639,7 @@ services, a free demo, and instant plan estimates. Migrate today!" />
       /* Meta */
       document.getElementById('priceMeta').textContent = plan.priceMeta;
 
-      /* Plan name badge — glow-ring pulse when tier changes */
+      /* Plan name badge - glow-ring pulse when tier changes */
       var planNameEl = document.getElementById('resultPlanName');
       planNameEl.textContent = plan.name + ' plan';
       if (planChanged) pulseBadge(planNameEl);
@@ -654,7 +654,7 @@ services, a free demo, and instant plan estimates. Migrate today!" />
         return '<span class="calc-data-pill">' + t + '</span>';
       }).join('');
 
-      /* Plan features — stagger entry only on plan change */
+      /* Plan features - stagger entry only on plan change */
       var featuresEl = document.getElementById('planFeatures');
       var checkSvg = '<svg viewBox="0 0 12 12" width="8" height="8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2 6 5 9 10 3"/></svg>';
       var featHtml = plan.features.map(function(f) {
