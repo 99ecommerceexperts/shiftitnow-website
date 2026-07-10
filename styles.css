@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    ShiftItNow — Marketing Site
    Design tokens, layout, components, and animations.
    ============================================================ */
@@ -359,8 +359,17 @@ p  { margin: 0; }
 }
 .primary-nav a:hover { color: var(--white); }
 .primary-nav a:hover::after { transform: scaleX(1); }
-.primary-nav a.nav-active { color: var(--white); }
-.primary-nav a.nav-active::after { transform: scaleX(1); }
+.primary-nav a.nav-active,
+.primary-nav a[aria-current="page"] { color: var(--white); }
+.primary-nav a.nav-active::after,
+.primary-nav a[aria-current="page"]::after { transform: scaleX(1); }
+.mobile-menu a.nav-active,
+.mobile-menu a[aria-current="page"] { color: var(--gold); }
+.nav-cta .btn.nav-active,
+.nav-cta .btn[aria-current="page"] {
+  background: rgba(255, 255, 255, 0.10);
+  border-color: rgba(255, 255, 255, 0.32);
+}
 
 .nav-cta {
   display: flex;
@@ -1297,11 +1306,14 @@ p  { margin: 0; }
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.6fr repeat(3, 1fr);
+  grid-template-columns: minmax(240px, 1.35fr) repeat(3, minmax(140px, 0.8fr));
+  align-items: start;
   gap: clamp(28px, 4vw, 56px);
   padding-bottom: 50px;
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
+.footer-grid > div { min-width: 0; }
+.footer-brand { max-width: 320px; }
 .footer-brand .brand { margin-bottom: 18px; }
 .footer-brand p {
   max-width: 360px;
@@ -1309,24 +1321,54 @@ p  { margin: 0; }
   line-height: 1.6;
   margin-bottom: 22px;
 }
-.footer-social {
+.footer-socials {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 12px;
 }
-.footer-social a {
-  width: 38px; height: 38px;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  background: rgba(255,255,255,0.05);
+.footer-social-link {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border-radius: 999px;
   color: var(--gray-300);
-  border: 1px solid rgba(255,255,255,0.06);
-  transition: all var(--t-base);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
-.footer-social a:hover {
-  background: var(--gold);
-  color: var(--navy-deep);
-  border-color: var(--gold);
+.footer-social-link::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  display: block;
+  background: currentColor;
+}
+.footer-social-link:hover,
+.footer-social-link:focus-visible {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.18);
   transform: translateY(-2px);
+}
+.footer-social-link.is-instagram::before {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 1.8A3.7 3.7 0 0 0 3.8 7.5v9a3.7 3.7 0 0 0 3.7 3.7h9a3.7 3.7 0 0 0 3.7-3.7v-9a3.7 3.7 0 0 0-3.7-3.7h-9Zm9.75 1.35a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8Z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 1.8A3.7 3.7 0 0 0 3.8 7.5v9a3.7 3.7 0 0 0 3.7 3.7h9a3.7 3.7 0 0 0 3.7-3.7v-9a3.7 3.7 0 0 0-3.7-3.7h-9Zm9.75 1.35a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8Z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.footer-social-link.is-linkedin::before {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6.25 8.1A1.85 1.85 0 1 1 6.2 4.4a1.85 1.85 0 0 1 .05 3.7ZM4.7 9.6h3.05V19H4.7V9.6Zm4.95 0h2.93v1.28h.04c.41-.77 1.4-1.58 2.89-1.58 3.09 0 3.66 2.03 3.66 4.67V19h-3.05v-4.47c0-1.07-.02-2.44-1.49-2.44-1.49 0-1.72 1.16-1.72 2.36V19H9.65V9.6Z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6.25 8.1A1.85 1.85 0 1 1 6.2 4.4a1.85 1.85 0 0 1 .05 3.7ZM4.7 9.6h3.05V19H4.7V9.6Zm4.95 0h2.93v1.28h.04c.41-.77 1.4-1.58 2.89-1.58 3.09 0 3.66 2.03 3.66 4.67V19h-3.05v-4.47c0-1.07-.02-2.44-1.49-2.44-1.49 0-1.72 1.16-1.72 2.36V19H9.65V9.6Z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.footer-social-link.is-youtube::before {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21.4 7.2a2.98 2.98 0 0 0-2.1-2.1C17.46 4.6 12 4.6 12 4.6s-5.46 0-7.3.5a2.98 2.98 0 0 0-2.1 2.1 31.1 31.1 0 0 0-.5 4.8 31.1 31.1 0 0 0 .5 4.8 2.98 2.98 0 0 0 2.1 2.1c1.84.5 7.3.5 7.3.5s5.46 0 7.3-.5a2.98 2.98 0 0 0 2.1-2.1 31.1 31.1 0 0 0 .5-4.8 31.1 31.1 0 0 0-.5-4.8ZM10.2 15.1V8.9l5.36 3.1-5.36 3.1Z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21.4 7.2a2.98 2.98 0 0 0-2.1-2.1C17.46 4.6 12 4.6 12 4.6s-5.46 0-7.3.5a2.98 2.98 0 0 0-2.1 2.1 31.1 31.1 0 0 0-.5 4.8 31.1 31.1 0 0 0 .5 4.8 2.98 2.98 0 0 0 2.1 2.1c1.84.5 7.3.5 7.3.5s5.46 0 7.3-.5a2.98 2.98 0 0 0 2.1-2.1 31.1 31.1 0 0 0 .5-4.8 31.1 31.1 0 0 0-.5-4.8ZM10.2 15.1V8.9l5.36 3.1-5.36 3.1Z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.site-footer a.nav-active,
+.site-footer a[aria-current="page"] {
+  color: var(--white);
 }
 
 .footer-col h4 {
@@ -1339,7 +1381,11 @@ p  { margin: 0; }
   font-weight: 600;
 }
 .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
-.footer-col a { color: var(--gray-400); font-size: 0.92rem; }
+.footer-col a {
+  display: inline-block;
+  color: var(--gray-400);
+  font-size: 0.92rem;
+}
 .footer-col a:hover { color: var(--gold); }
 
 .footer-bottom {
