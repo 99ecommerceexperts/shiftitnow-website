@@ -1,207 +1,654 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0A1F2E" />
-  <title>System Status - ShiftItNow</title>
-  <meta name="description" content="Live status of the ShiftItNow migration engine, API, dashboard and platform connectors. 90-day uptime history." />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0A1F2E" />
+    <title>System Status - ShiftItNow</title>
+    <meta
+      name="description"
+      content="Live status of the ShiftItNow migration engine, API, dashboard and platform connectors. 90-day uptime history."
+    />
 
-  <link rel="icon" type="image/webp" href="assets/logo.webp" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="mobile.css" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-75MFFCX1S2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-75MFFCX1S2');
-  </script>
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "xjp076zmko");
-  </script>
-</head>
-<body>
-
-  <div class="announcement-bar" id="announcementBar" role="region" aria-label="Announcement">
-    <div class="container announcement-inner">
-      <span class="announce-dot" aria-hidden="true"></span>
-      <span>Now live: <strong>BigCommerce → Shopify migration</strong> is available - see the platform deep-dive.</span>
-      <a href="/platforms" class="announce-link">See the deep-dive <span aria-hidden="true">→</span></a>
-      <button class="announce-close" id="announceClose" aria-label="Dismiss announcement">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-      </button>
+    <link rel="icon" type="image/webp" href="assets/logo.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mobile.css" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-75MFFCX1S2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-75MFFCX1S2");
+    </script>
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "xjp076zmko");
+    </script>
+  </head>
+  <body>
+    <div
+      class="announcement-bar"
+      id="announcementBar"
+      role="region"
+      aria-label="Announcement"
+    >
+      <div class="container announcement-inner">
+        <span class="announce-dot" aria-hidden="true"></span>
+        <span
+          >Now live: <strong>BigCommerce → Shopify migration</strong> is
+          available - see the platform deep-dive.</span
+        >
+        <a href="/platforms" class="announce-link"
+          >See the deep-dive <span aria-hidden="true">→</span></a
+        >
+        <button
+          class="announce-close"
+          id="announceClose"
+          aria-label="Dismiss announcement"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            width="16"
+            height="16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
+      </div>
     </div>
-  </div>
 
-  <header class="site-header" id="siteHeader" data-site-header></header>
+    <header class="site-header" id="siteHeader" data-site-header></header>
 
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <span class="eyebrow"><span class="eyebrow-dot"></span> System status</span>
-        <h1>All systems operational.</h1>
-        <p class="page-hero-sub">Real-time status of the ShiftItNow migration engine, dashboard, API and platform connectors. Refreshed every 60&nbsp;seconds.</p>
-      </div>
-    </section>
-
-    <section class="section" style="background: var(--off-white);">
-      <div class="container" style="max-width: 880px;">
-
-        <div class="status-overall">
-          <span class="status-overall-dot"></span>
-          <div class="status-overall-text">
-            <strong>All systems operational</strong>
-            <span>Updated just now · 90-day uptime: 99.987%</span>
-          </div>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <span class="eyebrow"
+            ><span class="eyebrow-dot"></span> System status</span
+          >
+          <h1>All systems operational.</h1>
+          <p class="page-hero-sub">
+            Real-time status of the ShiftItNow migration engine, dashboard, API
+            and platform connectors. Refreshed every 60&nbsp;seconds.
+          </p>
         </div>
+      </section>
 
-        <h2 style="font-size: 1.25rem; margin: 8px 0 18px; color: var(--gray-900);">Core services</h2>
-
-        <div class="status-grid">
-          <div class="status-row">
-            <div class="status-row-name">
-              <strong>Migration engine</strong>
-              <span>Processing migrations and delta syncs</span>
-              <div class="uptime-strip" aria-label="90-day uptime">
-                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
-                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
-                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
-                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
-                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
-                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
-              </div>
+      <section class="section" style="background: var(--off-white)">
+        <div class="container" style="max-width: 880px">
+          <div class="status-overall">
+            <span class="status-overall-dot"></span>
+            <div class="status-overall-text">
+              <strong>All systems operational</strong>
+              <span>Updated just now · 90-day uptime: 99.987%</span>
             </div>
-            <span class="status-pill status-pill-ok"><span class="status-pill-dot"></span> Operational</span>
           </div>
 
-          <div class="status-row">
-            <div class="status-row-name">
-              <strong>Merchant dashboard</strong>
-              <span>app.shiftitnow.app</span>
-              <div class="uptime-strip" aria-label="90-day uptime">
-                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
-                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
-                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
-                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
-                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
-                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+          <h2
+            style="
+              font-size: 1.25rem;
+              margin: 8px 0 18px;
+              color: var(--gray-900);
+            "
+          >
+            Core services
+          </h2>
+
+          <div class="status-grid">
+            <div class="status-row">
+              <div class="status-row-name">
+                <strong>Migration engine</strong>
+                <span>Processing migrations and delta syncs</span>
+                <div class="uptime-strip" aria-label="90-day uptime">
+                  <span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span>
+                  <span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span>
+                  <span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span>
+                  <span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span>
+                  <span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span>
+                  <span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span>
+                </div>
               </div>
+              <span class="status-pill status-pill-ok"
+                ><span class="status-pill-dot"></span> Operational</span
+              >
             </div>
-            <span class="status-pill status-pill-ok"><span class="status-pill-dot"></span> Operational</span>
+
+            <div class="status-row">
+              <div class="status-row-name">
+                <strong>Merchant dashboard</strong>
+                <span>app.shiftitnow.app</span>
+                <div class="uptime-strip" aria-label="90-day uptime">
+                  <span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span>
+                  <span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span>
+                  <span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span>
+                  <span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span>
+                  <span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span>
+                  <span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span>
+                </div>
+              </div>
+              <span class="status-pill status-pill-ok"
+                ><span class="status-pill-dot"></span> Operational</span
+              >
+            </div>
+
+            <div class="status-row">
+              <div class="status-row-name">
+                <strong>Public API</strong>
+                <span>api.shiftitnow.app</span>
+                <div class="uptime-strip" aria-label="90-day uptime">
+                  <span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span>
+                  <span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span>
+                  <span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span>
+                  <span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span>
+                  <span class="uptime-bar uptime-bar-warn"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span>
+                  <span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span>
+                </div>
+              </div>
+              <span class="status-pill status-pill-ok"
+                ><span class="status-pill-dot"></span> Operational</span
+              >
+            </div>
+
+            <div class="status-row">
+              <div class="status-row-name">
+                <strong>Webhook delivery</strong>
+                <span>Outbound webhooks to your apps</span>
+                <div class="uptime-strip" aria-label="90-day uptime">
+                  <span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span>
+                  <span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span>
+                  <span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span>
+                  <span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span>
+                  <span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span>
+                  <span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span
+                  ><span class="uptime-bar"></span>
+                </div>
+              </div>
+              <span class="status-pill status-pill-ok"
+                ><span class="status-pill-dot"></span> Operational</span
+              >
+            </div>
           </div>
 
-          <div class="status-row">
-            <div class="status-row-name">
-              <strong>Public API</strong>
-              <span>api.shiftitnow.app</span>
-              <div class="uptime-strip" aria-label="90-day uptime">
-                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
-                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
-                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
-                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
-                <span class="uptime-bar uptime-bar-warn"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
-                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+          <h2
+            style="
+              font-size: 1.25rem;
+              margin: 40px 0 18px;
+              color: var(--gray-900);
+            "
+          >
+            Platform connectors
+          </h2>
+
+          <div class="status-grid">
+            <div class="status-row">
+              <div class="status-row-name">
+                <strong>WooCommerce</strong><span>REST API connector</span>
               </div>
+              <span class="status-pill status-pill-ok"
+                ><span class="status-pill-dot"></span> Operational</span
+              >
             </div>
-            <span class="status-pill status-pill-ok"><span class="status-pill-dot"></span> Operational</span>
+            <div class="status-row">
+              <div class="status-row-name">
+                <strong>Magento / Adobe Commerce</strong
+                ><span>REST + bridge module</span>
+              </div>
+              <span class="status-pill status-pill-ok"
+                ><span class="status-pill-dot"></span> Operational</span
+              >
+            </div>
+            <div class="status-row">
+              <div class="status-row-name">
+                <strong>Wix</strong><span>Wix Stores OAuth</span>
+              </div>
+              <span class="status-pill status-pill-ok"
+                ><span class="status-pill-dot"></span> Operational</span
+              >
+            </div>
+            <div class="status-row">
+              <div class="status-row-name">
+                <strong>Squarespace</strong><span>Commerce API</span>
+              </div>
+              <span class="status-pill status-pill-warn"
+                ><span class="status-pill-dot"></span> Degraded - vendor</span
+              >
+            </div>
+            <div class="status-row">
+              <div class="status-row-name">
+                <strong>BigCommerce</strong
+                ><span>Management API v2/v3 connector</span>
+              </div>
+              <span class="status-pill status-pill-ok"
+                ><span class="status-pill-dot"></span> Operational</span
+              >
+            </div>
+            <div class="status-row">
+              <div class="status-row-name">
+                <strong>OpenCart</strong><span>Guided connector</span>
+              </div>
+              <span class="status-pill status-pill-ok"
+                ><span class="status-pill-dot"></span> Operational</span
+              >
+            </div>
+            <div class="status-row">
+              <div class="status-row-name">
+                <strong>Shopify destination</strong
+                ><span>Admin API + GraphQL</span>
+              </div>
+              <span class="status-pill status-pill-ok"
+                ><span class="status-pill-dot"></span> Operational</span
+              >
+            </div>
           </div>
 
-          <div class="status-row">
-            <div class="status-row-name">
-              <strong>Webhook delivery</strong>
-              <span>Outbound webhooks to your apps</span>
-              <div class="uptime-strip" aria-label="90-day uptime">
-                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
-                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
-                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
-                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
-                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
-                <span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span><span class="uptime-bar"></span>
+          <h2
+            style="
+              font-size: 1.25rem;
+              margin: 40px 0 18px;
+              color: var(--gray-900);
+            "
+          >
+            Recent incidents
+          </h2>
+
+          <div class="status-grid">
+            <div class="status-row">
+              <div class="status-row-name">
+                <strong>Squarespace connector - degraded response times</strong>
+                <span
+                  >Vendor-side rate limiting affecting new connections · 12 Jan
+                  2026 · Ongoing, monitoring</span
+                >
               </div>
+              <span class="status-pill status-pill-warn"
+                ><span class="status-pill-dot"></span> Monitoring</span
+              >
             </div>
-            <span class="status-pill status-pill-ok"><span class="status-pill-dot"></span> Operational</span>
+            <div class="status-row">
+              <div class="status-row-name">
+                <strong>Public API - elevated 5xx errors</strong>
+                <span
+                  >15 min partial outage caused by a deploy regression · 04 Jan
+                  2026 · Resolved</span
+                >
+              </div>
+              <span class="status-pill status-pill-ok"
+                ><span class="status-pill-dot"></span> Resolved</span
+              >
+            </div>
+            <div class="status-row">
+              <div class="status-row-name">
+                <strong>Scheduled maintenance - engine v4.2</strong>
+                <span
+                  >22 min planned downtime, all migrations paused and resumed
+                  cleanly · 18 Dec 2025 · Completed</span
+                >
+              </div>
+              <span class="status-pill status-pill-ok"
+                ><span class="status-pill-dot"></span> Completed</span
+              >
+            </div>
           </div>
+
+          <p
+            style="
+              margin-top: 40px;
+              text-align: center;
+              color: var(--text-muted);
+              font-size: 0.9rem;
+            "
+          >
+            Subscribe to status updates:
+            <a href="/contact" class="link-accent">contact us</a> · RSS feed at
+            <code>/status.rss</code>
+          </p>
         </div>
+      </section>
+    </main>
 
-        <h2 style="font-size: 1.25rem; margin: 40px 0 18px; color: var(--gray-900);">Platform connectors</h2>
+    <footer class="site-footer" data-site-footer></footer>
 
-        <div class="status-grid">
-          <div class="status-row">
-            <div class="status-row-name"><strong>WooCommerce</strong><span>REST API connector</span></div>
-            <span class="status-pill status-pill-ok"><span class="status-pill-dot"></span> Operational</span>
-          </div>
-          <div class="status-row">
-            <div class="status-row-name"><strong>Magento / Adobe Commerce</strong><span>REST + bridge module</span></div>
-            <span class="status-pill status-pill-ok"><span class="status-pill-dot"></span> Operational</span>
-          </div>
-          <div class="status-row">
-            <div class="status-row-name"><strong>Wix</strong><span>Wix Stores OAuth</span></div>
-            <span class="status-pill status-pill-ok"><span class="status-pill-dot"></span> Operational</span>
-          </div>
-          <div class="status-row">
-            <div class="status-row-name"><strong>Squarespace</strong><span>Commerce API</span></div>
-            <span class="status-pill status-pill-warn"><span class="status-pill-dot"></span> Degraded - vendor</span>
-          </div>
-          <div class="status-row">
-            <div class="status-row-name"><strong>BigCommerce</strong><span>Management API v2/v3 connector</span></div>
-            <span class="status-pill status-pill-ok"><span class="status-pill-dot"></span> Operational</span>
-          </div>
-          <div class="status-row">
-            <div class="status-row-name"><strong>OpenCart</strong><span>Guided connector</span></div>
-            <span class="status-pill status-pill-ok"><span class="status-pill-dot"></span> Operational</span>
-          </div>
-          <div class="status-row">
-            <div class="status-row-name"><strong>Shopify destination</strong><span>Admin API + GraphQL</span></div>
-            <span class="status-pill status-pill-ok"><span class="status-pill-dot"></span> Operational</span>
-          </div>
-        </div>
-
-        <h2 style="font-size: 1.25rem; margin: 40px 0 18px; color: var(--gray-900);">Recent incidents</h2>
-
-        <div class="status-grid">
-          <div class="status-row">
-            <div class="status-row-name">
-              <strong>Squarespace connector - degraded response times</strong>
-              <span>Vendor-side rate limiting affecting new connections · 12 Jan 2026 · Ongoing, monitoring</span>
-            </div>
-            <span class="status-pill status-pill-warn"><span class="status-pill-dot"></span> Monitoring</span>
-          </div>
-          <div class="status-row">
-            <div class="status-row-name">
-              <strong>Public API - elevated 5xx errors</strong>
-              <span>15 min partial outage caused by a deploy regression · 04 Jan 2026 · Resolved</span>
-            </div>
-            <span class="status-pill status-pill-ok"><span class="status-pill-dot"></span> Resolved</span>
-          </div>
-          <div class="status-row">
-            <div class="status-row-name">
-              <strong>Scheduled maintenance - engine v4.2</strong>
-              <span>22 min planned downtime, all migrations paused and resumed cleanly · 18 Dec 2025 · Completed</span>
-            </div>
-            <span class="status-pill status-pill-ok"><span class="status-pill-dot"></span> Completed</span>
-          </div>
-        </div>
-
-        <p style="margin-top: 40px; text-align: center; color: var(--text-muted); font-size: 0.9rem;">Subscribe to status updates: <a href="/contact" class="link-accent">contact us</a> · RSS feed at <code>/status.rss</code></p>
-
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer" data-site-footer></footer>
-
-  <script src="lenis.min.js" defer></script>
-  <script src="script.js" defer></script>
-  <script id="omnidimension-web-widget" async src="https://omnidim.io/web_widget.js?secret_key=14d67441b2a60ad2976bcdd676f52887" ></script>
-</body>
+    <script src="lenis.min.js" defer></script>
+    <script src="script.js" defer></script>
+    <script
+      id="omnidimension-web-widget"
+      async
+      src="https://omnidim.io/web_widget.js?secret_key=14d67441b2a60ad2976bcdd676f52887"
+    ></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://shiftitnow.com/#organization",
+            "name": "ShiftItNow",
+            "url": "https://shiftitnow.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://shiftitnow.com/assets/logo.webp"
+            },
+            "email": "team@shiftitnow.com",
+            "foundingDate": "2022",
+            "description": "ShiftItNow is a Shopify migration app that helps merchants migrate products, customers, orders, SEO redirects, blogs, reviews, and store data from WooCommerce, Magento, Wix, Squarespace, BigCommerce, OpenCart, and custom platforms to Shopify.",
+            "sameAs": [
+              "https://www.linkedin.com/company/shiftitnow/",
+              "https://www.instagram.com/shiftitnow/"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "team@shiftitnow.com",
+              "contactType": "customer support",
+              "url": "https://shiftitnow.com/contact",
+              "availableLanguage": "English",
+              "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+              }
+            },
+            "knowsAbout": [
+              "Shopify Migration",
+              "Shopify Data Migration",
+              "Ecommerce Migration",
+              "WooCommerce to Shopify Migration",
+              "Magento to Shopify Migration",
+              "Wix to Shopify Migration",
+              "BigCommerce to Shopify Migration",
+              "Squarespace to Shopify Migration",
+              "OpenCart to Shopify Migration",
+              "SEO Migration"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://shiftitnow.com/#website",
+            "url": "https://shiftitnow.com/",
+            "name": "ShiftItNow",
+            "publisher": {
+              "@id": "https://shiftitnow.com/#organization"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://shiftitnow.com/#webpage",
+            "url": "https://shiftitnow.com/",
+            "name": "ShiftItNow: Shopify Migration App | Move Your Store to Shopify",
+            "description": "Migrate your store to Shopify with ease. Transfer products, customers, orders, and SEO data seamlessly from any platform. Start your ecommerce migration today.",
+            "isPartOf": {
+              "@id": "https://shiftitnow.com/#website"
+            },
+            "about": {
+              "@id": "https://shiftitnow.com/#softwareapplication"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://shiftitnow.com/assets/logo.webp"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://shiftitnow.com/#softwareapplication",
+            "name": "ShiftItNow",
+            "url": "https://shiftitnow.com/",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web Browser",
+            "applicationSuite": "Shopify Migration",
+            "description": "ShiftItNow is a Shopify migration app that automates ecommerce store migration from WooCommerce, Magento, Wix, Squarespace, BigCommerce, OpenCart, and custom platforms to Shopify.",
+            "image": "https://shiftitnow.com/assets/logo.webp",
+            "downloadUrl": "https://apps.shopify.com/shift-it-now",
+            "installUrl": "https://apps.shopify.com/shift-it-now",
+            "sameAs": [
+              "https://apps.shopify.com/shift-it-now"
+            ],
+            "provider": {
+              "@id": "https://shiftitnow.com/#organization"
+            },
+            "publisher": {
+              "@id": "https://shiftitnow.com/#organization"
+            },
+            "featureList": [
+              "Product Migration",
+              "Customer Migration",
+              "Order Migration",
+              "SEO Redirect Migration",
+              "Blog Migration",
+              "Review Migration",
+              "Migration Preview",
+              "Automated Shopify Migration",
+              "Zero Downtime Migration",
+              "Data Mapping"
+            ],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5",
+              "reviewCount": "3",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "USD",
+              "lowPrice": "0",
+              "highPrice": "149",
+              "offerCount": "4",
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "name": "Starter",
+                  "price": "0",
+                  "priceCurrency": "USD",
+                  "description": "Up to 100 products"
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Growth",
+                  "price": "89",
+                  "priceCurrency": "USD",
+                  "description": "Up to 1,000 products"
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Scale",
+                  "price": "149",
+                  "priceCurrency": "USD",
+                  "description": "Up to 10,000 products"
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Enterprise",
+                  "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "priceCurrency": "USD"
+                  },
+                  "description": "Custom pricing for unlimited products"
+                }
+              ]
+            }
+          },
+          {
+            "@type": "Review",
+            "@id": "https://shiftitnow.com/#review1",
+            "author": {
+              "@type": "Person",
+              "name": "Sarah Patel"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5"
+            },
+            "reviewBody": "We migrated 14,000 SKUs from Magento with our team's sanity intact. SEO held, orders kept flowing, and the support team replied in minutes, not days.",
+            "itemReviewed": {
+              "@id": "https://shiftitnow.com/#softwareapplication"
+            }
+          },
+          {
+            "@type": "Review",
+            "@id": "https://shiftitnow.com/#review2",
+            "author": {
+              "@type": "Person",
+              "name": "Daniel Morrison"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5"
+            },
+            "reviewBody": "ShiftItNow completed our WooCommerce to Shopify migration in a weekend, including redirects. The process was smooth from start to finish.",
+            "itemReviewed": {
+              "@id": "https://shiftitnow.com/#softwareapplication"
+            }
+          },
+          {
+            "@type": "Review",
+            "@id": "https://shiftitnow.com/#review3",
+            "author": {
+              "@type": "Person",
+              "name": "Reina Kobayashi"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5"
+            },
+            "reviewBody": "Coming from Wix, I expected to lose content during migration. Everything transferred successfully, including blog metadata.",
+            "itemReviewed": {
+              "@id": "https://shiftitnow.com/#softwareapplication"
+            }
+          }
+        ]
+      }}
+    </script>
+  </body>
 </html>
-
