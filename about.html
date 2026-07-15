@@ -1,416 +1,508 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0A1F2E" />
-  <title>ShiftItNow: Shopify Store Migration App | Migration to Shopify</title>
-  <meta name="description" content="Learn how ShiftItNow simplifies migration to Shopify. Our Shopify store migration app helps
-move data accurately and efficiently. Contact us today!" />
-  <meta name="keywords" content="migration to shopify, shopify store migration app" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0A1F2E" />
+    <title>
+      ShiftItNow: Shopify Store Migration App | Migration to Shopify
+    </title>
+    <meta
+      name="description"
+      content="Learn how ShiftItNow simplifies migration to Shopify. Our Shopify store migration app helps
+move data accurately and efficiently. Contact us today!"
+    />
+    <meta
+      name="keywords"
+      content="migration to shopify, shopify store migration app"
+    />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="ShiftItNow: Shopify Store Migration App | Migration to Shopify" />
-  <meta property="og:description" content="Learn how ShiftItNow simplifies migration to Shopify. Our Shopify store migration app helps
-move data accurately and efficiently. Contact us today!" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/logo.webp" />
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="ShiftItNow: Shopify Store Migration App | Migration to Shopify"
+    />
+    <meta
+      property="og:description"
+      content="Learn how ShiftItNow simplifies migration to Shopify. Our Shopify store migration app helps
+move data accurately and efficiently. Contact us today!"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/logo.webp" />
 
-  <link rel="icon" type="image/webp" href="assets/logo.webp" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="mobile.css" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-75MFFCX1S2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-75MFFCX1S2');
-  </script>
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "xjp076zmko");
-  </script>
-</head>
-<body>
-
-  <div class="announcement-bar" id="announcementBar" role="region" aria-label="Announcement">
-    <div class="container announcement-inner">
-      <span class="announce-dot" aria-hidden="true"></span>
-      <span>Now live: <strong>BigCommerce → Shopify migration</strong> is available - see the platform deep-dive.</span>
-      <a href="/platforms" class="announce-link">See the deep-dive <span aria-hidden="true">→</span></a>
-      <button class="announce-close" id="announceClose" aria-label="Dismiss announcement">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-      </button>
+    <link rel="icon" type="image/webp" href="assets/logo.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mobile.css" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-75MFFCX1S2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-75MFFCX1S2");
+    </script>
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "xjp076zmko");
+    </script>
+  </head>
+  <body>
+    <div
+      class="announcement-bar"
+      id="announcementBar"
+      role="region"
+      aria-label="Announcement"
+    >
+      <div class="container announcement-inner">
+        <span class="announce-dot" aria-hidden="true"></span>
+        <span
+          >Now live: <strong>BigCommerce → Shopify migration</strong> is
+          available - see the platform deep-dive.</span
+        >
+        <a href="/platforms" class="announce-link"
+          >See the deep-dive <span aria-hidden="true">→</span></a
+        >
+        <button
+          class="announce-close"
+          id="announceClose"
+          aria-label="Dismiss announcement"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            width="16"
+            height="16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
+      </div>
     </div>
-  </div>
 
-  <header class="site-header" id="siteHeader" data-site-header></header>
+    <header class="site-header" id="siteHeader" data-site-header></header>
 
-  <main>
-
-    <section class="page-hero">
-      <div class="container">
-        <span class="eyebrow"><span class="eyebrow-dot"></span> About ShiftItNow</span>
-        <h1>Migration, done by people who've felt the pain.</h1>
-        <p class="page-hero-sub">We built ShiftItNow after watching too many merchants lose weeks, rankings and revenue to broken store migrations. Never again.</p>
-        <div class="page-hero-cta">
-          <a href="/contact" class="btn btn-primary btn-lg">Talk to the team</a>
-          <a href="/how-it-works" class="btn btn-ghost btn-lg">See how it works</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============== MISSION ============== -->
-    <section class="section">
-      <div class="container migrated-inner">
-        <div class="migrated-copy">
-          <span class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> Why we exist</span>
-          <h2>Make migrating to Shopify the easiest decision a merchant ever makes.</h2>
-          <p>Every founder we talk to has a migration horror story - half-imported products, lost SEO, weeks of cleanup, customers unable to log in. Most "migration tools" are exporters with marketing budgets. We're a migration engine first, and a company second.</p>
-          <a href="/how-it-works" class="btn btn-dark btn-md">
-            See the migration engine
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
-        </div>
-        <div class="migrated-grid">
-          <div class="mig-col">
-            <h4>Founded</h4>
-            <ul>
-              <li>2022, San Francisco</li>
-              <li>Backed by ex-Shopify engineers</li>
-              <li>Profitable since 2024</li>
-              <li>Remote-first, 6 countries</li>
-              <li>Customer-funded growth</li>
-            </ul>
-          </div>
-          <div class="mig-col">
-            <h4>Team</h4>
-            <ul>
-              <li>18 full-time</li>
-              <li>11 migration engineers</li>
-              <li>4 support specialists</li>
-              <li>2 designers</li>
-              <li>1 very patient ops lead</li>
-            </ul>
-          </div>
-          <div class="mig-col">
-            <h4>Track record</h4>
-            <ul>
-              <li>1,000+ stores migrated</li>
-              <li>50M+ products moved</li>
-              <li>99.98% data accuracy</li>
-              <li>Zero unrecovered migrations</li>
-              <li>4.9★ on Shopify App Store</li>
-            </ul>
-          </div>
-          <div class="mig-col">
-            <h4>Values</h4>
-            <ul>
-              <li>Merchant first, always</li>
-              <li>Boring, predictable software</li>
-              <li>No silent failures</li>
-              <li>Refund if we can't deliver</li>
-              <li>Real humans answer the phone</li>
-            </ul>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <span class="eyebrow"
+            ><span class="eyebrow-dot"></span> About ShiftItNow</span
+          >
+          <h1>Migration, done by people who've felt the pain.</h1>
+          <p class="page-hero-sub">
+            We built ShiftItNow after watching too many merchants lose weeks,
+            rankings and revenue to broken store migrations. Never again.
+          </p>
+          <div class="page-hero-cta">
+            <a href="/contact" class="btn btn-primary btn-lg"
+              >Talk to the team</a
+            >
+            <a href="/how-it-works" class="btn btn-ghost btn-lg"
+              >See how it works</a
+            >
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ============== STORY ============== -->
-    <section class="section testimonials section-featured">
-      <div class="container">
-        <span class="featured-flag" aria-hidden="true">★ Our story</span>
-        <div class="section-head">
-          <span class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> How we got here</span>
-          <h2>Built in the trenches of 200 painful migrations.</h2>
-          <p class="section-sub">Before ShiftItNow was a product, it was a side-tool we built to rescue merchants from broken DIY migrations. Word got out. Here we are.</p>
-        </div>
-
-        <div class="testimonial-grid">
-          <article class="testimonial">
-            <div class="stars" aria-label="Chapter 1">01</div>
-            <blockquote>"We were two engineers freelancing for Shopify Plus stores. Every project started the same way: a botched migration from someone else's tool. We got sick of cleaning up."</blockquote>
-            <footer>
-              <div class="avatar" style="background:linear-gradient(135deg,#F2B544,#E8821C);">2022</div>
-              <div>
-                <strong>The freelance years</strong>
-                <span>San Francisco, 2022</span>
-              </div>
-            </footer>
-          </article>
-          <article class="testimonial featured">
-            <div class="stars" aria-label="Chapter 2">02</div>
-            <blockquote>"We wrote a tiny internal engine to do migrations properly. One merchant asked if they could buy it. Then another. Then 50. We quit consulting and named it ShiftItNow."</blockquote>
-            <footer>
-              <div class="avatar" style="background:linear-gradient(135deg,#5FB1C0,#2E7D8E);">2023</div>
-              <div>
-                <strong>The pivot</strong>
-                <span>Remote-first, 2023</span>
-              </div>
-            </footer>
-          </article>
-          <article class="testimonial">
-            <div class="stars" aria-label="Chapter 3">03</div>
-            <blockquote>"Today, ShiftItNow moves more stores to Shopify in a week than we used to migrate in a year. Same tiny team, same obsession with getting it right the first time."</blockquote>
-            <footer>
-              <div class="avatar" style="background:linear-gradient(135deg,#11324A,#1A4D5C);">Now</div>
-              <div>
-                <strong>The migration engine</strong>
-                <span>1,000+ stores and counting</span>
-              </div>
-            </footer>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============== CTA ============== -->
-    <section class="section cta-section">
-      <div class="container">
-        <div class="cta-card">
-          <div class="cta-bg" aria-hidden="true"><div class="cta-glow"></div></div>
-          <div class="cta-content">
-            <span class="eyebrow"><span class="eyebrow-dot"></span> Come move with us</span>
-            <h2>Ready to make the shift?</h2>
-            <p>Run a free demo migration on your real catalog. See the result before you commit a single dollar.</p>
-            <div class="cta-buttons">
-              <a href="https://apps.shopify.com/shift-it-now" class="btn btn-primary btn-lg"><img src="assets/icons8-shopify.svg" alt="" width="20" height="20" class="btn-shopify-icon" /> Install on Shopify</a>
-              <a href="/contact" class="btn btn-ghost btn-lg">Talk to a migration expert</a>
+      <!-- ============== MISSION ============== -->
+      <section class="section">
+        <div class="container migrated-inner">
+          <div class="migrated-copy">
+            <span class="eyebrow eyebrow-dark"
+              ><span class="eyebrow-dot"></span> Why we exist</span
+            >
+            <h2>
+              Make migrating to Shopify the easiest decision a merchant ever
+              makes.
+            </h2>
+            <p>
+              Every founder we talk to has a migration horror story -
+              half-imported products, lost SEO, weeks of cleanup, customers
+              unable to log in. Most "migration tools" are exporters with
+              marketing budgets. We're a migration engine first, and a company
+              second.
+            </p>
+            <a href="/how-it-works" class="btn btn-dark btn-md">
+              See the migration engine
+              <svg
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+          <div class="migrated-grid">
+            <div class="mig-col">
+              <h4>Founded</h4>
+              <ul>
+                <li>2022, San Francisco</li>
+                <li>Backed by ex-Shopify engineers</li>
+                <li>Profitable since 2024</li>
+                <li>Remote-first, 6 countries</li>
+                <li>Customer-funded growth</li>
+              </ul>
+            </div>
+            <div class="mig-col">
+              <h4>Team</h4>
+              <ul>
+                <li>18 full-time</li>
+                <li>11 migration engineers</li>
+                <li>4 support specialists</li>
+                <li>2 designers</li>
+                <li>1 very patient ops lead</li>
+              </ul>
+            </div>
+            <div class="mig-col">
+              <h4>Track record</h4>
+              <ul>
+                <li>1,000+ stores migrated</li>
+                <li>50M+ products moved</li>
+                <li>99.98% data accuracy</li>
+                <li>Zero unrecovered migrations</li>
+                <li>4.9★ on Shopify App Store</li>
+              </ul>
+            </div>
+            <div class="mig-col">
+              <h4>Values</h4>
+              <ul>
+                <li>Merchant first, always</li>
+                <li>Boring, predictable software</li>
+                <li>No silent failures</li>
+                <li>Refund if we can't deliver</li>
+                <li>Real humans answer the phone</li>
+              </ul>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-  </main>
+      <!-- ============== STORY ============== -->
+      <section class="section testimonials section-featured">
+        <div class="container">
+          <span class="featured-flag" aria-hidden="true">★ Our story</span>
+          <div class="section-head">
+            <span class="eyebrow eyebrow-dark"
+              ><span class="eyebrow-dot"></span> How we got here</span
+            >
+            <h2>Built in the trenches of 200 painful migrations.</h2>
+            <p class="section-sub">
+              Before ShiftItNow was a product, it was a side-tool we built to
+              rescue merchants from broken DIY migrations. Word got out. Here we
+              are.
+            </p>
+          </div>
 
-  <footer class="site-footer" data-site-footer></footer>
+          <div class="testimonial-grid">
+            <article class="testimonial">
+              <div class="stars" aria-label="Chapter 1">01</div>
+              <blockquote>
+                "We were two engineers freelancing for Shopify Plus stores.
+                Every project started the same way: a botched migration from
+                someone else's tool. We got sick of cleaning up."
+              </blockquote>
+              <footer>
+                <div
+                  class="avatar"
+                  style="background: linear-gradient(135deg, #f2b544, #e8821c)"
+                >
+                  2022
+                </div>
+                <div>
+                  <strong>The freelance years</strong>
+                  <span>San Francisco, 2022</span>
+                </div>
+              </footer>
+            </article>
+            <article class="testimonial featured">
+              <div class="stars" aria-label="Chapter 2">02</div>
+              <blockquote>
+                "We wrote a tiny internal engine to do migrations properly. One
+                merchant asked if they could buy it. Then another. Then 50. We
+                quit consulting and named it ShiftItNow."
+              </blockquote>
+              <footer>
+                <div
+                  class="avatar"
+                  style="background: linear-gradient(135deg, #5fb1c0, #2e7d8e)"
+                >
+                  2023
+                </div>
+                <div>
+                  <strong>The pivot</strong>
+                  <span>Remote-first, 2023</span>
+                </div>
+              </footer>
+            </article>
+            <article class="testimonial">
+              <div class="stars" aria-label="Chapter 3">03</div>
+              <blockquote>
+                "Today, ShiftItNow moves more stores to Shopify in a week than
+                we used to migrate in a year. Same tiny team, same obsession
+                with getting it right the first time."
+              </blockquote>
+              <footer>
+                <div
+                  class="avatar"
+                  style="background: linear-gradient(135deg, #11324a, #1a4d5c)"
+                >
+                  Now
+                </div>
+                <div>
+                  <strong>The migration engine</strong>
+                  <span>1,000+ stores and counting</span>
+                </div>
+              </footer>
+            </article>
+          </div>
+        </div>
+      </section>
 
-  <script src="lenis.min.js" defer></script>
-  <script src="script.js" defer></script>  
-  <script id="omnidimension-web-widget" async src="https://omnidim.io/web_widget.js?secret_key=14d67441b2a60ad2976bcdd676f52887" ></script>
+      <!-- ============== CTA ============== -->
+      <section class="section cta-section">
+        <div class="container">
+          <div class="cta-card">
+            <div class="cta-bg" aria-hidden="true">
+              <div class="cta-glow"></div>
+            </div>
+            <div class="cta-content">
+              <span class="eyebrow"
+                ><span class="eyebrow-dot"></span> Come move with us</span
+              >
+              <h2>Ready to make the shift?</h2>
+              <p>
+                Run a free demo migration on your real catalog. See the result
+                before you commit a single dollar.
+              </p>
+              <div class="cta-buttons">
+                <a
+                  href="https://apps.shopify.com/shift-it-now"
+                  class="btn btn-primary btn-lg"
+                  ><img
+                    src="assets/icons8-shopify.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                    class="btn-shopify-icon"
+                  />
+                  Install on Shopify</a
+                >
+                <a href="/contact" class="btn btn-ghost btn-lg"
+                  >Talk to a migration expert</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://shiftitnow.com/#organization",
-        "name": "ShiftItNow",
-        "url": "https://shiftitnow.com/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://shiftitnow.com/assets/logo.webp"
-        },
-        "email": "team@shiftitnow.com",
-        "foundingDate": "2022",
-        "description": "ShiftItNow is a Shopify migration app that helps merchants migrate products, customers, orders, SEO redirects, blogs, reviews, and store data from WooCommerce, Magento, Wix, Squarespace, BigCommerce, OpenCart, and custom platforms to Shopify.",
-        "sameAs": [
-          "https://www.linkedin.com/company/shiftitnow/",
-          "https://www.instagram.com/shiftitnow/"
-        ],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "email": "team@shiftitnow.com",
-          "contactType": "customer support",
-          "url": "https://shiftitnow.com/contact",
-          "availableLanguage": "English",
-          "hoursAvailable": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-              "Saturday",
-              "Sunday"
-            ],
-            "opens": "00:00",
-            "closes": "23:59"
-          }
-        },
-        "knowsAbout": [
-          "Shopify Migration",
-          "Shopify Data Migration",
-          "Ecommerce Migration",
-          "WooCommerce to Shopify Migration",
-          "Magento to Shopify Migration",
-          "Wix to Shopify Migration",
-          "BigCommerce to Shopify Migration",
-          "Squarespace to Shopify Migration",
-          "OpenCart to Shopify Migration",
-          "SEO Migration"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://shiftitnow.com/#website",
-        "url": "https://shiftitnow.com/",
-        "name": "ShiftItNow",
-        "publisher": {
-          "@id": "https://shiftitnow.com/#organization"
-        },
-        "inLanguage": "en-US"
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://shiftitnow.com/#webpage",
-        "url": "https://shiftitnow.com/",
-        "name": "ShiftItNow: Shopify Migration App | Move Your Store to Shopify",
-        "description": "Migrate your store to Shopify with ease. Transfer products, customers, orders, and SEO data seamlessly from any platform. Start your ecommerce migration today.",
-        "isPartOf": {
-          "@id": "https://shiftitnow.com/#website"
-        },
-        "about": {
-          "@id": "https://shiftitnow.com/#softwareapplication"
-        },
-        "primaryImageOfPage": {
-          "@type": "ImageObject",
-          "url": "https://shiftitnow.com/assets/logo.webp"
-        },
-        "inLanguage": "en-US"
-      },
-      {
-        "@type": "SoftwareApplication",
-        "@id": "https://shiftitnow.com/#softwareapplication",
-        "name": "ShiftItNow",
-        "url": "https://shiftitnow.com/",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Web Browser",
-        "applicationSuite": "Shopify Migration",
-        "description": "ShiftItNow is a Shopify migration app that automates ecommerce store migration from WooCommerce, Magento, Wix, Squarespace, BigCommerce, OpenCart, and custom platforms to Shopify.",
-        "image": "https://shiftitnow.com/assets/logo.webp",
-        "downloadUrl": "https://apps.shopify.com/shift-it-now",
-        "installUrl": "https://apps.shopify.com/shift-it-now",
-        "sameAs": [
-          "https://apps.shopify.com/shift-it-now"
-        ],
-        "provider": {
-          "@id": "https://shiftitnow.com/#organization"
-        },
-        "publisher": {
-          "@id": "https://shiftitnow.com/#organization"
-        },
-        "featureList": [
-          "Product Migration",
-          "Customer Migration",
-          "Order Migration",
-          "SEO Redirect Migration",
-          "Blog Migration",
-          "Review Migration",
-          "Migration Preview",
-          "Automated Shopify Migration",
-          "Zero Downtime Migration",
-          "Data Mapping"
-        ],
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "reviewCount": "3",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
-        "offers": {
-          "@type": "AggregateOffer",
-          "priceCurrency": "USD",
-          "lowPrice": "0",
-          "highPrice": "149",
-          "offerCount": "4",
-          "offers": [
-            {
-              "@type": "Offer",
-              "name": "Starter",
-              "price": "0",
-              "priceCurrency": "USD",
-              "description": "Up to 100 products"
-            },
-            {
-              "@type": "Offer",
-              "name": "Growth",
-              "price": "89",
-              "priceCurrency": "USD",
-              "description": "Up to 1,000 products"
-            },
-            {
-              "@type": "Offer",
-              "name": "Scale",
-              "price": "149",
-              "priceCurrency": "USD",
-              "description": "Up to 10,000 products"
-            },
-            {
-              "@type": "Offer",
-              "name": "Enterprise",
-              "priceSpecification": {
-                "@type": "PriceSpecification",
-                "priceCurrency": "USD"
-              },
-              "description": "Custom pricing for unlimited products"
-            }
-          ]
-        }
-      },
-      {
-        "@type": "Review",
-        "@id": "https://shiftitnow.com/#review1",
-        "author": {
-          "@type": "Person",
-          "name": "Sarah Patel"
-        },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5"
-        },
-        "reviewBody": "We migrated 14,000 SKUs from Magento with our team's sanity intact. SEO held, orders kept flowing, and the support team replied in minutes, not days.",
-        "itemReviewed": {
-          "@id": "https://shiftitnow.com/#softwareapplication"
-        }
-      },
-      {
-        "@type": "Review",
-        "@id": "https://shiftitnow.com/#review2",
-        "author": {
-          "@type": "Person",
-          "name": "Daniel Morrison"
-        },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5"
-        },
-        "reviewBody": "ShiftItNow completed our WooCommerce to Shopify migration in a weekend, including redirects. The process was smooth from start to finish.",
-        "itemReviewed": {
-          "@id": "https://shiftitnow.com/#softwareapplication"
-        }
-      },
-      {
-        "@type": "Review",
-        "@id": "https://shiftitnow.com/#review3",
-        "author": {
-          "@type": "Person",
-          "name": "Reina Kobayashi"
-        },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5"
-        },
-        "reviewBody": "Coming from Wix, I expected to lose content during migration. Everything transferred successfully, including blog metadata.",
-        "itemReviewed": {
-          "@id": "https://shiftitnow.com/#softwareapplication"
-        }
-      }
-    ]
-  }}
-  </script>
-</body>
+    <footer class="site-footer" data-site-footer></footer>
+
+    <script src="lenis.min.js" defer></script>
+    <script src="script.js" defer></script>
+    <script
+      id="omnidimension-web-widget"
+      async
+      src="https://omnidim.io/web_widget.js?secret_key=14d67441b2a60ad2976bcdd676f52887"
+    ></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://shiftitnow.com/#organization",
+            "name": "ShiftItNow",
+            "url": "https://shiftitnow.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://shiftitnow.com/assets/logo.webp"
+            },
+            "image": "https://shiftitnow.com/assets/logo.webp",
+            "email": "team@shiftitnow.com",
+            "foundingDate": "2022",
+            "description": "ShiftItNow is a Shopify migration app that helps merchants migrate products, customers, orders, SEO redirects, blogs, reviews, and store data from WooCommerce, Magento, Wix, Squarespace, BigCommerce, OpenCart, and custom platforms to Shopify.",
+            "sameAs": [
+              "https://www.linkedin.com/company/shiftitnow/",
+              "https://www.instagram.com/shiftitnow/"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "team@shiftitnow.com",
+              "contactType": "customer support",
+              "url": "https://shiftitnow.com/contact",
+              "availableLanguage": "English",
+              "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+              }
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://shiftitnow.com/#website",
+            "url": "https://shiftitnow.com/",
+            "name": "ShiftItNow",
+            "publisher": { "@id": "https://shiftitnow.com/#organization" },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://shiftitnow.com/#webpage",
+            "url": "https://shiftitnow.com/",
+            "name": "ShiftItNow: Shopify Migration App | Move Your Store to Shopify",
+            "description": "Migrate your store to Shopify with ease.",
+            "isPartOf": { "@id": "https://shiftitnow.com/#website" },
+            "about": { "@id": "https://shiftitnow.com/#softwareapplication" },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://shiftitnow.com/assets/logo.webp"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://shiftitnow.com/#softwareapplication",
+            "name": "ShiftItNow",
+            "url": "https://shiftitnow.com/",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web Browser",
+            "softwareVersion": "1.0",
+            "browserRequirements": "Requires a modern web browser",
+            "applicationSuite": "Shopify Migration",
+            "description": "ShiftItNow automates ecommerce migration to Shopify.",
+            "image": "https://shiftitnow.com/assets/logo.webp",
+            "downloadUrl": "https://apps.shopify.com/shift-it-now",
+            "installUrl": "https://apps.shopify.com/shift-it-now",
+            "provider": { "@id": "https://shiftitnow.com/#organization" },
+            "publisher": { "@id": "https://shiftitnow.com/#organization" },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5",
+              "reviewCount": "3",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "USD",
+              "lowPrice": "0",
+              "highPrice": "149",
+              "offerCount": "4",
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "name": "Starter",
+                  "price": "0",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Growth",
+                  "price": "89",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Scale",
+                  "price": "149",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Enterprise",
+                  "price": "0",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock",
+                  "description": "Contact us for custom pricing."
+                }
+              ]
+            }
+          },
+          {
+            "@type": "Review",
+            "@id": "https://shiftitnow.com/#review1",
+            "author": { "@type": "Person", "name": "Sarah Patel" },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "datePublished": "2025-07-12",
+            "reviewBody": "We migrated 14,000 SKUs from Magento with our team's sanity intact.",
+            "itemReviewed": {
+              "@id": "https://shiftitnow.com/#softwareapplication"
+            }
+          },
+          {
+            "@type": "Review",
+            "@id": "https://shiftitnow.com/#review2",
+            "author": { "@type": "Person", "name": "Daniel Morrison" },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "datePublished": "2025-07-13",
+            "reviewBody": "WooCommerce to Shopify migration was smooth.",
+            "itemReviewed": {
+              "@id": "https://shiftitnow.com/#softwareapplication"
+            }
+          },
+          {
+            "@type": "Review",
+            "@id": "https://shiftitnow.com/#review3",
+            "author": { "@type": "Person", "name": "Reina Kobayashi" },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "datePublished": "2025-07-14",
+            "reviewBody": "Everything transferred successfully.",
+            "itemReviewed": {
+              "@id": "https://shiftitnow.com/#softwareapplication"
+            }
+          }
+        ]
+      }
+    </script>
+  </body>
 </html>
-
