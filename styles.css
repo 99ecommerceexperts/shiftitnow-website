@@ -3137,6 +3137,13 @@ p  { margin: 0; }
   gap: 16px;
   margin: 0 0 20px;
 }
+.blog-section-image {
+  margin: 12px 0 22px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: 0 18px 40px rgba(10, 31, 46, 0.08);
+}
 .blog-gallery-card {
   margin: 0;
 }
