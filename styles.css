@@ -3677,7 +3677,7 @@ p  { margin: 0; }
 }
 .blog-detail-hero-frame-full {
   min-height: 280px;
-  max-height: 280px;
+  max-height: 340px;
   border-radius: 30px;
 }
 .blog-detail-layout {
