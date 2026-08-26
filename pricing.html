@@ -226,6 +226,37 @@ services, a free demo, and instant plan estimates. Migrate today!"
                 </div>
                 <div
                   class="calc-plat-option"
+                  data-platform="bigcommerce"
+                  data-name="BigCommerce"
+                  data-sub="BigCommerce store"
+                  role="option"
+                >
+                  <div class="calc-plat-opt-icon">
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="16"
+                      height="16"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+                      />
+                      <line x1="3" y1="6" x2="21" y2="6" />
+                      <path d="M16 10a4 4 0 0 1-8 0" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="calc-plat-opt-name">BigCommerce</span>
+                    <span class="calc-plat-opt-sub">BigCommerce store</span>
+                  </div>
+                </div>
+                <div
+                  class="calc-plat-option"
                   data-platform="wix"
                   data-name="Wix"
                   data-sub="Wix Stores"
@@ -768,7 +799,7 @@ services, a free demo, and instant plan estimates. Migrate today!"
             </div>
             <div class="calc-plan-card" data-plan-id="growth">
               <span class="calc-plan-tier">Growth</span>
-              <span class="calc-plan-price">$89</span>
+              <span class="calc-plan-price">$79</span>
               <span class="calc-plan-capacity">up to 1,000 products</span>
               <span class="calc-plan-check" aria-hidden="true">
                 <svg
@@ -787,7 +818,7 @@ services, a free demo, and instant plan estimates. Migrate today!"
             </div>
             <div class="calc-plan-card" data-plan-id="scale">
               <span class="calc-plan-tier">Scale</span>
-              <span class="calc-plan-price">$149</span>
+              <span class="calc-plan-price">$139</span>
               <span class="calc-plan-capacity">up to 10,000 products</span>
               <span class="calc-plan-check" aria-hidden="true">
                 <svg
@@ -874,7 +905,7 @@ services, a free demo, and instant plan estimates. Migrate today!"
           <div class="calc-trust-bar">
             <div class="calc-trust-left">
               <span class="calc-trust-stars">★★★★★</span>
-              <span><strong>4.9/5</strong> · 2,400+ successful migrations</span>
+              <span><strong>5/5</strong> · 50+ successful migrations</span>
             </div>
             <div class="calc-trust-right">
               <span class="calc-trust-item">
@@ -970,7 +1001,7 @@ services, a free demo, and instant plan estimates. Migrate today!"
           growth: {
             id: "growth",
             name: "Growth",
-            priceStr: "$89",
+            priceStr: "$79",
             priceMeta: "One-time fee · all data, all preserved",
             isFree: false,
             isContact: false,
@@ -993,7 +1024,7 @@ services, a free demo, and instant plan estimates. Migrate today!"
           scale: {
             id: "scale",
             name: "Scale",
-            priceStr: "$149",
+            priceStr: "$139",
             priceMeta: "One-time fee · all data, all preserved",
             isFree: false,
             isContact: false,
@@ -1067,7 +1098,7 @@ services, a free demo, and instant plan estimates. Migrate today!"
           _priceEl.classList.add("is-punch");
         }
 
-        /* Count-up for numeric prices ($89 → $149), fade-reveal for text (Free, Custom) */
+        /* Count-up for numeric prices ($79 → $139), fade-reveal for text (Free, Custom) */
         function animatePrice(targetText, extraClass) {
           var prevText = _priceEl.textContent;
           var prevNum = parseFloat(prevText.replace(/[^0-9]/g, ""));
