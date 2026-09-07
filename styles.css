@@ -3540,10 +3540,13 @@ p  { margin: 0; }
 .blog-card-media-accent-seo {
   background: transparent;
 }
-.blog-card-media-accent-bigcommerce {
-  background: transparent;
-}
-.blog-card-media-accent-strategy {
+  .blog-card-media-accent-bigcommerce {
+    background: transparent;
+  }
+  .blog-card-media-accent-squarespace {
+    background: transparent;
+  }
+  .blog-card-media-accent-strategy {
   background: transparent;
 }
 .blog-card-media-accent-launch {

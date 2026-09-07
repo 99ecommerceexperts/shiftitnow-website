@@ -63,7 +63,12 @@
   </url>
   <url>
     <loc>https://shiftitnow.com/blogs</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-07</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://shiftitnow.com/blog/squarespace-to-shopify-migration-guide</loc>
+    <lastmod>2026-09-07</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
