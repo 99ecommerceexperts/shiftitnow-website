@@ -756,7 +756,7 @@ services, a free demo, and instant plan estimates. Migrate today!"
                 No service charge
               </div>
               <div class="calc-result-plan-name" id="resultPlanName">
-                Starter plan
+                Free plan
               </div>
               <div class="calc-data-pills" id="dataPills"></div>
               <div class="calc-result-divider"></div>
@@ -779,9 +779,10 @@ services, a free demo, and instant plan estimates. Migrate today!"
           <!-- PLAN SELECTOR -->
           <div class="calc-plan-selector">
             <div class="calc-plan-card active" data-plan-id="free">
-              <span class="calc-plan-tier">Starter</span>
+              <span class="calc-plan-tier">Free</span>
               <span class="calc-plan-price">Free</span>
-              <span class="calc-plan-capacity">up to 100 products</span>
+              <span class="calc-plan-capacity">up to 30 products</span>
+              <ul class="calc-tier-features"><li>Imports up to 30 products</li><li>Imports up to 30 customers</li><li>Imports up to 30 orders</li><li>Imports up to 2 pages</li><li>Imports up to 2 posts</li><li>24/7 dedicated support</li></ul>
               <span class="calc-plan-check" aria-hidden="true">
                 <svg
                   viewBox="0 0 12 12"
@@ -799,8 +800,10 @@ services, a free demo, and instant plan estimates. Migrate today!"
             </div>
             <div class="calc-plan-card" data-plan-id="growth">
               <span class="calc-plan-tier">Growth</span>
-              <span class="calc-plan-price">$79</span>
+              <span class="calc-plan-price">$49</span>
               <span class="calc-plan-capacity">up to 1,000 products</span>
+              <span class="calc-plan-capacity">One-time charge</span>
+              <ul class="calc-tier-features"><li>Imports up to 1,000 products</li><li>Imports up to 500 customers</li><li>Imports up to 500 orders</li><li>Imports up to 10 pages</li><li>Imports up to 10 posts</li><li>24/7 dedicated support</li></ul>
               <span class="calc-plan-check" aria-hidden="true">
                 <svg
                   viewBox="0 0 12 12"
@@ -818,27 +821,10 @@ services, a free demo, and instant plan estimates. Migrate today!"
             </div>
             <div class="calc-plan-card" data-plan-id="scale">
               <span class="calc-plan-tier">Scale</span>
-              <span class="calc-plan-price">$139</span>
-              <span class="calc-plan-capacity">up to 10,000 products</span>
-              <span class="calc-plan-check" aria-hidden="true">
-                <svg
-                  viewBox="0 0 12 12"
-                  width="8"
-                  height="8"
-                  fill="none"
-                  stroke="white"
-                  stroke-width="2.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <polyline points="2 6 5 9 10 3" />
-                </svg>
-              </span>
-            </div>
-            <div class="calc-plan-card" data-plan-id="enterprise">
-              <span class="calc-plan-tier">Enterprise</span>
-              <span class="calc-plan-price">Custom</span>
-              <span class="calc-plan-capacity">unlimited</span>
+              <span class="calc-plan-price">$99</span>
+              <span class="calc-plan-capacity">up to 5,000 products</span>
+              <span class="calc-plan-capacity">One-time charge</span>
+              <ul class="calc-tier-features"><li>Imports up to 5,000 products</li><li>Imports up to 1,000 customers</li><li>Imports up to 1,000 orders</li><li>Imports up to 50 pages</li><li>Imports up to 50 posts</li><li>24/7 dedicated support</li></ul>
               <span class="calc-plan-check" aria-hidden="true">
                 <svg
                   viewBox="0 0 12 12"
@@ -977,23 +963,25 @@ services, a free demo, and instant plan estimates. Migrate today!"
         var PLANS = {
           free: {
             id: "free",
-            name: "Starter",
+            name: "Free",
             priceStr: "Free",
             priceMeta: "No service charge",
             isFree: true,
             isContact: false,
             limits: {
-              products: 100,
-              customers: 50,
-              orders: 500,
-              pages: 5,
-              posts: 5,
+              products: 30,
+              customers: 30,
+              orders: 30,
+              pages: 2,
+              posts: 2,
             },
             features: [
-              "Up to 100 products & variants",
-              "All images & media files",
-              "Basic SEO meta data",
-              "Email support included",
+              "Imports up to 30 products",
+              "Imports up to 30 customers",
+              "Imports up to 30 orders",
+              "Imports up to 2 pages",
+              "Imports up to 2 posts",
+              "24/7 dedicated support",
             ],
             cta: "Get started - install free",
             ctaHref: "https://apps.shopify.com/shift-it-now",
@@ -1001,7 +989,7 @@ services, a free demo, and instant plan estimates. Migrate today!"
           growth: {
             id: "growth",
             name: "Growth",
-            priceStr: "$79",
+            priceStr: "$49",
             priceMeta: "One-time fee · all data, all preserved",
             isFree: false,
             isContact: false,
@@ -1009,14 +997,16 @@ services, a free demo, and instant plan estimates. Migrate today!"
               products: 1000,
               customers: 500,
               orders: 500,
-              pages: 20,
-              posts: 20,
+              pages: 10,
+              posts: 10,
             },
             features: [
-              "Up to 1,000 products & variants",
-              "Full customer & order history",
-              "SEO data + URL redirects",
-              "Priority Slack support",
+              "Imports up to 1,000 products",
+              "Imports up to 500 customers",
+              "Imports up to 500 orders",
+              "Imports up to 10 pages",
+              "Imports up to 10 posts",
+              "24/7 dedicated support",
             ],
             cta: "Continue - Install Growth",
             ctaHref: "https://apps.shopify.com/shift-it-now",
@@ -1024,30 +1014,32 @@ services, a free demo, and instant plan estimates. Migrate today!"
           scale: {
             id: "scale",
             name: "Scale",
-            priceStr: "$139",
+            priceStr: "$99",
             priceMeta: "One-time fee · all data, all preserved",
             isFree: false,
             isContact: false,
             limits: {
-              products: 10000,
-              customers: 5000,
-              orders: 5000,
-              pages: 100,
-              posts: 100,
+              products: 5000,
+              customers: 1000,
+              orders: 1000,
+              pages: 50,
+              posts: 50,
             },
             features: [
-              "Up to 10,000 products & variants",
-              "Bulk metafields & custom data",
-              "Advanced redirect mapping",
-              "Dedicated migration manager",
+              "Imports up to 5,000 products",
+              "Imports up to 1,000 customers",
+              "Imports up to 1,000 orders",
+              "Imports up to 50 pages",
+              "Imports up to 50 posts",
+              "24/7 dedicated support",
             ],
             cta: "Continue - Install Scale",
             ctaHref: "https://apps.shopify.com/shift-it-now",
           },
           enterprise: {
             id: "enterprise",
-            name: "Enterprise",
-            priceStr: "Custom",
+            name: "Contact us",
+            priceStr: "Contact us",
             priceMeta: "Contact our sales team",
             isFree: false,
             isContact: true,
@@ -1059,13 +1051,11 @@ services, a free demo, and instant plan estimates. Migrate today!"
               posts: Infinity,
             },
             features: [
-              "Unlimited products & data",
-              "White-glove managed migration",
-              "Custom API & integrations",
-              "SLA + 24/7 dedicated support",
+              "Your store exceeds the listed plan limits",
+              "Contact us to discuss your migration",
             ],
             cta: "Talk to sales",
-            ctaHref: "index.html#contact",
+            ctaHref: "/contact",
           },
         };
 
@@ -1098,7 +1088,7 @@ services, a free demo, and instant plan estimates. Migrate today!"
           _priceEl.classList.add("is-punch");
         }
 
-        /* Count-up for numeric prices ($79 → $139), fade-reveal for text (Free, Custom) */
+        /* Count-up for numeric prices ($49 → $99), fade-reveal for text (Free, Custom) */
         function animatePrice(targetText, extraClass) {
           var prevText = _priceEl.textContent;
           var prevNum = parseFloat(prevText.replace(/[^0-9]/g, ""));
@@ -1203,13 +1193,14 @@ services, a free demo, and instant plan estimates. Migrate today!"
           o = parseInt(o) || 0;
           pg = parseInt(pg) || 0;
           b = parseInt(b) || 0;
-          if (p > 10000 || c > 5000 || o > 5000 || pg > 100 || b > 100)
-            return PLANS.enterprise;
-          if (p > 1000 || c > 500 || o > 500 || pg > 20 || b > 20)
-            return PLANS.scale;
-          if (p > 100 || c > 50 || o > 50 || pg > 5 || b > 5)
-            return PLANS.growth;
-          return PLANS.free;
+          var counts = { products: p, customers: c, orders: o, pages: pg, posts: b };
+          var tiers = [PLANS.free, PLANS.growth, PLANS.scale];
+          for (var i = 0; i < tiers.length; i++) {
+            if (Object.keys(counts).every(function (key) {
+              return counts[key] <= tiers[i].limits[key];
+            })) return tiers[i];
+          }
+          return PLANS.enterprise;
         }
 
         /* ── RENDER ── */
@@ -1471,43 +1462,35 @@ services, a free demo, and instant plan estimates. Migrate today!"
               "worstRating": "1"
             },
             "offers": {
-              "@type": "AggregateOffer",
-              "priceCurrency": "USD",
-              "lowPrice": "0",
-              "highPrice": "149",
-              "offerCount": "4",
-              "offers": [
-                {
-                  "@type": "Offer",
-                  "name": "Starter",
-                  "price": "0",
-                  "priceCurrency": "USD",
-                  "availability": "https://schema.org/InStock"
-                },
-                {
-                  "@type": "Offer",
-                  "name": "Growth",
-                  "price": "89",
-                  "priceCurrency": "USD",
-                  "availability": "https://schema.org/InStock"
-                },
-                {
-                  "@type": "Offer",
-                  "name": "Scale",
-                  "price": "149",
-                  "priceCurrency": "USD",
-                  "availability": "https://schema.org/InStock"
-                },
-                {
-                  "@type": "Offer",
-                  "name": "Enterprise",
-                  "price": "0",
-                  "priceCurrency": "USD",
-                  "availability": "https://schema.org/InStock",
-                  "description": "Contact us for custom pricing."
-                }
-              ]
-            }
+  "@type": "AggregateOffer",
+  "priceCurrency": "USD",
+  "lowPrice": "0",
+  "highPrice": "99",
+  "offerCount": "3",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Free",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "up to 30 products, up to 30 orders, up to 30 customers, up to 2 pages, up to 2 posts; 24/7 dedicated support"
+    },
+    {
+      "@type": "Offer",
+      "name": "Growth",
+      "price": "49",
+      "priceCurrency": "USD",
+      "description": "up to 1,000 products, up to 500 orders, up to 500 customers, up to 10 pages, up to 10 posts; 24/7 dedicated support; one-time charge"
+    },
+    {
+      "@type": "Offer",
+      "name": "Scale",
+      "price": "99",
+      "priceCurrency": "USD",
+      "description": "up to 5,000 products, up to 1,000 orders, up to 1,000 customers, up to 50 pages, up to 50 posts; 24/7 dedicated support; one-time charge"
+    }
+  ]
+}
           },
           {
             "@type": "Review",

@@ -490,7 +490,7 @@ body.pricing-page {
 /* ── PLAN SELECTOR ── */
 .calc-plan-selector {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: clamp(5px, 0.7vw, 8px);
   margin-top: clamp(8px, 1vw, 12px);
 }
@@ -798,3 +798,5 @@ body.pricing-page {
     transition: width 300ms ease !important;
   }
 }
+
+.calc-tier-features { padding-left: 18px; margin: 12px 0 0; font-size: 12px; line-height: 1.7; }
