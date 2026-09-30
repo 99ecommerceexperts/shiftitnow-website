@@ -799,4 +799,30 @@ body.pricing-page {
   }
 }
 
-.calc-tier-features { padding-left: 18px; margin: 12px 0 0; font-size: 12px; line-height: 1.7; }
+.calc-tier-features {
+  display: grid;
+  gap: 6px;
+  padding: 12px 0 0;
+  margin: 12px 0 0;
+  border-top: 1px solid var(--border);
+  list-style: none;
+  color: var(--gray-700);
+  font-size: 12px;
+  line-height: 1.7;
+}
+.calc-tier-features li {
+  display: grid;
+  grid-template-columns: 12px minmax(0, 1fr);
+  gap: 6px;
+}
+.calc-tier-features li::before { content: "\2713"; }
+.calc-plan-card:hover { border-color: var(--teal-dark); }
+.calc-plan-card.active .calc-tier-features {
+  color: var(--white);
+  border-top-color: rgba(255,255,255,0.25);
+}
+.calc-plan-card.active .calc-plan-tier,
+.calc-plan-card.active .calc-plan-capacity { color: rgba(255,255,255,0.8); }
+@media (max-width: 480px) {
+  .calc-plan-selector { grid-template-columns: 1fr; }
+}
