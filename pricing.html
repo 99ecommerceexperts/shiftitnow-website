@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NJDS338C');</script>
+<!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#EDE8DC" />
@@ -67,6 +70,9 @@ services, a free demo, and instant plan estimates. Migrate today!"
     </script>
   </head>
   <body class="pricing-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJDS338C" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
     <!-- ============== ANNOUNCEMENT BAR ============== -->
     <div
       class="announcement-bar"
@@ -867,6 +873,8 @@ services, a free demo, and instant plan estimates. Migrate today!"
               href="https://apps.shopify.com/shift-it-now"
               class="calc-primary-btn"
               id="ctaBtn"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <span id="ctaBtnText">Get started - install free</span>
               <span class="calc-btn-arrow">
@@ -1285,6 +1293,13 @@ services, a free demo, and instant plan estimates. Migrate today!"
           /* CTA */
           var btn = document.getElementById("ctaBtn");
           btn.href = plan.ctaHref;
+          if (plan.ctaHref.indexOf("https://apps.shopify.com/") === 0) {
+            btn.target = "_blank";
+            btn.rel = "noopener noreferrer";
+          } else {
+            btn.removeAttribute("target");
+            btn.removeAttribute("rel");
+          }
           btn.className =
             "calc-primary-btn" + (plan.isContact ? " is-contact" : "");
           document.getElementById("ctaBtnText").textContent = plan.cta;
