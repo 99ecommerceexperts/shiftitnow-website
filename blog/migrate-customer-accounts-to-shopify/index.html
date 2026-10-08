@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+  <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NJDS338C');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0A1F2E" />
+    <title>How to Migrate Customer Accounts to Shopify (2026 Guide)</title>
+    <meta
+      name="description"
+      content="Migrating customer accounts to Shopify? Here's what actually transfers, why passwords can't, and how Shopify's 2026 passwordless login changes everything."
+    />
+    <meta
+      name="keywords"
+      content="migrate customer accounts to Shopify, Shopify customer migration, Shopify passwordless login, Shopify customer accounts 2026, migrate customer data Shopify, Shopify legacy customer accounts, Shopify OTP login"
+    />
+    <meta
+      property="og:title"
+      content="How to Migrate Customer Accounts to Shopify (2026 Guide)"
+    />
+    <meta
+      property="og:description"
+      content="Migrating customer accounts to Shopify? Here's what actually transfers, why passwords can't, and how Shopify's 2026 passwordless login changes everything."
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:image"
+      content="https://shiftitnow.com/assets/blog-images/12/main.png"
+    />
+    <link
+      rel="canonical"
+      href="https://shiftitnow.com/blog/migrate-customer-accounts-to-shopify"
+    />
+    <link rel="icon" type="image/webp" href="/assets/logo.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/mobile.css" />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-75MFFCX1S2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-75MFFCX1S2");
+    </script>
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "xjp076zmko");
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I migrate customer passwords to Shopify?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No - passwords are stored as irreversible hashes on every platform, including Shopify, so there's no way to transfer them directly. This is true regardless of which migration tool you use."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will my customers need to reset their passwords after migrating?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you're on Shopify's current default system, customers won't use a password at all - they'll sign in with their email and a one-time code, so there's no password to reset in the first place."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Shopify still use passwords for customer accounts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not for new stores. As of February 2026, Shopify deprecated password-based login for new customer accounts in favor of email-based one-time codes. Existing stores on the older system still function for now but are no longer being updated."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens to customers on Shopify's legacy accounts system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Existing customer data carries over when you upgrade from the legacy system to the current one - only the sign-in method changes, from a password to an email code."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will my customers lose their order history when I migrate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not if the migration is done properly. Order history should migrate alongside customer accounts as part of a complete migration, not get left behind as a separate step."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I keep email + password login on Shopify if I want to?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, through a third-party authentication app layered on top of Shopify's current system - it's no longer the built-in default, so it needs to be set up intentionally rather than assumed."
+      }
+    }
+  ]
+}
+    </script>
+  </head>
+  <body class="blog-post-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJDS338C" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <div
+      class="announcement-bar"
+      id="announcementBar"
+      role="region"
+      aria-label="Announcement"
+    >
+      <div class="container announcement-inner">
+        <span class="announce-dot" aria-hidden="true"></span>
+        <span>Migrating customer accounts to Shopify? Keep the data that matters and test the flow first.</span>
+        <a href="https://apps.shopify.com/shift-it-now" class="announce-link"
+           target="_blank"
+           rel="noopener noreferrer"
+          >Start demo <span aria-hidden="true">&rarr;</span></a
+        >
+        <button
+          class="announce-close"
+          id="announceClose"
+          aria-label="Dismiss announcement"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            width="16"
+            height="16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <header class="site-header" id="siteHeader" data-site-header></header>
+
+    <main>
+      <section class="blog-detail-top">
+        <div class="container">
+          <a href="/blogs" class="blog-detail-back">&larr; Back to all blogs</a>
+          <div class="blog-detail-showcase">
+            <div class="blog-detail-hero-frame blog-detail-hero-frame-full">
+              <div
+                class="blog-card-media blog-card-media-accent blog-card-media-accent-strategy blog-card-media-detail"
+              >
+                <img
+                  src="/assets/blog-images/12/inner.png"
+                  alt="How to Migrate Customer Accounts to Shopify Including Passwords"
+                  class="blog-image-fallback"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="blog-detail-layout">
+            <article class="blog-detail-article">
+              <div class="blog-detail-intro">
+                <div class="blog-detail-headband">
+                  <span class="blog-detail-kicker">Customer Migration</span>
+                </div>
+                <h1 class="blog-detail-title">
+                  How to Migrate Customer Accounts to Shopify (Including Passwords)
+                </h1>
+                <div class="blog-detail-meta-row">
+                  <span>By Abhishek Porwal</span>
+                  <span>October 8, 2026</span>
+                  <span>6 min read</span>
+                </div>
+                <p class="blog-detail-excerpt">
+                  Migrating customer accounts to Shopify? Here's what actually transfers, why passwords can't, and how Shopify's 2026 passwordless login changes everything.
+                </p>
+              </div>
+              <div class="blog-content">
+                <p>Short answer: your customer records - names, emails, addresses, order history - can migrate to Shopify completely. Passwords themselves cannot, and that's true on every platform, not just Shopify. But there's a bigger update worth knowing before you worry too much about it: as of February 2026, Shopify itself stopped using passwords for new stores entirely, replacing them with a one-time email code at login. That actually makes migrating customer accounts to Shopify simpler than it used to be, not harder. Here's what really happens to your customer data during a migration, and what to do about it.</p>
+
+                <h2>What Actually Migrates When You Move Customer Accounts to Shopify</h2>
+
+                <p>A proper customer account migration should carry across names, email addresses, phone numbers, shipping and billing addresses, order history, marketing consent/opt-in status, and any customer tags or segments you've built up. This is the data that actually matters for running your business - order history for support requests, addresses for repeat purchases, consent status so you stay compliant with email marketing. None of it depends on the password, which is the part people worry about most and matters the least in practice.</p>
+
+                <figure class="blog-section-image">
+                  <img src="/assets/blog-images/12/1.png" alt="Customer account data that migrates to Shopify versus passwords which cannot transfer" width="670" height="300" loading="lazy" />
+                </figure>
+
+                <p>&#x1F449; <a href="https://shiftitnow.com/features">See exactly what customer data migrates with ShiftItNow</a> before you commit to a plan.</p>
+
+                <h2>Why Passwords Themselves Can Never Be Migrated</h2>
+
+                <p>This isn't a Shopify limitation - it's true everywhere. Passwords are stored as one-way hashes, not as readable text, specifically so that even the platform itself can't see or export them. There's no technical process, migration tool, or workaround that reverses a password hash back into something transferable. Any tool claiming to &quot;migrate&quot; passwords directly either isn't telling you the whole story or is talking about something else entirely, like session tokens.</p>
+
+                <h2>The Bigger Change: Shopify Doesn't Use Passwords for New Stores Anymore</h2>
+
+                <p>Here's the part that changes the whole conversation. In February 2026, Shopify officially <a href="https://changelog.shopify.com/posts/legacy-customer-accounts-are-now-deprecated" target="_blank" rel="noopener noreferrer">deprecated its old email-and-password login system for customer accounts</a>. New stores can no longer even enable password-based accounts - every new Shopify store runs on the newer system, where customers log in by entering their email and a one-time six-digit code sent to their inbox. No password to create, remember, or reset. Stores still running the older system continue to work for now, but Shopify has stopped updating it and has confirmed a final shutdown date is coming later in 2026, so building anything new on it isn't worth the risk at this point.</p>
+
+                <figure class="blog-section-image">
+                  <img src="/assets/blog-images/12/2.png" alt="Shopify's new passwordless customer login compared to the old password-based login" width="670" height="300" loading="lazy" />
+                </figure>
+
+                <p>&#x1F449; <a href="https://apps.shopify.com/shift-it-now" target="_blank" rel="noopener noreferrer">Run a free demo migration with ShiftItNow</a> and see your customer accounts mapped before you launch.</p>
+
+                <h2>What This Actually Means for Your Migration</h2>
+
+                <p>Since login now runs entirely on email rather than a password, the accuracy of your customer email addresses during migration matters more than it used to - that email is effectively the login credential now. It's also worth telling returning customers ahead of launch that they'll see a code-based sign-in instead of a password field, so it doesn't read as a mistake when they don't recognize the screen. If you specifically need a traditional email-and-password experience preserved - some B2B storefronts prefer it - that's still possible through a third-party authentication app layered on top, but it's no longer Shopify's default, so it needs to be planned for rather than assumed.</p>
+
+                <p>&#x1F449; <a href="https://shiftitnow.com/contact">Talk to a migration expert</a> about your specific customer account setup before migrating.</p>
+
+                <h2>Why Most Migration Tools Handle Customer Data Poorly</h2>
+
+                <p>A lot of migration tools treat customer accounts as an afterthought - they'll happily move your product catalog and leave customer records as a manual export-and-clean-up job you're expected to handle separately. That's backwards, since customer data is often more valuable than the product listings themselves. A complete migration tool should move customer accounts, addresses, order history, and marketing consent status in the same pass as your products - not as a second project you start after the &quot;migration&quot; is technically done.</p>
+
+                <figure class="blog-section-image">
+                  <img src="/assets/blog-images/12/3.png" alt="Checklist of what a complete Shopify customer account migration should include" width="670" height="300" loading="lazy" />
+                </figure>
+
+                <p>&#x1F449; <a href="https://apps.shopify.com/shift-it-now" target="_blank" rel="noopener noreferrer">Migrate customers, orders, and products together</a> instead of piecing it together after launch.</p>
+
+                <h2>Customer Account Migration Checklist</h2>
+
+                <ul>
+                  <li>Confirm every customer email address is accurate and deliverable before migrating</li>
+                  <li>Migrate marketing consent/opt-in status, not just contact details, to stay compliant</li>
+                  <li>Decide upfront whether you're on Shopify's new passwordless accounts or need password login preserved via a third-party app</li>
+                  <li>Tell existing customers ahead of launch that sign-in will use an email code instead of a password</li>
+                  <li>Test the full account login and order-history view yourself before opening the store to customers</li>
+                </ul>
+
+                <p>For more on what else can go wrong during a move, see our guide on <a href="https://shiftitnow.com/blog/common-shopify-migration-mistakes">common Shopify migration mistakes</a>, and if you're weighing a manual approach, <a href="https://shiftitnow.com/blog/diy-csv-export-vs-migration-app-shopify">here's the real cost of migrating with a CSV export instead of a dedicated tool</a>.</p>
+
+                <h2>FAQ: Migrating Customer Accounts to Shopify</h2>
+
+                <h3>Can I migrate customer passwords to Shopify?</h3>
+
+                <p>No - passwords are stored as irreversible hashes on every platform, including Shopify, so there's no way to transfer them directly. This is true regardless of which migration tool you use.</p>
+
+                <h3>Will my customers need to reset their passwords after migrating?</h3>
+
+                <p>If you're on Shopify's current default system, customers won't use a password at all - they'll sign in with their email and a one-time code, so there's no password to reset in the first place.</p>
+
+                <h3>Does Shopify still use passwords for customer accounts?</h3>
+
+                <p>Not for new stores. As of February 2026, Shopify deprecated password-based login for new customer accounts in favor of email-based one-time codes. Existing stores on the older system still function for now but are no longer being updated.</p>
+
+                <h3>What happens to customers on Shopify's legacy accounts system?</h3>
+
+                <p>Existing customer data carries over when you upgrade from the legacy system to the current one - only the sign-in method changes, from a password to an email code.</p>
+
+                <h3>Will my customers lose their order history when I migrate?</h3>
+
+                <p>Not if the migration is done properly. Order history should migrate alongside customer accounts as part of a complete migration, not get left behind as a separate step.</p>
+
+                <h3>Can I keep email + password login on Shopify if I want to?</h3>
+
+                <p>Yes, through a third-party authentication app layered on top of Shopify's current system - it's no longer the built-in default, so it needs to be set up intentionally rather than assumed.</p>
+
+                <p>Migrating customer accounts to Shopify was never really about transferring passwords - it's about carrying over the data that actually matters, and Shopify's own move to passwordless login has made the part merchants worried about most largely irrelevant.</p>
+
+                <p>&#x1F449; <a href="https://apps.shopify.com/shift-it-now" target="_blank" rel="noopener noreferrer">Install ShiftItNow from the Shopify App Store</a> and migrate your full customer base, not just your products. No card required.</p>
+
+                <div class="blog-inline-cta">
+                  <a
+                    href="https://apps.shopify.com/shift-it-now"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="blog-inline-cta-link"
+                  >
+                    <span>Plan Your Customer Migration</span>
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </div>
+                <div class="blog-post-meta-stack">
+                  <div class="blog-post-tags" aria-label="Article tags">
+                    <span class="blog-post-tags-label">Tags:</span>
+                    <div class="blog-post-tags-list">
+                      <span class="blog-post-tag">Shopify Customer Migration</span>
+                      <span class="blog-post-tag">Customer Accounts</span>
+                      <span class="blog-post-tag">Passwordless Login</span>
+                      <span class="blog-post-tag">Shopify Customer Data</span>
+                      <span class="blog-post-tag">Ecommerce Migration</span>
+                    </div>
+                  </div>
+                  <section
+                    class="blog-post-author-card"
+                    aria-labelledby="blog-author-title"
+                  >
+                    <div class="blog-post-author-header">
+                      <img
+                        src="/assets/abhi.jpg"
+                        alt="Author portrait"
+                        class="blog-post-author-photo"
+                        loading="lazy"
+                      />
+                      <div class="blog-post-author-copy">
+                        <h2 id="blog-author-title">Abhishek Porwal</h2>
+                        <p class="blog-post-author-role">Co-Founder</p>
+                        <div
+                          class="blog-post-author-socials"
+                          aria-label="Author social links"
+                        >
+                          <a
+                            class="blog-post-author-social is-linkedin"
+                            href="https://in.linkedin.com/in/abhishek-porwal"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn"
+                          >
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                              <path d="M6.94 8.57A1.72 1.72 0 1 1 6.9 5.13a1.72 1.72 0 0 1 .04 3.44Zm-1.45 1.4h2.83V18H5.49V9.97Zm4.6 0h2.72v1.18h.04c.38-.71 1.3-1.45 2.68-1.45 2.86 0 3.4 1.88 3.4 4.33V18h-2.83v-4.14c0-1-.02-2.27-1.38-2.27-1.38 0-1.6 1.08-1.6 2.19V18h-2.83V9.97Z"></path>
+                            </svg>
+                          </a>
+                          <a
+                            class="blog-post-author-social is-x"
+                            href="https://x.com/99shopifyexpert"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="X"
+                          >
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                              <path d="M18.9 2H22l-6.78 7.75L23 22h-6.1l-4.78-6.24L6.66 22H3.55l7.25-8.29L1.36 2h6.26l4.32 5.7L18.9 2Zm-1.07 18h1.72L6.7 3.9H4.85L17.83 20Z"></path>
+                            </svg>
+                          </a>
+                          <a
+                            class="blog-post-author-social is-instagram"
+                            href="https://www.instagram.com/imabhishek.porwal"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Instagram"
+                          >
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                              <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 1.8A3.7 3.7 0 0 0 3.8 7.5v9a3.7 3.7 0 0 0 3.7 3.7h9a3.7 3.7 0 0 0 3.7-3.7v-9a3.7 3.7 0 0 0-3.7-3.7h-9Zm9.75 1.35a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8Z"></path>
+                            </svg>
+                          </a>
+                          <a
+                            class="blog-post-author-social is-youtube"
+                            href="https://www.youtube.com/@99EcommerceExperts"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="YouTube"
+                          >
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                              <path d="M21.4 7.2a2.98 2.98 0 0 0-2.1-2.1C17.46 4.6 12 4.6 12 4.6s-5.46 0-7.3.5a2.98 2.98 0 0 0-2.1 2.1 31.1 31.1 0 0 0-.5 4.8 31.1 31.1 0 0 0 .5 4.8 2.98 2.98 0 0 0 2.1 2.1c1.84.5 7.3.5 7.3.5s5.46 0 7.3-.5a2.98 2.98 0 0 0 2.1-2.1 31.1 31.1 0 0 0 .5-4.8 31.1 31.1 0 0 0-.5-4.8ZM10.2 15.1V8.9l5.36 3.1-5.36 3.1Z"></path>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="blog-post-author-bio">
+                      Abhishek Porwal is a Shopify Growth Expert, Co-Founder of Expert Village Media Technologies (a Shopify Select Partner with 14+ years of experience and 3,000+ successful Shopify projects), and Founder of Price Mirror and Shift It Now Shopify apps. He shares practical insights on Shopify growth, SEO, CRO, and ecommerce strategies to help merchants scale their businesses.
+                    </p>
+                  </section>
+                </div>
+                <div class="blog-post-nav" aria-label="Post navigation">
+                  <a href="/blog/diy-csv-export-vs-migration-app-shopify" class="blog-post-nav-card" rel="prev">
+                    <span class="blog-post-nav-label">Prev post</span>
+                    <strong>DIY CSV Export vs. a Migration App: The Real Cost of Migrating to Shopify Manually</strong>
+                  </a>
+                  <div class="blog-post-nav-card blog-post-nav-card-disabled" aria-disabled="true">
+                    <span class="blog-post-nav-label">Next post</span>
+                    <strong>No next post</strong>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <aside class="blog-detail-sidebar">
+              <div class="blog-detail-sidebar-inner">
+                <div class="blog-detail-sidecard">
+                  <h2>Article details</h2>
+                  <div class="blog-detail-sideitem">
+                    <span>Category</span>
+                    <strong>Customer Migration</strong>
+                  </div>
+                  <div class="blog-detail-sideitem">
+                    <span>Reading time</span>
+                    <strong>6 min read</strong>
+                  </div>
+                  <div class="blog-detail-sideitem">
+                    <span>Updated</span>
+                    <strong>October 8, 2026</strong>
+                  </div>
+                  <div class="blog-detail-sideitem">
+                    <span>Focus</span>
+                    <strong>Customer accounts + passwords</strong>
+                  </div>
+                </div>
+                <div class="blog-detail-sidecard blog-detail-sidecard-accent">
+                  <h2>Need migration help?</h2>
+                  <p>
+                    Move customer accounts, addresses, order history, and marketing consent together with the rest of your store data.
+                  </p>
+                  <a
+                    href="https://apps.shopify.com/shift-it-now"
+                    class="btn btn-primary btn-sm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Install on Shopify</a
+                  >
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" data-site-footer></footer>
+
+    <script src="/lenis.min.js" defer></script>
+    <script src="/script.js" defer></script>
+    <script
+      id="omnidimension-web-widget"
+      async
+      src="https://omnidim.io/web_widget.js?secret_key=14d67441b2a60ad2976bcdd676f52887"
+    ></script>
+  </body>
+</html>
