@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NJDS338C');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0A1F2E" />
+    <title>How to Tell Google You've Moved After a Shopify Migration</title>
+    <meta name="description" content="Migrated to Shopify? Here's exactly how to tell Google - Search Console setup, sitemap submission, the Change of Address tool, and what to monitor." />
+    <meta name="keywords" content="tell Google you've moved Shopify, Google Search Console Shopify migration, Change of Address tool Google, submit sitemap Shopify migration, Shopify migration Google indexing, Google Merchant Center Shopify migration" />
+    <meta property="og:title" content="How to Tell Google You've Moved After a Shopify Migration" />
+    <meta property="og:description" content="Migrated to Shopify? Here's exactly how to tell Google - Search Console setup, sitemap submission, the Change of Address tool, and what to monitor." />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://shiftitnow.com/assets/blog-images/14/main.png" />
+    <link rel="canonical" href="https://shiftitnow.com/blog/tell-google-youve-moved-shopify-migration" />
+    <link rel="icon" type="image/webp" href="/assets/logo.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/mobile.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-75MFFCX1S2"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-75MFFCX1S2");</script>
+    <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","xjp076zmko");</script>
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+        {"@type":"Question","name":"Do I need to use Google's Change of Address tool if I didn't change domains?","acceptedAnswer":{"@type":"Answer","text":"No. If your domain stayed the same and only your platform changed, the Change of Address tool doesn't apply. Focus on redirects, an updated sitemap, and re-verifying your Search Console property instead."}},
+        {"@type":"Question","name":"How long does it take Google to recognize I've moved?","acceptedAnswer":{"@type":"Answer","text":"Initial recrawling often begins within days of submitting an updated sitemap, but full stabilization of rankings typically takes four to eight weeks for a properly redirected migration."}},
+        {"@type":"Question","name":"Do I need to manually submit every URL to Google?","acceptedAnswer":{"@type":"Answer","text":"No. Submit an updated sitemap and request indexing on your highest-priority pages; Google will crawl the rest on its normal schedule."}},
+        {"@type":"Question","name":"What happens if I forget to update my Google Merchant Center feed?","acceptedAnswer":{"@type":"Answer","text":"Your Shopping ads or free listings can point to broken URLs even if your site works, hurting ad performance until the feed is fixed."}},
+        {"@type":"Question","name":"Can a migration tool submit my sitemap to Google for me?","acceptedAnswer":{"@type":"Answer","text":"No. Search Console access is owner-specific, so submission is manual. A good migration tool can generate a clean sitemap and redirect map."}},
+        {"@type":"Question","name":"Will my Google Business Profile need updating too?","acceptedAnswer":{"@type":"Answer","text":"If its website link points to an old URL structure, update it to your new Shopify domain or homepage."}}
+      ]}
+    </script>
+  </head>
+  <body class="blog-post-page">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJDS338C" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="announcement-bar" id="announcementBar" role="region" aria-label="Announcement">
+      <div class="container announcement-inner">
+        <span class="announce-dot" aria-hidden="true"></span>
+        <span>Moved to Shopify? Help Google discover your new store structure faster.</span>
+        <a href="https://apps.shopify.com/shift-it-now" class="announce-link" target="_blank" rel="noopener noreferrer">Start demo <span aria-hidden="true">&rarr;</span></a>
+        <button class="announce-close" id="announceClose" aria-label="Dismiss announcement"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+      </div>
+    </div>
+    <header class="site-header" id="siteHeader" data-site-header></header>
+    <main>
+      <section class="blog-detail-top">
+        <div class="container">
+          <a href="/blogs" class="blog-detail-back">&larr; Back to all blogs</a>
+          <div class="blog-detail-showcase"><div class="blog-detail-hero-frame blog-detail-hero-frame-full"><div class="blog-card-media blog-card-media-accent blog-card-media-accent-strategy blog-card-media-detail"><img src="/assets/blog-images/14/inner.png" alt="How to tell Google you've moved after migrating to Shopify" class="blog-image-fallback" /></div></div></div>
+          <div class="blog-detail-layout">
+            <article class="blog-detail-article">
+              <div class="blog-detail-intro">
+                <div class="blog-detail-headband"><span class="blog-detail-kicker">Shopify Migration SEO</span></div>
+                <h1 class="blog-detail-title">How to Tell Google You've Moved After Migrating to Shopify</h1>
+                <div class="blog-detail-meta-row"><span>By Abhishek Porwal</span><span>October 22, 2026</span><span>6 min read</span></div>
+                <p class="blog-detail-excerpt">Migrated to Shopify? Here's exactly how to tell Google - Search Console setup, sitemap submission, the Change of Address tool, and what to monitor.</p>
+              </div>
+              <div class="blog-content">
+                <p>Short answer: it depends on whether your domain changed, or just your platform did. If you kept the same domain and only switched the software running behind it, Google doesn't need a formal "we moved" declaration - it needs correct redirects, a fresh sitemap, and time to recrawl. If your domain changed too, there's a specific Google Search Console tool built exactly for that. Here's precisely what to do in each case, and the steps people skip that quietly slow down recovery.</p>
+
+                <h2>First: Did Your Domain Change, or Just Your Platform?</h2>
+                <p>This distinction determines almost everything that follows, and it's the part a lot of migration advice glosses over. If mystore.com stayed mystore.com and you simply moved from Wix or BigCommerce to Shopify underneath it, that's a platform change with no URL-level domain change - Google's Change of Address tool doesn't apply here, and using it incorrectly won't help. If you moved to a different domain entirely (or from a subdomain like mystore.myshopify.com to your own custom domain), that's a domain change, and Google has a dedicated process for it.</p>
+                <figure class="blog-section-image"><img src="/assets/blog-images/14/1.png" alt="Decision flowchart for telling Google about a Shopify migration based on domain change" width="1005" height="450" loading="lazy" /></figure>
+                <p>&#x1F449; <a href="https://shiftitnow.com/features">See how ShiftItNow handles redirects for your specific migration</a> before you touch Search Console.</p>
+
+                <h2>If You Kept the Same Domain: What to Actually Do</h2>
+                <p>Re-verify your property in Google Search Console using a method Shopify supports - an HTML meta tag, DNS TXT record, or your connected Google Analytics/Google &amp; YouTube sales channel - since your hosting changed even if your domain didn't. Submit your updated XML sitemap; Shopify generates one automatically at yourdomain.com/sitemap.xml, and resubmitting it prompts Google to recrawl your new URL structure rather than waiting to stumble onto it. Use the URL Inspection tool to manually request indexing on your highest-value pages - homepage, best-selling products, top blog posts - instead of waiting for Google's natural crawl schedule to reach them.</p>
+                <p>&#x1F449; <a href="https://apps.shopify.com/shift-it-now" target="_blank" rel="noopener noreferrer">Run a free demo migration with ShiftItNow</a> and get a clean redirect map to work from.</p>
+
+                <h2>If Your Domain Changed: Use the Change of Address Tool</h2>
+                <p>When you've moved to a genuinely new domain or subdomain, Google's Change of Address tool (inside Search Console settings) is the correct step - but it comes with two requirements people frequently miss. First, both the old and new domains need to be verified properties in your Search Console account before the tool becomes available. Second, the tool doesn't replace 301 redirects - it depends on them already being fully in place. Submitting a change of address without working redirects underneath it won't transfer your rankings; the redirects do the actual work, and the tool just confirms the move is intentional and permanent.</p>
+                <figure class="blog-section-image"><img src="/assets/blog-images/14/2.png" alt="Google Search Console Change of Address tool for domain-level site moves" width="1005" height="450" loading="lazy" /></figure>
+                <p>&#x1F449; <a href="https://shiftitnow.com/contact">Talk to a migration expert</a> if your Shopify migration includes a domain change.</p>
+
+                <h2>Don't Forget Your Google Merchant Center Feed</h2>
+                <p>If you run Google Shopping ads or free product listings, this is the step that gets missed most often. Your product feed is tied to your old platform's URL structure, and if it isn't reconnected, your Shopping listings can start pointing at broken links even while your actual site works fine. Shopify's built-in Google &amp; YouTube sales channel handles feed generation and syncing automatically once connected, which is worth setting up as part of migration day, not as an afterthought once someone notices ad performance dropping.</p>
+                <p>&#x1F449; <a href="https://apps.shopify.com/shift-it-now" target="_blank" rel="noopener noreferrer">Migrate with SEO and redirects handled from day one</a> instead of chasing feed issues after launch.</p>
+
+                <h2>What to Monitor After You Launch</h2>
+                <p>Check Search Console's Coverage report in the first two weeks for a spike in 404 errors - that's your earliest signal a redirect is missing somewhere. Compare the Performance report's impressions and clicks against your pre-migration baseline rather than assuming silence means a problem; some fluctuation while Google recrawls is normal and typically settles within four to eight weeks for a properly redirected migration. Keep an eye on Core Web Vitals too, since site speed can shift when you change platforms, and that affects both rankings and user experience.</p>
+                <figure class="blog-section-image"><img src="/assets/blog-images/14/3.png" alt="Post-migration Google Search Console monitoring checklist for the first 30 days" width="1005" height="450" loading="lazy" /></figure>
+
+                <h2>Why Most Migration Tools Leave This Part to You</h2>
+                <p>Here's the honest gap: Google Search Console access is tied to you as the site owner, so no migration tool can submit your sitemap or verify your property on your behalf - that part is always manual. But a lot of migration tools don't even hand you a usable starting point, leaving you to build your entire redirect map and figure out your new sitemap structure from scratch, on top of the Search Console work itself. A complete migration tool should generate your 301 redirects and sitemap automatically as part of the migration, so the manual Search Console steps take minutes instead of days.</p>
+
+                <h2>Quick Post-Migration Google Checklist</h2>
+                <ul>
+                  <li>Confirm whether your move involved a domain change or just a platform change</li>
+                  <li>Re-verify your Search Console property using a Shopify-supported method</li>
+                  <li>Submit your updated Shopify sitemap (yourdomain.com/sitemap.xml)</li>
+                  <li>Use the Change of Address tool only if your domain itself changed, and only after redirects are live</li>
+                  <li>Reconnect your Google Merchant Center feed via Shopify's Google &amp; YouTube channel</li>
+                  <li>Monitor Coverage and Performance reports weekly for the first month</li>
+                </ul>
+                <p>For the broader picture on ranking risk during a move, see <a href="https://shiftitnow.com/blog/will-i-lose-google-rankings-moving-to-shopify">what actually affects your SEO during a Shopify migration</a>, and for what else commonly goes wrong, read our guide on <a href="https://shiftitnow.com/blog/common-shopify-migration-mistakes">common Shopify migration mistakes</a>.</p>
+
+                <h2>FAQ: Telling Google About a Shopify Migration</h2>
+                <h3>Do I need to use Google's Change of Address tool if I didn't change domains?</h3>
+                <p>No. If your domain stayed the same and only your platform changed, the Change of Address tool doesn't apply - focus on redirects, an updated sitemap, and re-verifying your Search Console property instead.</p>
+                <h3>How long does it take Google to recognize I've moved?</h3>
+                <p>Initial recrawling often begins within days of submitting an updated sitemap, but full stabilization of rankings typically takes four to eight weeks for a properly redirected migration.</p>
+                <h3>Do I need to manually submit every URL to Google?</h3>
+                <p>No. Submitting an updated sitemap and requesting indexing on your highest-priority pages is enough to speed things up - Google will crawl the rest on its normal schedule.</p>
+                <h3>What happens if I forget to update my Google Merchant Center feed?</h3>
+                <p>Your Shopping ads or free listings can end up pointing to broken URLs even if your actual site is working fine, which quietly hurts ad performance until someone catches it.</p>
+                <h3>Can a migration tool submit my sitemap to Google for me?</h3>
+                <p>No - Search Console access is owner-specific, so that step is always manual. A good migration tool can at least generate a clean sitemap and redirect map so the manual submission takes minutes.</p>
+                <h3>Will my Google Business Profile need updating too?</h3>
+                <p>If your website link in Google Business Profile points to an old URL structure, update it to your new Shopify domain or homepage to keep that listing consistent with your actual site.</p>
+
+                <p>Telling Google you've moved isn't one universal step - it's a short, specific checklist that depends entirely on whether your domain changed. Get the redirects and sitemap right first, and the Search Console side takes minutes, not days.</p>
+                <p>&#x1F449; <a href="https://apps.shopify.com/shift-it-now" target="_blank" rel="noopener noreferrer">Install ShiftItNow from the Shopify App Store</a> and migrate with your redirect map and sitemap ready to submit. No card required.</p>
+                <div class="blog-inline-cta"><a href="https://apps.shopify.com/shift-it-now" target="_blank" rel="noopener noreferrer" class="blog-inline-cta-link"><span>Prepare Your Shopify Migration</span><span aria-hidden="true">&rarr;</span></a></div>
+                <div class="blog-post-meta-stack">
+                  <div class="blog-post-tags" aria-label="Article tags"><span class="blog-post-tags-label">Tags:</span><div class="blog-post-tags-list"><span class="blog-post-tag">Shopify Migration SEO</span><span class="blog-post-tag">Google Search Console</span><span class="blog-post-tag">301 Redirects</span><span class="blog-post-tag">Google Merchant Center</span><span class="blog-post-tag">Shopify Sitemap</span></div></div>
+                  <section class="blog-post-author-card" aria-labelledby="blog-author-title">
+                    <div class="blog-post-author-header"><img src="/assets/abhi.jpg" alt="Author portrait" class="blog-post-author-photo" loading="lazy" /><div class="blog-post-author-copy"><h2 id="blog-author-title">Abhishek Porwal</h2><p class="blog-post-author-role">Co-Founder</p><div class="blog-post-author-socials" aria-label="Author social links">
+                      <a class="blog-post-author-social is-linkedin" href="https://in.linkedin.com/in/abhishek-porwal" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 8.57A1.72 1.72 0 1 1 6.9 5.13a1.72 1.72 0 0 1 .04 3.44Zm-1.45 1.4h2.83V18H5.49V9.97Zm4.6 0h2.72v1.18h.04c.38-.71 1.3-1.45 2.68-1.45 2.86 0 3.4 1.88 3.4 4.33V18h-2.83v-4.14c0-1-.02-2.27-1.38-2.27-1.38 0-1.6 1.08-1.6 2.19V18h-2.83V9.97Z"/></svg></a>
+                      <a class="blog-post-author-social is-x" href="https://x.com/99shopifyexpert" target="_blank" rel="noopener noreferrer" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.78 7.75L23 22h-6.1l-4.78-6.24L6.66 22H3.55l7.25-8.29L1.36 2h6.26l4.32 5.7L18.9 2Zm-1.07 18h1.72L6.7 3.9H4.85L17.83 20Z"/></svg></a>
+                      <a class="blog-post-author-social is-instagram" href="https://www.instagram.com/imabhishek.porwal" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 1.8A3.7 3.7 0 0 0 3.8 7.5v9a3.7 3.7 0 0 0 3.7 3.7h9a3.7 3.7 0 0 0 3.7-3.7v-9a3.7 3.7 0 0 0-3.7-3.7h-9Zm9.75 1.35a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8Z"/></svg></a>
+                      <a class="blog-post-author-social is-youtube" href="https://www.youtube.com/@99EcommerceExperts" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.4 7.2a2.98 2.98 0 0 0-2.1-2.1C17.46 4.6 12 4.6 12 4.6s-5.46 0-7.3.5a2.98 2.98 0 0 0-2.1 2.1 31.1 31.1 0 0 0-.5 4.8 31.1 31.1 0 0 0 .5 4.8 2.98 2.98 0 0 0 2.1 2.1c1.84.5 7.3.5 7.3.5s5.46 0 7.3-.5a2.98 2.98 0 0 0 2.1-2.1 31.1 31.1 0 0 0 .5-4.8 31.1 31.1 0 0 0-.5-4.8ZM10.2 15.1V8.9l5.36 3.1-5.36 3.1Z"/></svg></a>
+                    </div></div></div>
+                    <p class="blog-post-author-bio">Abhishek Porwal is a Shopify Growth Expert, Co-Founder of Expert Village Media Technologies (a Shopify Select Partner with 14+ years of experience and 3,000+ successful Shopify projects), and Founder of Price Mirror and Shift It Now Shopify apps. He shares practical insights on Shopify growth, SEO, CRO, and ecommerce strategies to help merchants scale their businesses.</p>
+                  </section>
+                </div>
+                <div class="blog-post-nav" aria-label="Post navigation"><a href="/blog/store-design-shopify-migration" class="blog-post-nav-card" rel="prev"><span class="blog-post-nav-label">Prev post</span><strong>What Happens to Your Store Design When You Migrate to Shopify?</strong></a><div class="blog-post-nav-card blog-post-nav-card-disabled" aria-disabled="true"><span class="blog-post-nav-label">Next post</span><strong>No next post</strong></div></div>
+              </div>
+            </article>
+            <aside class="blog-detail-sidebar"><div class="blog-detail-sidebar-inner">
+              <div class="blog-detail-sidecard"><h2>Article details</h2><div class="blog-detail-sideitem"><span>Category</span><strong>Shopify Migration SEO</strong></div><div class="blog-detail-sideitem"><span>Reading time</span><strong>6 min read</strong></div><div class="blog-detail-sideitem"><span>Updated</span><strong>October 22, 2026</strong></div><div class="blog-detail-sideitem"><span>Focus</span><strong>Google indexing after migration</strong></div></div>
+              <div class="blog-detail-sidecard blog-detail-sidecard-accent"><h2>Need migration help?</h2><p>Move to Shopify with your redirects and sitemap ready for Google Search Console.</p><a href="https://apps.shopify.com/shift-it-now" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Install on Shopify</a></div>
+            </div></aside>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" data-site-footer></footer>
+    <script src="/lenis.min.js" defer></script>
+    <script src="/script.js" defer></script>
+    <script id="omnidimension-web-widget" async src="https://omnidim.io/web_widget.js?secret_key=14d67441b2a60ad2976bcdd676f52887"></script>
+  </body>
+</html>
