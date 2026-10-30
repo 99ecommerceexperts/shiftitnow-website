@@ -63,7 +63,12 @@
   </url>
   <url>
     <loc>https://shiftitnow.com/blogs</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://shiftitnow.com/blog/switch-ecommerce-platforms-without-customers-noticing</loc>
+    <lastmod>2026-10-30</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
