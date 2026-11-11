@@ -759,11 +759,25 @@
 
     <script src="/lenis.min.js" defer></script>
     <script src="/script.js" defer></script>
+    <script type="text/javascript">
+      window.$crisp = [];
+      window.CRISP_WEBSITE_ID = "608e8b46-cfdf-429d-9af3-6583e7cdc6b5";
+      (function () {
+        var d = document;
+        var s = d.createElement("script");
+        s.src = "https://client.crisp.chat/l.js";
+        s.async = true;
+        d.getElementsByTagName("head")[0].appendChild(s);
+      })();
+    </script>
+
+    <!-- OmniDimension chat widget temporarily disabled
     <script
       id="omnidimension-web-widget"
       async
       src="https://omnidim.io/web_widget.js?secret_key=14d67441b2a60ad2976bcdd676f52887"
     ></script>
+    -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
