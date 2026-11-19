@@ -39,9 +39,9 @@ Same shape as Price Mirror: the Next.js server runs on **Cloud Run** (`Dockerfil
 
 One-time setup (not run automatically):
 
-1. Make sure the Firebase project `shiftitnow-5cc4b` is on the Blaze (billing) plan; Cloud Run requires it.
+1. Make sure the Firebase project `shiftitnow-5cc4b` is on the Blaze (billing) plan; Cloud Run requires it (Firebase console > Usage and billing > Modify plan, or `gcloud billing projects link shiftitnow-5cc4b --billing-account=<id>`). The script below stops with a message if billing is off.
 2. Run `scripts/setup-cloud-run.sh` (needs an owner account). It creates the image repository, the service accounts and the keyless GitHub sign-in, and prints the value for the `GCP_WORKLOAD_IDENTITY_PROVIDER` **repository variable** (Settings > Secrets and variables > Actions > Variables). Add it before merging to `master`.
-3. The `FIREBASE_SERVICE_ACCOUNT_SHIFTITNOW_5CC4B` secret used for the Hosting step already exists.
+3. The `FIREBASE_SERVICE_ACCOUNT_SHIFTITNOW_5CC4B` secret used for the Hosting step already exists. It holds the key of the `firebase-adminsdk-fbsvc` account, and the script gives that account the read-only Cloud Run Viewer role, which Hosting needs to attach the Cloud Run rewrite.
 
 Notes: Cloud Run scales to zero, so the first request after an idle period is slower; add `--min-instances 1` to the deploy step if that matters. `max-instances` is 3.
 

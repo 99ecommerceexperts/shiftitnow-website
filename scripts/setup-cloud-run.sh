@@ -21,7 +21,15 @@ exists() { gcloud "$@" >/dev/null 2>&1; }
 # New service accounts take a few seconds to become usable in IAM policies.
 retry() { for _ in 1 2 3 4 5 6; do "$@" && return; sleep 10; done; "$@"; }
 
-echo "Enabling APIs (Cloud Run needs the project on the Blaze/billing plan)..."
+# Cloud Run and Artifact Registry cannot be enabled while the project is on the free Spark plan; fail early with a clear message.
+if [[ "$(gcloud billing projects describe "$PROJECT_ID" --format 'value(billingEnabled)' 2>/dev/null)" != "True" ]]; then
+  echo "Billing is not enabled on $PROJECT_ID, and Cloud Run needs it." >&2
+  echo "Upgrade the project to the Blaze plan (Firebase console > Usage and billing > Modify plan," >&2
+  echo "or: gcloud billing projects link $PROJECT_ID --billing-account=<billing account id>), then run this script again." >&2
+  exit 1
+fi
+
+echo "Enabling APIs..."
 gcloud services enable run.googleapis.com artifactregistry.googleapis.com iamcredentials.googleapis.com sts.googleapis.com
 
 echo "Docker image repository..."
@@ -41,6 +49,17 @@ retry gcloud artifacts repositories add-iam-policy-binding "$REPOSITORY" --locat
   --member "serviceAccount:$DEPLOY_SA" --role roles/artifactregistry.writer >/dev/null
 retry gcloud iam service-accounts add-iam-policy-binding "$RUNTIME_SA" --member "serviceAccount:$DEPLOY_SA" \
   --role roles/iam.serviceAccountUser >/dev/null
+
+# The Hosting step signs in with the key stored in the FIREBASE_SERVICE_ACCOUNT_SHIFTITNOW_5CC4B secret. That key belongs to the
+# firebase-adminsdk account, which cannot read Cloud Run yet; Hosting needs to look the service up to attach the rewrite in firebase.json.
+HOSTING_SA=firebase-adminsdk-fbsvc@$PROJECT_ID.iam.gserviceaccount.com
+echo "Hosting deploy permission (read Cloud Run services)..."
+if exists iam service-accounts describe "$HOSTING_SA"; then
+  retry gcloud projects add-iam-policy-binding "$PROJECT_ID" --member "serviceAccount:$HOSTING_SA" \
+    --role roles/run.viewer --condition None >/dev/null
+else
+  echo "  $HOSTING_SA not found: give the account behind the Hosting secret the Cloud Run Viewer role yourself."
+fi
 
 # GitHub Actions signs in with a short-lived token (no stored key), and only from the deploy branch of this repository.
 echo "GitHub sign-in (Workload Identity Federation)..."
