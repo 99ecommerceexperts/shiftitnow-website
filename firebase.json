@@ -1,62 +1,23 @@
 {
   "hosting": {
-    "public": ".",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**",
-      "CN_knuiD3Y8DEAE=.webp",
-      "README.md",
-      "ONBOARDING.md"
-    ],
-    "cleanUrls": true,
+    "public": "public",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "cleanUrls": false,
     "trailingSlash": false,
-    "redirects": [
-      {
-        "source": "/llms.txt",
-        "destination": "https://shiftitnow.com",
-        "type": 301
-      },
-      {
-        "source": "/blog/how-to-migrate-wix-to-shopify",
-        "destination": "/blog/migrate-wix-shopify",
-        "type": 301
-      }
-    ],
     "rewrites": [
       {
-        "source": "/blogs",
-        "destination": "/blogs.html"
-      },
-      {
-        "source": "/blog/**",
-        "destination": "/blog/index.html"
+        "source": "**",
+        "run": { "serviceId": "shiftitnow-website", "region": "us-central1" }
       }
     ],
     "headers": [
       {
         "source": "**",
-        "headers": [
-          { "key": "X-Content-Type-Options", "value": "nosniff" }
-        ]
-      },
-      {
-        "source": "**/*.html",
-        "headers": [
-          { "key": "Cache-Control", "value": "public, max-age=600" }
-        ]
-      },
-      {
-        "source": "**/*.@(css|js)",
-        "headers": [
-          { "key": "Cache-Control", "value": "public, max-age=3600" }
-        ]
+        "headers": [{ "key": "X-Content-Type-Options", "value": "nosniff" }]
       },
       {
         "source": "**/*.@(webp|svg|png|jpg|jpeg|gif|ico)",
-        "headers": [
-          { "key": "Cache-Control", "value": "public, max-age=604800" }
-        ]
+        "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }]
       }
     ]
   }

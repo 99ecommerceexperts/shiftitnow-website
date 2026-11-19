@@ -1,0 +1,21 @@
+node_modules
+.next
+.git
+.github
+.vscode
+.env*
+!.env.example
+firebase-debug.log
+# Leftovers from an old Word-document extraction; not part of the site
+.tmp_first_blog
+.tmp_first_blog.zip
+# Old static site (kept on the html-backup branch)
+*.html
+!public/**/*.html
+partials
+blog
+script.js
+lenis.min.js
+sitemap.xml
+# Local development helpers
+scripts

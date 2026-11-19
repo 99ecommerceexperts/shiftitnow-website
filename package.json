@@ -1,0 +1,22 @@
+{
+  "name": "shiftitnow-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "dev:mock": "node scripts/dev-with-mock.mjs"
+  },
+  "dependencies": {
+    "lenis": "^1.3.27",
+    "next": "^16.4.3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.1",
+    "eslint-config-next": "^16.0.1"
+  }
+}

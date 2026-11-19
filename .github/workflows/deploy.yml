@@ -1,0 +1,56 @@
+# Builds the Next.js server image, deploys it to Cloud Run, then deploys Firebase Hosting,
+# which serves public/ from its CDN and forwards every other request to Cloud Run (see firebase.json).
+# One-time Google Cloud setup: scripts/setup-cloud-run.sh (it prints the value for the
+# GCP_WORKLOAD_IDENTITY_PROVIDER repository variable used below).
+
+name: Deploy to Cloud Run and Firebase Hosting
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+env:
+  PROJECT_ID: shiftitnow-5cc4b
+  REGION: us-central1
+  SERVICE: shiftitnow-website
+  IMAGE: us-central1-docker.pkg.dev/shiftitnow-5cc4b/shiftitnow/website:${{ github.sha }}
+  RUNTIME_SERVICE_ACCOUNT: shiftitnow-web@shiftitnow-5cc4b.iam.gserviceaccount.com
+  # Blogs and testimonials come from the shared admin backend (Price Mirror).
+  CONTENT_API_URL: https://www.pricemirror.in/api/public/shiftitnow
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: github-deployer@shiftitnow-5cc4b.iam.gserviceaccount.com
+      - uses: google-github-actions/setup-gcloud@v2
+      - name: Build and push the image
+        run: |
+          gcloud auth configure-docker "$REGION-docker.pkg.dev" --quiet
+          docker build --tag "$IMAGE" .
+          docker push "$IMAGE"
+      - name: Deploy to Cloud Run
+        run: |
+          gcloud run deploy "$SERVICE" \
+            --project "$PROJECT_ID" \
+            --region "$REGION" \
+            --image "$IMAGE" \
+            --service-account "$RUNTIME_SERVICE_ACCOUNT" \
+            --allow-unauthenticated \
+            --set-env-vars "CONTENT_API_URL=$CONTENT_API_URL" \
+            --max-instances 3
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SHIFTITNOW_5CC4B }}
+          channelId: live
+          projectId: shiftitnow-5cc4b

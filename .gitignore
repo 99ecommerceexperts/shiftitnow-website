@@ -8,6 +8,20 @@ firebase-debug.*.log
 # Dependencies
 node_modules/
 
+# Next.js
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# Local environment (see .env.example)
+.env
+.env.*
+!.env.example
+
+# Headless-browser profiles created while testing
+.chrome-*/
+
 # OS / editor cruft
 .DS_Store
 Thumbs.db
