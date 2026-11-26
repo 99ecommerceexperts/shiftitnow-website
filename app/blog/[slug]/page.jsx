@@ -68,7 +68,6 @@ export default async function BlogPostPage({ params }) {
 
   return (
     <SiteShell
-      announcement={view.announcement}
       pageClass="blog-post-page"
       structuredData={[blogPostingStructuredData(post), faqStructuredData(body)]}
     >

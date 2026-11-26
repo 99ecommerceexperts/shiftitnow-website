@@ -244,6 +244,18 @@ p  { margin: 0; }
 }
 .btn-dark:hover { background: var(--navy); transform: translateY(-2px); }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ---------- 5. ANNOUNCEMENT BAR ---------- */
 .announcement-bar {
   background: var(--navy-deep);
@@ -256,24 +268,57 @@ p  { margin: 0; }
   align-items: center;
   justify-content: center;
   gap: 12px;
-  padding: 10px var(--gutter);
-  flex-wrap: wrap;
+  padding: 10px 42px 10px 12px;
   text-align: center;
 }
 .announcement-inner strong { color: var(--gold); font-weight: 600; }
-.announce-dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: var(--gold);
-  box-shadow: 0 0 0 4px rgba(242,181,68,0.22);
-  animation: pulseDot 2s ease-in-out infinite;
+.announce-marquee {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
 }
-.announce-link { color: var(--teal-light); font-weight: 600; }
-.announce-link:hover { color: var(--gold-bright); }
+.announce-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 38s linear infinite;
+}
+.announce-message {
+  padding-inline: 32px;
+  white-space: nowrap;
+}
+.announcement-bar:hover .announce-track,
+.announcement-bar:focus-within .announce-track { animation-play-state: paused; }
+
+@media (prefers-reduced-motion: reduce) {
+  .announce-track { display: block; width: auto; animation: none; }
+  .announce-message { min-width: 0; padding: 0; white-space: normal; }
+  .announce-message[aria-hidden="true"] { display: none; }
+}
+.announce-code {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 9px;
+  color: var(--navy-deep);
+  background: var(--gold);
+  border: 1px dashed rgba(7, 24, 42, 0.55);
+  border-radius: 6px;
+  font: inherit;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background 150ms, transform 150ms;
+}
+.announce-code:hover { background: var(--gold-bright); transform: translateY(-1px); }
+.announce-code:focus-visible { outline: 2px solid var(--white); outline-offset: 2px; }
+.announce-code.copied { background: var(--teal-light); }
+.announce-code svg { flex-shrink: 0; }
 
 .announcement-inner { position: relative; }
 .announce-close {
   position: absolute;
-  right: 0;
+  right: 8px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;

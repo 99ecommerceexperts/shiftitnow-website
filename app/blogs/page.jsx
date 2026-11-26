@@ -2,7 +2,6 @@ import SiteShell from '@/components/chrome/SiteShell';
 import BlogCard from '@/components/blog/BlogCard';
 import BlogCtaSection from '@/components/sections/blogs/BlogCtaSection';
 import BlogDiscoveryHero from '@/components/sections/blogs/BlogDiscoveryHero';
-import { BLOGS_ANNOUNCEMENT } from '@/lib/announcements';
 import { getPosts } from '@/lib/content-api';
 import { pageMetadata } from '@/lib/seo';
 
@@ -29,7 +28,7 @@ export default async function BlogsPage() {
   }
 
   return (
-    <SiteShell announcement={BLOGS_ANNOUNCEMENT}>
+    <SiteShell>
       <main>
         <BlogDiscoveryHero />
         <section className="blog-catalog-section">

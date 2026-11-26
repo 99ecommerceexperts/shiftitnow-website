@@ -201,14 +201,7 @@
     text-align: center;
     position: relative;
   }
-  .announcement-inner > span:not(.announce-dot) {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    min-width: 0;
-  }
-  .announce-link { white-space: nowrap; flex-shrink: 0; }
-  .announce-dot { display: none; }
+  .announce-code { padding: 4px 7px; white-space: nowrap; flex-shrink: 0; }
   .announce-close {
     position: absolute;
     right: 6px;
