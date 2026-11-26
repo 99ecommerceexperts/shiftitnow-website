@@ -59,7 +59,7 @@ export default function AnnouncementBar() {
           <div className="announce-track">
             {Array.from({ length: 12 }, (_, index) => (
               <span className="announce-message" key={index} aria-hidden={index > 0}>
-                BFCM Special: Get <strong>30% off</strong> with code
+                BFCM Special: Save Big with <strong>30% OFF!</strong>
               </span>
             ))}
           </div>
